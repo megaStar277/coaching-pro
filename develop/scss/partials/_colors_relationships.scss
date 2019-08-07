@@ -1,0 +1,308 @@
+/*
+Relationships Scheme
+---------------------------------------------------------------------------------------------------- */
+.coaching-pro-color-scheme-4 .genesis-nav-menu a {
+  @include media($screen--m) {
+    color: $cs4-base-color-5;
+  }
+}
+
+.coaching-pro-color-scheme-4 .genesis-nav-menu .current-menu-item > a,
+.coaching-pro-color-scheme-4 .genesis-nav-menu a:focus,
+.coaching-pro-color-scheme-4 .genesis-nav-menu a:hover {
+  @include media($screen--m) {
+    color: $cs4-base-color-5;
+  }
+}
+
+.coaching-pro-color-scheme-4 .genesis-nav-menu .current-menu-item > a > span,
+.coaching-pro-color-scheme-4 .genesis-nav-menu .current-menu-parent > a > span,
+.coaching-pro-color-scheme-4 .genesis-nav-menu a:focus > span,
+.coaching-pro-color-scheme-4 .genesis-nav-menu a:hover > span {
+  @include media($screen--m) {
+    border-bottom-color: $cs4-base-color-5;
+    border-bottom: 2px solid;
+  }
+}
+
+// Site Footer
+.coaching-pro-color-scheme-4 .site-footer .genesis-nav-menu a {
+  color: $cs4-base-color-6;
+}
+
+.coaching-pro-color-scheme-4 .site-footer .genesis-nav-menu .current-menu-item > a,
+.coaching-pro-color-scheme-4 .site-footer .genesis-nav-menu a:focus,
+.coaching-pro-color-scheme-4 .site-footer .genesis-nav-menu a:hover {
+  color: $cs4-base-color-1;
+}
+
+.coaching-pro-color-scheme-4 .site-footer .genesis-nav-menu .current-menu-item > a > span,
+.coaching-pro-color-scheme-4 .site-footer .genesis-nav-menu .current-menu-parent > a > span,
+.coaching-pro-color-scheme-4 .site-footer .genesis-nav-menu a:focus > span,
+.coaching-pro-color-scheme-4 .site-footer .genesis-nav-menu a:hover > span {
+  border-bottom-color: $cs4-base-color-6;
+  border-bottom: 2px solid;
+}
+
+.coaching-pro-color-scheme-4 .menu-social-menu-container li > a:focus,
+.coaching-pro-color-scheme-4 .menu-social-menu-container li > a:hover {
+  color: $cs4-base-color-6;
+}
+
+/* base-color-1 */
+.coaching-pro-color-scheme-4 .archive-pagination .active a,
+.coaching-pro-color-scheme-4 .button,
+.coaching-pro-color-scheme-4 .footer-widgets-1 section:last-child,
+.coaching-pro-color-scheme-4 .menu-toggle,
+.coaching-pro-color-scheme-4 .sidebar .enews-widget input[type="submit"],
+.coaching-pro-color-scheme-4 button,
+.coaching-pro-color-scheme-4 input[type="button"],
+.coaching-pro-color-scheme-4 input[type="reset"],
+.coaching-pro-color-scheme-4 input[type="submit"],
+.coaching-pro-color-scheme-4.home .widget .button {
+  background-color: $cs4-base-color-1;
+}
+
+.coaching-pro-color-scheme-4 .front-page-1a .widget-title,
+.coaching-pro-color-scheme-4 .front-page-2 section.coaching-pro-subtitle:last-of-type p:first-of-type,
+.coaching-pro-color-scheme-4 .front-page-3 section.coaching-pro-subtitle:first-of-type p:first-child,
+.coaching-pro-color-scheme-4 .menu-social-menu-container li > a,
+.coaching-pro-color-scheme-4 .menu-toggle:focus,
+.coaching-pro-color-scheme-4 .menu-toggle:hover,
+.coaching-pro-color-scheme-4 .sub-menu-toggle,
+.coaching-pro-color-scheme-4 .sub-menu-toggle:focus,
+.coaching-pro-color-scheme-4 .sub-menu-toggle:hover,
+.coaching-pro-color-scheme-4 .subtitle,
+.coaching-pro-color-scheme-4 a {
+  color: $cs4-base-color-1;
+}
+
+.coaching-pro-color-scheme-4 .front-page-testimonials .testimonial-author-img img,
+.coaching-pro-color-scheme-4 .menu-toggle,
+.coaching-pro-color-scheme-4 .menu-toggle:focus,
+.coaching-pro-color-scheme-4 .menu-toggle:hover,
+.coaching-pro-color-scheme-4 .sub-menu-toggle,
+.coaching-pro-color-scheme-4 a,
+.coaching-pro-color-scheme-4.home .widget .button {
+  border-color: $cs4-base-color-1;
+}
+
+.coaching-pro-color-scheme-4 .menu-toggle:focus,
+.coaching-pro-color-scheme-4 .menu-toggle:hover {
+  background-color: $cs4-base-color-1;
+  color: $white;
+}
+
+.coaching-pro-color-scheme-4 .archive-pagination li a:focus,
+.coaching-pro-color-scheme-4 .archive-pagination li a:hover {
+  color: $cs4-base-color-1;
+  background-color: transparent;
+}
+/* base-color-2 */
+
+.coaching-pro-color-scheme-4 .search-form {
+  border-color: $cs4-base-color-2;
+}
+
+.coaching-pro-color-scheme-4 .entry-title a:focus,
+.coaching-pro-color-scheme-4 .entry-title a:hover,
+.coaching-pro-color-scheme-4 a:focus,
+.coaching-pro-color-scheme-4 a:hover {
+  color: $cs4-base-color-2;
+  border-bottom-color: transparent;
+}
+
+.coaching-pro-color-scheme-4 .footer-widgets-1 section,
+.coaching-pro-color-scheme-4 .site-header,
+.coaching-pro-color-scheme-4.fixed-header-on .custom-header-background.light .site-header,
+.coaching-pro-color-scheme-4.home .custom-header-background.light .site-header,
+.coaching-pro-color-scheme-4.home.no-featured-section .site-header {
+  background-color: $cs4-base-color-2;
+}
+
+.coaching-pro-color-scheme-4.fixed-header-off .custom-header-background .site-header {
+  @include media($screen--m) {
+    background-color: transparent;
+  }
+}
+
+.coaching-pro-color-scheme-4.fixed-header-on .custom-header-background .site-header {
+  @include media($screen--m) {
+    background-color: transparent;
+  }
+}
+
+.coaching-pro-color-scheme-4 .front-page-welcome:before {
+  @include media($screen--m) {
+    border-left: 50px $cs4-base-color-2 solid!important;
+  }
+}
+
+.coaching-pro-color-scheme-4 .front-page-testimonials {
+  @include media($screen--m) {
+    border-left-color: $cs4-base-color-2;
+    border-top-color: $cs4-base-color-2;
+  }
+}
+
+/* base-color-3 */
+.coaching-pro-color-scheme-4 .entry-title,
+.coaching-pro-color-scheme-4 .entry-title a,
+.coaching-pro-color-scheme-4 .footer-widgets-2 .widget-title,
+.coaching-pro-color-scheme-4 .front-page-1b .widget-title,
+.coaching-pro-color-scheme-4 .front-page-2 .widget-title,
+.coaching-pro-color-scheme-4 .front-page-3 .widget-title,
+.coaching-pro-color-scheme-4 .front-page-3 .widget_sp_image-description p:first-child,
+.coaching-pro-color-scheme-4 .front-page-testimonials .widget-title,
+.coaching-pro-color-scheme-4 .sidebar .widget-title a,
+.coaching-pro-color-scheme-4 .site-description,
+.coaching-pro-color-scheme-4 .site-footer,
+.coaching-pro-color-scheme-4 .site-footer a,
+.coaching-pro-color-scheme-4 .site-title a,
+.coaching-pro-color-scheme-4 .widget-title {
+  color: $cs4-base-color-3;
+}
+
+.coaching-pro-color-scheme-4 .front-page-offer,
+.coaching-pro-color-scheme-4 .sidebar .enews-widget,
+.coaching-pro-color-scheme-4 .sidebar .enews-widget .widget-title,
+.coaching-pro-color-scheme-4 .sidebar .widget.enews-widget {
+  background-color: $cs4-base-color-3;
+}
+
+.coaching-pro-color-scheme-4 .site-footer a {
+
+  border-bottom-color: $cs4-base-color-3;
+}
+
+.coaching-pro-color-scheme-4 .front-page-1a .icon-bracket-right {
+  fill: $cs4-base-color-3;
+}
+
+/* base-color-4 */
+
+.coaching-pro-color-scheme-4 .front-page-3 .icon-bracket-right {
+  fill: $cs4-base-color-4;
+}
+
+.coaching-pro-color-scheme-4 .site-footer {
+  background-color: $cs4-base-color-4;
+
+}
+
+// Needed for specificity
+.coaching-pro-color-scheme-4 .button:focus,
+.coaching-pro-color-scheme-4 .button:hover,
+.coaching-pro-color-scheme-4 button:focus,
+.coaching-pro-color-scheme-4 button:hover,
+.coaching-pro-color-scheme-4 input[type="button"]:focus,
+.coaching-pro-color-scheme-4 input[type="button"]:hover,
+.coaching-pro-color-scheme-4 input[type="reset"]:focus,
+.coaching-pro-color-scheme-4 input[type="reset"]:hover,
+.coaching-pro-color-scheme-4 input[type="submit"]:focus,
+.coaching-pro-color-scheme-4 input[type="submit"]:hover,
+.coaching-pro-color-scheme-4.home .widget .button:focus,
+.coaching-pro-color-scheme-4.home .widget .button:focus p,
+.coaching-pro-color-scheme-4.home .widget .button:focus p a,
+.coaching-pro-color-scheme-4.home .widget .button:hover,
+.coaching-pro-color-scheme-4.home .widget .button:hover p,
+.coaching-pro-color-scheme-4.home .widget .button:hover p a {
+  background-color: $grey;
+}
+
+.coaching-pro-color-scheme-4 .sidebar .enews-widget input[type="submit"]:focus,
+.coaching-pro-color-scheme-4 .sidebar .enews-widget input[type="submit"]:hover {
+  background-color: $soft-white;
+  color: $base-text-color;
+}
+
+.coaching-pro-color-scheme-4 .link-has-image {
+  border-color: transparent;
+}
+
+.coaching-pro-color-scheme-4 .genesis-nav-menu .sub-menu-toggle {
+  background-color: transparent;
+}
+
+// Add any color overrides here.
+
+.coaching-pro-color-scheme-4 a.button,
+.coaching-pro-color-scheme-4 button {
+  color: $white;
+}
+
+.coaching-pro-color-scheme-4 .footer-widgets-1 .widget-title,
+.coaching-pro-color-scheme-4 .front-page-cta .widget-title,
+.coaching-pro-color-scheme-4 .front-page-offer .widget-title,
+.coaching-pro-color-scheme-4 .front-page-welcome .widget-title {
+  color: $white;
+}
+
+.coaching-pro-color-scheme-4 .site-footer,
+.coaching-pro-color-scheme-4 .site-footer a {
+  color: $cs4-base-color-3;
+  border-bottom-color: $cs4-base-color-3;
+}
+
+.coaching-pro-color-scheme-4 .site-footer a:focus,
+.coaching-pro-color-scheme-4 .site-footer a:hover {
+  color: $cs4-base-color-1;
+  border-bottom-color: transparent;
+}
+// Override colors on home page with opaque background color
+
+// home transparent header target only the first level of nav
+// home transparent header
+.coaching-pro-color-scheme-4 .custom-header-background .site-header {
+  .site-description,
+  .site-title a {
+    color: $cs4-base-color-5;
+    @include media($screen--m) {
+      color: $cs4-base-color-5;
+    }
+  }
+
+  .genesis-nav-menu > .current-menu-item > a,
+  .genesis-nav-menu > .menu-item > a,
+  .genesis-nav-menu > .menu-item > a:focus,
+  .genesis-nav-menu > .menu-item > a:hover {
+    @include media($screen--m) {
+      color: $cs4-base-color-5;
+    }
+  }
+
+  .genesis-nav-menu > .current-menu-item > a > span,
+  .genesis-nav-menu > .current-menu-parent > a > span,
+  .genesis-nav-menu > .menu-item > a:focus > span,
+  .genesis-nav-menu > .menu-item > a:hover > span {
+    @include media($screen--m) {
+      border-bottom-color: $cs4-base-color-5;
+      border-bottom: 2px solid;
+    }
+  }
+
+}
+// home solid header
+.coaching-pro-color-scheme-4 .custom-header-background.light .site-header {
+  .site-description,
+  .site-title a {
+    color: $cs4-base-color-5;
+  }
+
+  .genesis-nav-menu > .current-menu-item > a,
+  .genesis-nav-menu > .menu-item > a,
+  .genesis-nav-menu > .menu-item > a:focus,
+  .genesis-nav-menu > .menu-item > a:hover {
+    @include media($screen--m) {
+      color: $cs4-base-color-5;
+    }
+  }
+
+  .genesis-nav-menu > .current-menu-item > a > span,
+  .genesis-nav-menu > .current-menu-parent > a > span,
+  .genesis-nav-menu > .menu-item > a > span {
+    @include media($screen--m) {
+      border-bottom-color: $cs4-base-color-5;
+    }
+  }
+}

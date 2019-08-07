@@ -1,0 +1,329 @@
+# Copyright (C) 2018 Coaching Pro
+# This file is distributed under the same license as the Coaching Pro package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Coaching Pro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: 404.php:39
+msgid "Not found, error 404"
+msgstr ""
+
+#: 404.php:44
+msgid "The page you are looking for no longer exists. Perhaps you can return back to the site's <a href=\"%s\">homepage</a> and see if you can find what you are looking for. Or, you can try finding it by using the search form below."
+msgstr ""
+
+#: 404.php:51
+msgid "The page you are looking for no longer exists. Perhaps you can return back to the site's <a href=\"%s\">homepage</a> and see if you can find what you are looking for. Or, you can try finding it with the information below."
+msgstr ""
+
+#: 404.php:61
+msgid "Sitemap"
+msgstr ""
+
+#: page_landing.php:2
+msgid "Landing Page"
+msgstr ""
+
+#: searchform.php:19
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:21
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:23
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: lib/customize-colors.php:286, lib/customize-colors.php:338
+msgid "Color Scheme"
+msgstr ""
+
+#: lib/customize-colors.php:340
+msgid "Career"
+msgstr ""
+
+#: lib/customize-colors.php:341
+msgid "Executives"
+msgstr ""
+
+#: lib/customize-colors.php:342
+msgid "Health and Fitness"
+msgstr ""
+
+#: lib/customize-colors.php:343
+msgid "Relationships"
+msgstr ""
+
+#: lib/customize-colors.php:344
+msgid "Custom"
+msgstr ""
+
+#: lib/customize-colors.php:364
+msgid "Custom Color #1"
+msgstr ""
+
+#: lib/customize-colors.php:385
+msgid "Custom Color #2"
+msgstr ""
+
+#: lib/customize-colors.php:406
+msgid "Custom Color #3"
+msgstr ""
+
+#: lib/customize-colors.php:427
+msgid "Custom Color #4"
+msgstr ""
+
+#: lib/customize-colors.php:448
+msgid "Navigation Text Color"
+msgstr ""
+
+#: lib/customize-colors.php:469
+msgid "Navigation Text Hover Color"
+msgstr ""
+
+#: lib/customize.php:43
+msgid "No Image"
+msgstr ""
+
+#: lib/customize.php:74
+msgid "Front Page Background Images"
+msgstr ""
+
+#: lib/customize.php:97
+msgid "Front Page Welcome Section Image:"
+msgstr ""
+
+#: lib/customize.php:107
+msgid "Front Page Call To Action Section Image:"
+msgstr ""
+
+#: lib/customize.php:117
+msgid "Front Page Offer Section Image:"
+msgstr ""
+
+#: lib/customize.php:126
+msgid "General Settings"
+msgstr ""
+
+#: lib/customize.php:141
+msgid "Turn off Sticky Header Navigation (allow header to scroll) "
+msgstr ""
+
+#: lib/customize.php:160
+msgid "Turn off front page graphics"
+msgstr ""
+
+#: lib/customize.php:179
+msgid "Use minified CSS stylesheet"
+msgstr ""
+
+#: lib/customize.php:188
+msgid "Logo Image"
+msgstr ""
+
+#: lib/customize.php:199
+msgid "Background Repeat"
+msgstr ""
+
+#: lib/customize.php:204
+msgid "No Repeat"
+msgstr ""
+
+#: lib/customize.php:205
+msgid "Tile"
+msgstr ""
+
+#: lib/customize.php:206
+msgid "Tile Horizontally"
+msgstr ""
+
+#: lib/customize.php:207
+msgid "Tile Vertically"
+msgstr ""
+
+#: lib/customize.php:224
+msgid "Background Size"
+msgstr ""
+
+#: lib/customize.php:229
+msgid "Cover"
+msgstr ""
+
+#: lib/customize.php:230
+msgid "Contain"
+msgstr ""
+
+#: lib/customize.php:231
+msgid "100% width"
+msgstr ""
+
+#: lib/customize.php:232
+msgid "100% height"
+msgstr ""
+
+#: lib/customize.php:233
+msgid "Actual Size"
+msgstr ""
+
+#: lib/customize.php:245
+msgid "Background Position Horizontal"
+msgstr ""
+
+#: lib/customize.php:250
+msgid "Left"
+msgstr ""
+
+#: lib/customize.php:251, lib/customize.php:269
+msgid "Center"
+msgstr ""
+
+#: lib/customize.php:252
+msgid "Right"
+msgstr ""
+
+#: lib/customize.php:263
+msgid "Background Position Vertical"
+msgstr ""
+
+#: lib/customize.php:268
+msgid "Top"
+msgstr ""
+
+#: lib/customize.php:270
+msgid "Bottom"
+msgstr ""
+
+#: lib/customize.php:283
+msgid "Change the color of the overlay for this image."
+msgstr ""
+
+#: lib/customize.php:284
+msgid "Overlay Color"
+msgstr ""
+
+#: lib/customize.php:297
+msgid "Background Overlay"
+msgstr ""
+
+#: lib/customize.php:298, lib/customize.php:318
+msgid "Opacity (0 = transparent | 1 = solid)"
+msgstr ""
+
+#: lib/customize.php:317
+msgid "Image Opacity"
+msgstr ""
+
+#: lib/icon-functions.php:46
+msgid "Please define default parameters in the form of an array."
+msgstr ""
+
+#: lib/icon-functions.php:51
+msgid "Please define an SVG icon filename."
+msgstr ""
+
+#: lib/load-scripts.php:119
+msgid "Menu"
+msgstr ""
+
+#: lib/load-scripts.php:121
+msgid "Submenu"
+msgstr ""
+
+#: lib/theme-setup.php:53
+msgid "Featured Image"
+msgstr ""
+
+#: lib/theme-setup.php:89
+msgid "Primary Menu"
+msgstr ""
+
+#: lib/theme-setup.php:89
+msgid "Footer Menu"
+msgstr ""
+
+#: lib/theme-setup.php:179
+msgid "Read more"
+msgstr ""
+
+#: lib/theme-setup.php:179
+msgid "about"
+msgstr ""
+
+#: lib/widget-setup.php:13
+msgid "Front Page Welcome Section"
+msgstr ""
+
+#: lib/widget-setup.php:14
+msgid "This is the welcome area in the header."
+msgstr ""
+
+#: lib/widget-setup.php:22
+msgid "Front Page 1 - a"
+msgstr ""
+
+#: lib/widget-setup.php:23
+msgid "This is the front page 1a section."
+msgstr ""
+
+#: lib/widget-setup.php:29
+msgid "Front Page 1 - b"
+msgstr ""
+
+#: lib/widget-setup.php:30
+msgid "This is the front page 1b section."
+msgstr ""
+
+#: lib/widget-setup.php:36
+msgid "Front Page 2"
+msgstr ""
+
+#: lib/widget-setup.php:37
+msgid "This is the front page 2 section."
+msgstr ""
+
+#: lib/widget-setup.php:44
+msgid "Front Page 3"
+msgstr ""
+
+#: lib/widget-setup.php:45
+msgid "This is the front page 3 section."
+msgstr ""
+
+#: lib/widget-setup.php:52
+msgid "Front Page Testimonials"
+msgstr ""
+
+#: lib/widget-setup.php:53
+msgid "This is the front page testimonials section."
+msgstr ""
+
+#: lib/widget-setup.php:61
+msgid "Front Page Call to Action"
+msgstr ""
+
+#: lib/widget-setup.php:62
+msgid "This is the call to action  section."
+msgstr ""
+
+#: lib/widget-setup.php:69
+msgid "Front Page Offer"
+msgstr ""
+
+#: lib/widget-setup.php:70
+msgid "This is the front page offer section."
+msgstr ""

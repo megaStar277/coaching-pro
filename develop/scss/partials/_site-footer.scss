@@ -1,0 +1,37 @@
+/* # Site Footer
+---------------------------------------------------------------------------------------------------- */
+
+.site-footer {
+  font-size: 16px;
+  line-height: 1;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.site-footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include media($screen--m) {
+    justify-content: flex-end;
+  }
+
+}
+
+.site-footer a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.site-footer a:focus,
+.site-footer a:hover {
+  border-bottom: 1px solid transparent;
+}
+
+.site-footer p {
+  margin-bottom: 15px;
+}
+
+.site-footer p:last-child {
+  margin-bottom: 0;
+}

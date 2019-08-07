@@ -1,0 +1,40 @@
+{
+  "name": "coaching-pro",
+  "version": "1.0.0",
+  "description": "Coaching Pro Theme by brandiD",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/brandid/coaching-pro"
+  },
+  "author": "The BrandiD",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://bitbucket.org/brandid/coaching-pro"
+  },
+  "homepage": "https://thebrandid.com",
+  "devDependencies": {
+    "bourbon": "^4.2.6",
+    "bourbon-neat": "^1.7.2",
+    "browser-sync": "^2.18.8",
+    "css-mqpacker": "^5.0.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sass-lint": "^1.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-wp-pot": "^2.0.4",
+    "gulp-zip": "^4.0.0",
+    "postcss-svg": "^1.0.6",
+    "postcss-pxtorem": "^4.0.1"
+  },
+  "dependencies": {
+    "del": "^2.2.2"
+  }
+}
