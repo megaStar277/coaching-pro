@@ -23,34 +23,52 @@ function coaching_pro_fonts_css_blockeditor() {
 
     foreach ( $editor_fonts as $font ) {
 
-		$css .= "
+        // If this is the 'navmenu' slug, don't output CSS -- not needed for the Page Editor.
+		if ( 'navmenu' === $font['slug'] ) {
+            // Don't output anything for this tag.
+        }else {
+            // Output CSS styles for this tag.
+            $css .= "
 
 		.editor-styles-wrapper {$font['tag']} {
 			font-family: '{$font['font']}' !important;
 		}
 		";
+        }
 
-        // Fonts for pullquote blocks - default is font assigned to 'h3' tags.
+        // Fonts for Pullquote blocks - default is font assigned to 'h3' tags.
 		if ( 'h3' === $font['slug'] ) {
 
-			$css .= "
+		$css .= "
 
-            .editor-styles-wrapper .wp-block-pullquote blockquote::before,
-			.editor-styles-wrapper .wp-block-pullquote blockquote p {
-				font-family: '{$font['font']}' !important;
-			}
-			";
+        .editor-styles-wrapper .wp-block-pullquote blockquote::before,
+		.editor-styles-wrapper .wp-block-pullquote blockquote p {
+			font-family: '{$font['font']}' !important;
+		}
+		";
 
 		}
 
-        $css .= "
+        // Fonts for Citation inside Pullquote blocks - default is font assigned to 'p' tags.
+		if ( 'body' === $font['slug'] ) {
+
+		$css .= "
+
+        .editor-styles-wrapper .wp-block-pullquote blockquote .wp-block-pullquote__citation {
+			font-family: '{$font['font']}' !important;
+		}
+		";
+
+		}
+
+	}
+
+    $css .= "
 
         .editor-styles-wrapper .wp-block-pullquote blockquote .wp-block-pullquote__citation {
             text-transform: uppercase;
         }
-        ";
-
-	}
+    ";
 
 	// OUTPUT CSS.
 	// Use the handle from the stylesheet enqueued above.

@@ -1,13 +1,15 @@
 /* Coaching Pro - Block Editor Styles
 --------------------------------------------- */
 body {
-    // background-color: #f3f1f2;
-    // font-family: 'Questrial', sans-serif !important;
 	font-size: 18px;
 	font-weight: 300;
 	line-height: 1.625;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+#wpwrap {
+	-webkit-font-smoothing: antialiased;
 }
 
 .editor-styles-wrapper p,
