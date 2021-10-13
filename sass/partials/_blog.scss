@@ -1,0 +1,15 @@
+/* BLOG STYLES
+----------------------------------------------------------------------------- */
+.blog {
+    &.blog-archive {
+        .archive-description {
+            padding: 0;
+            .archive-title {
+                padding: 30px;
+                @include media($screen--l) {
+                    padding: 30px 0;
+                }
+            }
+        }
+    }
+}

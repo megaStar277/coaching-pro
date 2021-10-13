@@ -1,0 +1,84 @@
+/* Override colors for responsive nav menu - this loads after color schemes.
+---------------------------------------------------------------------------------------------------- */
+.genesis-nav-menu {
+    .current-menu-item span,
+    a:focus span,
+    a:hover span {
+        border-bottom: 2px solid;
+    }
+    .genesis-nav-menu {
+        .sub-menu {
+            .current-menu-item a,
+            .current-menu-item > a:focus,
+            .current-menu-item > a:hover,
+            a,
+            a:focus,
+            a:hover {
+                color: $sub-menu-color;
+            }
+            .current-menu-item > a > span,
+            .current-menu-item > a:focus > span,
+            .current-menu-item > a:hover > span,
+            .sub-menu a:focus > span,
+            .sub-menu a:hover > span {
+                border-bottom: 2px solid;
+                border-bottom-color: $sub-menu-color;
+            }
+        }
+    }
+}
+
+/* ## RESPONSIVE MENU
+--------------------------------------------- */
+.genesis-responsive-menu {
+    .genesis-nav-menu {
+        a:focus,
+        a:hover {
+            @include media($screen--s2) {
+                color: $sub-menu-color;
+            }
+        }
+        .menu-item {
+            a {
+                @include media($screen--s2) {
+                    // color: $sub-menu-color;
+                    // border-bottom: 1px solid lighten($sub-menu-color, 35);
+                }
+            }
+        }
+    }
+}
+
+/* ## FOOTER MENU
+--------------------------------------------- */
+.site-footer {
+    .genesis-nav-menu {
+        .current-menu-item {
+            & > a:focus,
+            & > a:hover {
+               color: $sub-menu-color;
+               & > span {
+                   border-bottom-color: $sub-menu-color;
+               }
+            }
+        }
+        .current-menu-item span,
+        a:focus span,
+        a:hover span {
+            border-bottom: 2px solid;
+        }
+        .current-menu-item a > span,
+        a:focus > span,
+        a:hover > span {
+            border-bottom: 2px solid $sub-menu-color;
+        }
+        .sub-menu {
+            a {
+                color: $sub-menu-color;
+                span {
+                    border-color: $sub-menu-color;
+                }
+            }
+        }
+    }
+}

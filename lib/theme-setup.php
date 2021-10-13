@@ -15,16 +15,12 @@ add_theme_support( 'genesis-accessibility', array( '404-page', 'drop-down-menu',
 // Add viewport meta tag for mobile browsers.
 add_theme_support( 'genesis-responsive-viewport' );
 
-// * Remove content/sidebar/sidebar layout
+// Remove unnecessary layouts.
 genesis_unregister_layout( 'content-sidebar-sidebar' );
-
-// * Remove sidebar/sidebar/content layout
 genesis_unregister_layout( 'sidebar-sidebar-content' );
-
-// * Remove sidebar/content/sidebar layout
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 
-// * Unregister secondary sidebar
+// Unregister secondary sidebar.
 unregister_sidebar( 'sidebar-alt' );
 
 // Add support for custom header.
@@ -41,8 +37,8 @@ add_theme_support( 'custom-header', array(
 // Add support for after entry widget.
 add_theme_support( 'genesis-after-entry-widget-area' );
 
-// Add support for 2-column footer widgets.
-add_theme_support( 'genesis-footer-widgets', 2 );
+// Add support for a footer Widget Blocks area.
+add_theme_support( 'genesis-footer-widgets', 1 );
 
 // Add Image Sizes.
 add_image_size( 'featured-image', 900, 400, true );
@@ -54,22 +50,14 @@ function coaching_pro_show_custom_image_sizes( $sizes ) {
 	));
 }
 
-/**
- * Remove Genesis Page Templates
- *
- * @author Bill Erickson
- * @link http://www.billerickson.net/remove-genesis-page-templates
- *
- * @param array $page_templates
- * @return array
- */
+// Remove Genesis Page Templates.
+add_filter( 'theme_page_templates', 'coaching_pro_remove_genesis_page_templates', 20, 1 );
 function coaching_pro_remove_genesis_page_templates( $page_templates ) {
 	unset( $page_templates['page_blog.php'] );
 	// Let's keep the archive template.
 	// unset( $page_templates['page_archive.php'] );
 	return $page_templates;
 }
-add_filter( 'theme_page_templates', 'coaching_pro_remove_genesis_page_templates', 20, 1 );
 
 /**
  * Remove the blog page settings metabox from the Genesis Theme Settings
@@ -83,7 +71,7 @@ function coaching_pro_remove_unwanted_genesis_metaboxes() {
 }
 add_action( 'toplevel_page_genesis_settings_page_boxes', 'coaching_pro_remove_unwanted_genesis_metaboxes' );
 
-// * Add new image sizes to the image size dropdown
+// Add new image sizes to the image size dropdown.
 add_filter( 'image_size_names_choose', 'coaching_pro_show_custom_image_sizes' );
 
 // Rename primary and secondary navigation menus.
@@ -106,60 +94,55 @@ function coaching_pro_secondary_menu_args( $args ) {
 	return $args;
 
 }
-// Remove header right widget area
+// Remove header right widget area.
 unregister_sidebar( 'header-right' );
 
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
 add_action( 'genesis_header', 'genesis_do_nav', 12 );
 
-// Add a body class for the color scheme selected
+// Add a body class for the fixed header option selected.
 add_filter( 'body_class', 'coaching_pro_theme_color_body_class' );
 function coaching_pro_theme_color_body_class( $classes ) {
 
-	$selected_scheme = get_theme_mod( 'coaching_pro_colorscheme_setting', '3' );
+	// $selected_scheme = get_theme_mod( 'coaching_pro_colorscheme_setting', '3' );
 	$fixed_header_off = get_theme_mod( 'fixed_header_off', false );
 	$classes[] = ($fixed_header_off ? 'fixed-header-off' : 'fixed-header-on');
-	$classes[] = 'coaching-pro-color-scheme-' . $selected_scheme;
+	// $classes[] = 'coaching-pro-color-scheme-' . $selected_scheme;
 	$classes[] = has_nav_menu( 'primary' ) ? '' : 'no-primary-nav';
 	return $classes;
 
 }
 
-// Modify size of the Gravatar in the author box.
+// Modify the size of the Gravatar in the author box.
 add_filter( 'genesis_author_box_gravatar_size', 'coaching_pro_author_box_gravatar' );
 function coaching_pro_author_box_gravatar( $size ) {
 	return 90;
 }
 
-// Modify size of the Gravatar in the entry comments.
+// Modify the size of the Gravatar in the entry comments.
 add_filter( 'genesis_comment_list_args', 'coaching_pro_comments_gravatar' );
 function coaching_pro_comments_gravatar( $args ) {
-
 	$args['avatar_size'] = 60;
-
 	return $args;
-
 }
-// Let's use the search form from WordPress core instead.
+
+// Use the search form from WordPress core.
 remove_filter( 'get_search_form', 'genesis_search_form' );
 
-// Move the secondary sidebar within content-sidebar-wrap for flexbox
-//
+// Move the secondary sidebar within content-sidebar-wrap for flexbox.
 remove_action( 'genesis_after_content_sidebar_wrap', 'genesis_get_sidebar_alt' );
 add_action( 'genesis_after_content','genesis_get_sidebar_alt' );
 
 
-// Customize entry meta header
+// Customize the entry meta header.
 add_filter( 'genesis_post_info', 'coaching_pro_post_info_filter' );
 function coaching_pro_post_info_filter( $post_info ) {
 	$post_info = '[post_date] by [post_author_posts_link] | [post_comments] [post_edit]';
 	return $post_info;
 }
 
+// Add comment count and remove standard comment title.
 add_action( 'genesis_before_comments' , 'coaching_pro_comment_count' );
-/**
- * Add comment count and remove standard comment title
- */
 function coaching_pro_comment_count () {
 	add_filter( 'genesis_title_comments', '__return_null' );
 	if ( is_single() ) {
@@ -171,17 +154,15 @@ function coaching_pro_comment_count () {
 	}
 }
 
-// * Customize read more text to include post title for screen readers
+// Customize 'read more' text to include the post title for screen readers.
 add_filter( 'excerpt_more', 'genesis_read_more_link' );
 add_filter( 'get_the_content_more_link', 'genesis_read_more_link' );
 add_filter( 'the_content_more_link', 'genesis_read_more_link' );
 function genesis_read_more_link() {
-
 	return '...</p><p><a href="'. get_permalink() .'" class="more-link button">' . __( 'Read more', 'coaching-pro' ) . '<span class="screen-reader-text"> ' . __( 'about', 'coaching-pro' ) . ' ' . get_the_title() . '</span></a>';
-
 }
 
-// Adds subtitles to single posts, only if the plugin WPSubtitle is active.
+// If the plugin WPSubtitle is active, add subtitles to single posts.
 add_action( 'genesis_entry_header', 'coaching_pro_do_post_subtitle', 11 );
 function coaching_pro_do_post_subtitle() {
 	if ( function_exists( 'the_subtitle' ) ) {
@@ -195,29 +176,28 @@ function coaching_pro_do_post_subtitle() {
 }
 
 
-// * Remove 'You are here' from the front of breadcrumb trail
+// Remove 'You are here' from the front of the breadcrumb trail.
+add_filter( 'genesis_breadcrumb_args', 'coaching_pro_prefix_breadcrumb' );
 function coaching_pro_prefix_breadcrumb( $args ) {
 	$args['labels']['prefix'] = '';
-
 	return $args;
 }
-add_filter( 'genesis_breadcrumb_args', 'coaching_pro_prefix_breadcrumb' );
 
-
+// Customize the breadcrumb separator character.
+add_filter( 'genesis_breadcrumb_args', 'coaching_pro_change_breadcrumb_separator' );
 function coaching_pro_change_breadcrumb_separator( $args ) {
 	$args['sep'] = ' &rsaquo; ';
 	return $args;
 }
-add_filter( 'genesis_breadcrumb_args', 'coaching_pro_change_breadcrumb_separator' );
 
-
-// * Removes alignleft from featured image and replaces with alignnone to avoid wrapping of text on blog / archive pages
+// Remove 'alignleft' from the featured image and replaces with 'alignnone' to avoid wrapping of text on blog / archive pages.
+add_filter( 'genesis_attr_entry-image', 'coaching_pro_remove_image_alignment' );
 function coaching_pro_remove_image_alignment( $attributes ) {
 	$attributes['class'] = str_replace( 'alignleft', 'alignnone', $attributes['class'] );
 	return $attributes;
 }
-add_filter( 'genesis_attr_entry-image', 'coaching_pro_remove_image_alignment' );
 
+// Show the featured image on Single Posts and Pages.
 add_action( 'genesis_entry_header', 'coaching_pro_show_featured_post_image', 1 );
 function coaching_pro_show_featured_post_image() {
 	// only show on single posts and pages
@@ -228,4 +208,12 @@ function coaching_pro_show_featured_post_image() {
 	if ( $image = genesis_get_image( 'format=url&size=featured-image' ) ) {
 		printf( '<img class="post-photo aligncenter" src="%s" alt="%s" />', $image, the_title_attribute( 'echo=0' ) );
 	}
+}
+
+// Add a CSS class to the site header if the Sticky Header Customizer option is enabled.
+add_filter( 'genesis_attr_site-header', 'coachingpro_stickynav_class' );
+function coachingpro_stickynav_class( $attributes ) {
+	$sticky_header = get_theme_mod( 'sticky_header', true );
+	$attributes['class'] = ( ! $sticky_header ? $attributes['class'] : $attributes['class'] . ' sticky' );
+	return $attributes;
 }

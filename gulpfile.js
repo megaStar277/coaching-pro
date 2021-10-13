@@ -5,163 +5,111 @@
  * @author     brandiD
  * @link       http://thebrandid.com
  * @license    GPL-2.0+
- * @version    1.0
+ * @version    2.0.0
  */
 
 'use strict';
 
-var gulp = require('gulp'),
+var autoprefixer = require('autoprefixer');
+var concat = require('gulp-concat');
+var del = require('del');
+var gulp = require('gulp');
+var postcss = require('gulp-postcss');
+var pxtorem = require('postcss-pxtorem');
+var sass = require('gulp-sass')(require('node-sass'));
+var wpPot = require('gulp-wp-pot');
+var zip = require('gulp-zip');
 
-  // Sass/CSS processes
-  bourbon = require('bourbon').includePaths,
-  neat = require('bourbon-neat').includePaths,
-  concat = require('gulp-concat'),
-  sass = require('gulp-sass'),
-  postcss = require('gulp-postcss'),
-  autoprefixer = require('autoprefixer'),
-  sourcemaps = require('gulp-sourcemaps'),
-  cssMinify = require('gulp-cssnano'),
-  sassLint = require('gulp-sass-lint'),
-  del = require('del'),
-  postcssSVG = require('postcss-svg'),
-  jsMinify = require('gulp-uglify'),
+// Generates a CSS file from the SASS files.
+gulp.task('styles', async function() {
 
+    // Define options for pxtorem.
+    var processors = [
+        autoprefixer({
+            overrideBrowserslist: [
+                "last 1 version"
+            ]
+        }),
+        pxtorem({
+            replace: false,
+            propList: ['font-size'],
+            mediaQuery: false,
+            rootValue: 10
+        })
+    ];
 
-  // Utilities
-  rename = require('gulp-rename'),
-  pxtorem = require('postcss-pxtorem'),
-  notify = require('gulp-notify'),
-  plumber = require('gulp-plumber'),
-  cssMQpacker = require('css-mqpacker'),
-  browserSync = require('browser-sync'),
-  zip = require('gulp-zip'),
-  wpPot = require('gulp-wp-pot'),
-  reload = browserSync.reload;
-
-/*************
- * Utilities
- ************/
-
-/**
- * Error handling
- *
- * @function
- */
-function handleErrors() {
-  var args = Array.prototype.slice.call(arguments);
-
-  notify.onError({
-    title: 'Task Failed [<%= error.message %>',
-    message: 'See console.',
-    sound: 'Sosumi' // See: https://github.com/mikaelbr/node-notifier#all-notification-options-with-their-defaults
-  }).apply(this, args);
-
-  gutil.beep(); // Beep 'sosumi' again
-
-  // Prevent the 'watch' task from stopping
-  this.emit('end');
-}
-
-/*************
- * CSS Tasks
- ************/
-
-/**
- * PostCSS Task Handler
- */
-gulp.task('postcss', function() {
-
-
-
-  return gulp.src('develop/scss/*.scss')
-
-
-    // Error handling
-    .pipe(plumber({
-      errorHandler: handleErrors
-    }))
-
-    // Wrap tasks in a sourcemap
-    .pipe(sourcemaps.init())
-
-    .pipe(sass({
-      includePaths: [].concat(bourbon, neat),
-      errLogToConsole: true,
-      outputStyle: 'expanded' // Options: nested, expanded, compact, compressed
-    }))
-
-
-    .pipe(postcss([
-      autoprefixer({
-        browsers: ['last 2 versions']
-      }),
-      pxtorem({
-        replace: false,
-        propList: ['font-size'],
-        mediaQuery: false,
-        rootValue: 10
-      }),
-      cssMQpacker({
-        sort: true
-      }),
-      postcssSVG({
-        paths: ['images']
-      })
-
-
-    ]))
-
-    .pipe(sourcemaps.write('./'))
-
-    .pipe(gulp.dest('./'))
-
-    .pipe(browserSync.stream())
-
-    .pipe(notify({
-      message: 'PostCSS is done.'
-    }));
-
+    return gulp.src('sass/*.scss')
+        .pipe(sass().on('error', sass.logError)) // Stop on errors.
+        .pipe(postcss(processors))
+        .pipe(gulp.dest('./')); // Generate the file here.
 });
 
+// Generates the Block Editor CSS file.
+gulp.task('blockeditorstyles', async function() {
 
+    var processors = [
+        autoprefixer({
+            overrideBrowserslist: [
+                "last 1 version"
+            ]
+        })
+    ];
 
-gulp.task('sass:lint', ['postcss'], function() {
-  gulp.src([
-      'develop/scss/*.scss'
-    ])
-    .pipe(sassLint())
-    .pipe(sassLint.format())
-    .pipe(sassLint.failOnError())
+    return gulp.src('sass/block-editor/*.scss')
+        .pipe(sass().on('error', sass.logError)) // Stop on errors.
+        .pipe(postcss(processors))
+        .pipe(gulp.dest('./css/')); // Generate the file here.
 });
 
-
-
-
-
-/********************
- * All Tasks Listeners
- *******************/
-
-gulp.task('watch', function() {
-
-  browserSync({
-    open: false, //no new tab
-    proxy: "https://coaching-pro.local" // use http://_s.com:3000 to use BrowserSync
-  });
-
-  gulp.watch('develop/scss/**/*.scss', ['styles']);
-
-
+// Removes the generated CSS file.
+gulp.task('clean', async function() {
+    return del([
+        'style.css',
+    ]);
 });
 
-/**
- * Individual tasks.
- */
-// gulp.task('scripts', [''])
-gulp.task('styles', ['clean', 'sass:lint']);
-
-// gulp.task('build', ['styles', 'compress', 'zip']);
-
-gulp.task('clean', function() {
-  del(['*.css*']);
+// Watch SASS files and auto-generate a new CSS file on changes.
+gulp.task('watch', async function() {
+    return gulp.watch(['sass/*.scss', 'sass/block-editor/*.scss'], (done) => {
+        gulp.series(['clean', 'styles', 'blockeditorstyles'])(done);
+    });
 });
+
+// Generate .pot files for language translation.
+gulp.task('pot', function() {
+    return gulp.src(['./**/*.php'])
+        .pipe(wpPot({
+            domain: 'coaching-pro',
+            package: 'Coaching Pro'
+        }))
+        .pipe(gulp.dest('languages/coaching-pro.pot'));
+});
+
+// Zip all theme files and put into /dist/ folder.
+gulp.task('zip', async function() {
+    return gulp.src([
+        'config/*',
+        'css/*',
+        'images/*',
+        'includes/**/*',
+        'js/*',
+        'languages/*',
+        'lib/*',
+        'xml/*',
+        '*.css',
+        '*.md',
+        '*.php',
+        'readme.txt',
+        'screenshot.png',
+    ], {
+        base: '.'
+    })
+    .pipe(zip('coaching-pro.zip'))
+    .pipe(gulp.dest('./dist'))
+});
+
+// Remove old stylesheet file, compile all SASS files, zip theme files and put it into the /dist/ folder.
+gulp.task('build', gulp.series(['clean', 'styles', 'pot', 'zip']));
+
+// Default process if none is defined.
+gulp.task('default', gulp.series(['clean', 'styles']));

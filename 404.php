@@ -7,7 +7,7 @@
  * @package Coaching Pro Theme
  * @author  thebrandiD
  * @license GPL-2.0+
- * @link    https://thebrandidthemes.com/
+ * @link    https://buildmybrandid.com/
  */
 
 //* Remove default loop

@@ -1,0 +1,27 @@
+/* # Plugins
+---------------------------------------------------------------------------------------------------- */
+
+/* Gravity Forms
+--------------------------------------------- */
+.gform_wrapper {
+    background-color: $medium-background-color;
+    padding: 20px;
+}
+
+/* Ninja Forms
+--------------------------------------------- */
+.ninja-forms-all-fields-wrap {
+    padding: 20px;
+}
+
+/* Contact Form 7
+--------------------------------------------- */
+.wpcf7-form {
+    padding: 20px;
+}
+
+/* ## Jetpack
+--------------------------------------------- */
+#wpstats {
+    display: none;
+}

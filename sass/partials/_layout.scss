@@ -1,0 +1,224 @@
+/* # Structure and Layout
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Site Containers
+--------------------------------------------- */
+.site-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.admin-bar .site-container {
+    min-height: calc(100vh - 46px);
+    @include media($screen--m) {
+        min-height: calc(100vh - 32px);
+    }
+}
+
+.site-inner,
+.wrap {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.wrap {
+    padding-left: 5%;
+    padding-right: 5%;
+    @include media($screen--m) {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+
+.site-inner {
+    clear: both;
+    margin-top: 0;
+    max-width: 100%;
+    padding: 1% 1% 0;
+    flex: 1 0 auto;
+    // 1 0 auto needed here for IE11
+    word-wrap: break-word;
+    @include media($screen--m) {
+        padding: 40px;
+        margin-top: 120px;
+    }
+    @include media($screen--l) {
+        margin-top: 90px;
+        max-width: $max-width;
+    }
+}
+
+.fixed-header-off .site-inner {
+    margin-top: 0;
+}
+
+/* ## Column Widths and Positions
+--------------------------------------------- */
+/* ### Wrapping div for .content and .sidebar-primary */
+
+.content-sidebar-wrap {
+    overflow: visible;
+}
+
+body.full-width-content {
+    .content-sidebar-wrap {
+        display: block;
+    }
+}
+
+body.content-sidebar {
+    .content-sidebar-wrap {
+        display: flex;
+        flex-direction: column;
+        @include media($screen--l) {
+            flex-direction: row;
+        }
+    }
+}
+
+/* ### Content
+--------------------------------------------- */
+.content,
+.sidebar-primary {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content-sidebar {
+    .content {
+        order: 1;
+        @include media($screen--m) {
+            width: 68%;
+        }
+    }
+    .sidebar-primary {
+        order: 2;
+        @include media($screen--m) {
+            width: 26%;
+            flex-basis: 300px;
+        }
+    }
+}
+
+.sidebar-content{
+    .content {
+        order: 1;
+        @include media($screen--m) {
+            order: 2;
+            width: 68%;
+        }
+    }
+    .sidebar-primary {
+        order: 2;
+        @include media($screen--m) {
+            order: 1;
+            width: 26%;
+            flex-basis: 300px;
+        }
+    }
+}
+
+.full-width-content {
+    .site-inner {
+        padding: 40px 0;
+        max-width: 100%;
+        width: 100%;
+        @include media($screen--l) {
+            max-width: $max-width;
+            width: 1200px;
+        }
+        .content {
+            width: 100%;
+            max-width: none;
+            @include media($screen--m) {
+                // width: 65%;
+                // margin-left: auto;
+                // margin-right: auto;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+            @include media($screen--l) {
+                width: 65%;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .breadcrumb {
+                @include media($screen--l) {
+                    margin-left: -250px;
+                    margin-right: -250px;
+                    max-width: 1280px;
+                }
+            }
+            .entry.page {
+                .entry-header {
+                    text-align: center;
+                    @include media($screen--l) {
+                        margin-left: -250px;
+                        margin-right: -250px;
+                        max-width: 1280px;
+                        padding: 0 30px;
+                    }
+                }
+            }
+        }
+    }
+    &.blog-archive {
+        .archive-description {
+            padding-left: 0;
+            padding-right: 0;
+            h1 {
+                font-size: 36px;
+            }
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: none;
+            @include media($screen--m) {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                width: 100%;
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            article.entry {
+                width: 100%;
+                @include media($screen--m) {
+                    width: 31%;
+                    // margin-left: 1%;
+                    // margin-right: 1%;
+                }
+                h2.entry-title {
+                    a {
+                        font-size: 20px;
+                    }
+                }
+                .entry-content {
+                    font-size: 17px;
+                }
+            }
+            .pagination {
+                width: 100%;
+            }
+        }
+    }
+}
+
+body.first-block-align-full.full-width-content {
+    .site-inner {
+        padding-top: 0;
+        @include media($screen--m) {
+            margin-top: 0;
+            padding: 0 0 40px 0;
+        }
+        @include media($screen--l) {
+            margin-top: 0;
+        }
+    }
+}

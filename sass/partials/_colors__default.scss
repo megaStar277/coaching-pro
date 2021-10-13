@@ -1,0 +1,205 @@
+/* Default Colors - All of the elements with colors not in base color scheme
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Header Colors
+--------------------------------------------- */
+.home .site-header.sticky:not(.scrolled) {
+    background-color: transparent;
+}
+
+.home .site-header:not(.sticky),
+.home .site-header.sticky.scrolled,
+body:not(.home) .site-header {
+    background-color: $theme-color8 !important;
+}
+
+/* ## Default Menu Colors
+--------------------------------------------- */
+
+.nav-primary {
+    background-color: transparent;
+}
+
+/* Colors for transparent header nav menu */
+body.first-block-align-full.full-width-content {
+    header.sticky:not(.scrolled) {
+        .site-title {
+            a {
+                @include media($screen--m) {
+                    color: #fff;
+                }
+            }
+        }
+        .site-description {
+            @include media($screen--m) {
+                color: #fff;
+            }
+        }
+        .genesis-responsive-menu {
+            .genesis-nav-menu {
+                .menu-item {
+                    a {
+                        @include media($screen--m) {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    header.sticky.scrolled {
+        .genesis-responsive-menu {
+            .genesis-nav-menu {
+                .menu-item {
+                    a {
+                        // color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.genesis-nav-menu {
+    .sub-menu {
+        background: $sub-menu-background;
+        a {
+            color: $sub-menu-color;
+        }
+    }
+    .sub-menu,
+    .sub-menu a {
+        border-color: $white;
+    }
+}
+
+.menu-toggle {
+    color: $white;
+    &:focus,
+    &:hover {
+        background-color: $soft-white;
+    }
+    .activated .genesis-nav-menu a {
+        color: $sub-menu-color;
+    }
+}
+
+.sub-menu-toggle,
+.sub-menu-toggle:focus,
+.sub-menu-toggle:hover {
+    background-color: $sub-menu-background;
+}
+
+.genesis-responsive-menu {
+    .genesis-nav-menu {
+        background-color: $sub-menu-background;
+        @include media($screen--m) {
+            background-color: transparent;
+        }
+        .menu-item {
+            a {
+                border-bottom-color: $white;
+            }
+        }
+        .sub-menu {
+            @include media($screen--m) {
+                border-top-color: $white;
+            }
+            a {
+                color: $sub-menu-color;
+            }
+        }
+        .sub-menu,
+        .sub-menu a {
+            border-color: $white;
+        }
+    }
+}
+
+.menu-social-menu-container li > a {
+    color: $theme-color2;
+    border-bottom: none;
+}
+
+/* ## Theme Colors
+--------------------------------------------- */
+
+a.button,
+button {
+    color: $white;
+}
+
+.button:focus,
+.button:hover,
+button:focus,
+button:hover,
+input[type="button"]:focus,
+input[type="button"]:hover,
+input[type="reset"]:focus,
+input[type="reset"]:hover,
+input[type="submit"]:focus,
+input[type="submit"]:hover {
+    background-color: $grey;
+}
+
+.fixed-header-on .custom-header-background .site-header {
+    @include media($screen--m) {
+        background-color: transparent;
+    }
+}
+
+.archive-pagination {
+    li {
+        a {
+            background: lighten($grey, 25);
+            color: darken($soft-black,10);
+        }
+    }
+    .active {
+        a {
+            color: $white;
+        }
+    }
+}
+
+/* ## Footer Colors
+--------------------------------------------- */
+.site-footer {
+    background-color: $theme-color8;
+    color: $theme-color3;
+    a {
+        color: $theme-color3;
+        border-bottom: 1px solid $theme-color3;
+        &:focus,
+        &:hover {
+            // color: $grey;
+            border-bottom: 1px solid transparent;
+        }
+    }
+}
+
+.footer-widgets {
+    background-color: $white;
+    .footer-widgets-1 {
+        // background: $grey;
+        a {
+            // color: $white;
+            // border-color: $white;
+            &:focus,
+            &:hover {
+                // color: $base-color-6;
+            }
+        }
+        section:last-child {
+            // color: $white;
+        }
+    }
+    .menu-social-menu-container {
+        li {
+            & > a {
+                color: $white;
+                border-bottom: none;
+            }
+        }
+    }
+}

@@ -7,7 +7,7 @@
  * @package Coaching Pro Theme
  * @author  thebrandiD
  * @license GPL-2.0+
- * @link    https://thebrandidthemes.com/
+ * @link    https://buildmybrandid.com/
  */
 
 // Start the engine.
@@ -49,26 +49,29 @@ function coaching_pro_localization_setup() {
 // Load Theme Setup and Configuration.
 include_once( CHILD_THEME_DIR . '/lib/theme-setup.php' );
 
-// Register Widget Areas.
-include_once( CHILD_THEME_DIR . '/lib/widget-setup.php' );
+// Color functions.
+include_once( CHILD_THEME_DIR . '/lib/color-functions.php' );
+
+// Import Customizer custom toggle control.
+require_once CHILD_THEME_DIR . '/lib/class-coaching-pro-toggle-control.php';
+
+// Customizer functions.
+include_once( CHILD_THEME_DIR . '/lib/customize.php' );
+
+// Font functions.
+include_once( CHILD_THEME_DIR . '/lib/font-functions.php' );
 
 // Add the social icons functions.
 include_once( CHILD_THEME_DIR . '/lib/icon-functions.php' );
-
-// Add Color Schemes to WordPress Theme Customizer.
-include_once( CHILD_THEME_DIR . '/lib/customize-colors.php' );
-
-// Include Customizer CSS.
-include_once( CHILD_THEME_DIR . '/lib/output-colors.php' );
-
-// Add Image upload and Color select to WordPress Theme Customizer.
-include_once( CHILD_THEME_DIR . '/lib/customize.php' );
-
-// Include Customizer CSS for home page.
-include_once( CHILD_THEME_DIR . '/lib/output.php' );
 
 // Add the helper functions.
 include_once( CHILD_THEME_DIR . '/lib/helper-functions.php' );
 
 // Load Scripts and Styles.
 include_once( CHILD_THEME_DIR . '/lib/load-scripts.php' );
+
+// Load Block Editor functions.
+include_once( CHILD_THEME_DIR . '/lib/block-functions.php' );
+
+// Load Block Patterns.
+include_once( CHILD_THEME_DIR . '/lib/block-patterns.php' );

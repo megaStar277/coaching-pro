@@ -1,0 +1,40 @@
+/*
+Social Icons Classes - for custom menu and widgets
+---------------------------------------------------------------------------------------------------- */
+.menu-social-menu-container {
+    ul#menu-social-menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding: 20px;
+        text-align: center;
+        & > li {
+            display: inline-block;
+            padding: 20px 16px;
+            a {
+                svg {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+}
+
+.sidebar {
+    .menu-social-menu-container {
+        ul#menu-social-menu {
+            padding: 0;
+            & > li {
+                padding: 10px;
+                a {
+                    svg {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

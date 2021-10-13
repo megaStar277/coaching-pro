@@ -1,4 +1,4 @@
-# Copyright (C) 2018 Coaching Pro
+# Copyright (C) 2021 Coaching Pro
 # This file is distributed under the same license as the Coaching Pro package.
 msgid ""
 msgstr ""
@@ -17,35 +17,88 @@ msgstr ""
 msgid "Not found, error 404"
 msgstr ""
 
-#: 404.php:44
-msgid "The page you are looking for no longer exists. Perhaps you can return back to the site's <a href=\"%s\">homepage</a> and see if you can find what you are looking for. Or, you can try finding it by using the search form below."
-msgstr ""
-
 #: 404.php:51
 msgid "The page you are looking for no longer exists. Perhaps you can return back to the site's <a href=\"%s\">homepage</a> and see if you can find what you are looking for. Or, you can try finding it with the information below."
+msgstr ""
+
+#: 404.php:44
+msgid "The page you are looking for no longer exists. Perhaps you can return back to the site's <a href=\"%s\">homepage</a> and see if you can find what you are looking for. Or, you can try finding it by using the search form below."
 msgstr ""
 
 #: 404.php:61
 msgid "Sitemap"
 msgstr ""
 
-#: page_landing.php:2
-msgid "Landing Page"
+#: config/appearance.php:61, lib/color-functions.php:49
+msgid "Color 1"
 msgstr ""
 
-#: searchform.php:19
-msgctxt "label"
-msgid "Search for:"
+#: config/appearance.php:66, lib/color-functions.php:73
+msgid "Color 2"
 msgstr ""
 
-#: searchform.php:21
-msgctxt "placeholder"
-msgid "Search &hellip;"
+#: config/appearance.php:71, lib/color-functions.php:97
+msgid "Color 3"
 msgstr ""
 
-#: searchform.php:23
-msgctxt "submit button"
-msgid "Search"
+#: config/appearance.php:76, lib/color-functions.php:121
+msgid "Color 4"
+msgstr ""
+
+#: config/appearance.php:81, lib/color-functions.php:145
+msgid "Text Color 1"
+msgstr ""
+
+#: config/appearance.php:86, lib/color-functions.php:169
+msgid "Text Color 2"
+msgstr ""
+
+#: config/appearance.php:91, lib/color-functions.php:193
+msgid "Background Color 1"
+msgstr ""
+
+#: config/appearance.php:96, lib/color-functions.php:217
+msgid "Background Color 2"
+msgstr ""
+
+#: config/appearance.php:101
+msgid "White"
+msgstr ""
+
+#: config/appearance.php:106
+msgid "Black"
+msgstr ""
+
+#: config/appearance.php:113, lib/font-functions.php:115
+msgid "H1"
+msgstr ""
+
+#: config/appearance.php:119, lib/font-functions.php:138
+msgid "H2"
+msgstr ""
+
+#: config/appearance.php:125, lib/font-functions.php:161
+msgid "H3"
+msgstr ""
+
+#: config/appearance.php:131, lib/font-functions.php:184
+msgid "H4"
+msgstr ""
+
+#: config/appearance.php:137, lib/font-functions.php:207
+msgid "H5"
+msgstr ""
+
+#: config/appearance.php:143, lib/font-functions.php:230
+msgid "H6"
+msgstr ""
+
+#: config/appearance.php:149, lib/font-functions.php:253
+msgid "Body Text"
+msgstr ""
+
+#: lib/color-functions.php:27
+msgid "Color Palette"
 msgstr ""
 
 #: lib/customize-colors.php:286, lib/customize-colors.php:338
@@ -96,136 +149,8 @@ msgstr ""
 msgid "Navigation Text Hover Color"
 msgstr ""
 
-#: lib/customize.php:43
-msgid "No Image"
-msgstr ""
-
-#: lib/customize.php:74
-msgid "Front Page Background Images"
-msgstr ""
-
-#: lib/customize.php:97
-msgid "Front Page Welcome Section Image:"
-msgstr ""
-
-#: lib/customize.php:107
-msgid "Front Page Call To Action Section Image:"
-msgstr ""
-
-#: lib/customize.php:117
-msgid "Front Page Offer Section Image:"
-msgstr ""
-
-#: lib/customize.php:126
-msgid "General Settings"
-msgstr ""
-
-#: lib/customize.php:141
-msgid "Turn off Sticky Header Navigation (allow header to scroll) "
-msgstr ""
-
-#: lib/customize.php:160
-msgid "Turn off front page graphics"
-msgstr ""
-
-#: lib/customize.php:179
-msgid "Use minified CSS stylesheet"
-msgstr ""
-
-#: lib/customize.php:188
-msgid "Logo Image"
-msgstr ""
-
-#: lib/customize.php:199
-msgid "Background Repeat"
-msgstr ""
-
-#: lib/customize.php:204
-msgid "No Repeat"
-msgstr ""
-
-#: lib/customize.php:205
-msgid "Tile"
-msgstr ""
-
-#: lib/customize.php:206
-msgid "Tile Horizontally"
-msgstr ""
-
-#: lib/customize.php:207
-msgid "Tile Vertically"
-msgstr ""
-
-#: lib/customize.php:224
-msgid "Background Size"
-msgstr ""
-
-#: lib/customize.php:229
-msgid "Cover"
-msgstr ""
-
-#: lib/customize.php:230
-msgid "Contain"
-msgstr ""
-
-#: lib/customize.php:231
-msgid "100% width"
-msgstr ""
-
-#: lib/customize.php:232
-msgid "100% height"
-msgstr ""
-
-#: lib/customize.php:233
-msgid "Actual Size"
-msgstr ""
-
-#: lib/customize.php:245
-msgid "Background Position Horizontal"
-msgstr ""
-
-#: lib/customize.php:250
-msgid "Left"
-msgstr ""
-
-#: lib/customize.php:251, lib/customize.php:269
-msgid "Center"
-msgstr ""
-
-#: lib/customize.php:252
-msgid "Right"
-msgstr ""
-
-#: lib/customize.php:263
-msgid "Background Position Vertical"
-msgstr ""
-
-#: lib/customize.php:268
-msgid "Top"
-msgstr ""
-
-#: lib/customize.php:270
-msgid "Bottom"
-msgstr ""
-
-#: lib/customize.php:283
-msgid "Change the color of the overlay for this image."
-msgstr ""
-
-#: lib/customize.php:284
-msgid "Overlay Color"
-msgstr ""
-
-#: lib/customize.php:297
-msgid "Background Overlay"
-msgstr ""
-
-#: lib/customize.php:298, lib/customize.php:318
-msgid "Opacity (0 = transparent | 1 = solid)"
-msgstr ""
-
-#: lib/customize.php:317
-msgid "Image Opacity"
+#: lib/font-functions.php:93
+msgid "Fonts"
 msgstr ""
 
 #: lib/icon-functions.php:46
@@ -236,11 +161,11 @@ msgstr ""
 msgid "Please define an SVG icon filename."
 msgstr ""
 
-#: lib/load-scripts.php:119
+#: lib/load-scripts.php:132
 msgid "Menu"
 msgstr ""
 
-#: lib/load-scripts.php:121
+#: lib/load-scripts.php:134
 msgid "Submenu"
 msgstr ""
 
@@ -248,82 +173,18 @@ msgstr ""
 msgid "Featured Image"
 msgstr ""
 
-#: lib/theme-setup.php:89
+#: lib/theme-setup.php:90
 msgid "Primary Menu"
 msgstr ""
 
-#: lib/theme-setup.php:89
+#: lib/theme-setup.php:90
 msgid "Footer Menu"
 msgstr ""
 
-#: lib/theme-setup.php:179
+#: lib/theme-setup.php:180
 msgid "Read more"
 msgstr ""
 
-#: lib/theme-setup.php:179
+#: lib/theme-setup.php:180
 msgid "about"
-msgstr ""
-
-#: lib/widget-setup.php:13
-msgid "Front Page Welcome Section"
-msgstr ""
-
-#: lib/widget-setup.php:14
-msgid "This is the welcome area in the header."
-msgstr ""
-
-#: lib/widget-setup.php:22
-msgid "Front Page 1 - a"
-msgstr ""
-
-#: lib/widget-setup.php:23
-msgid "This is the front page 1a section."
-msgstr ""
-
-#: lib/widget-setup.php:29
-msgid "Front Page 1 - b"
-msgstr ""
-
-#: lib/widget-setup.php:30
-msgid "This is the front page 1b section."
-msgstr ""
-
-#: lib/widget-setup.php:36
-msgid "Front Page 2"
-msgstr ""
-
-#: lib/widget-setup.php:37
-msgid "This is the front page 2 section."
-msgstr ""
-
-#: lib/widget-setup.php:44
-msgid "Front Page 3"
-msgstr ""
-
-#: lib/widget-setup.php:45
-msgid "This is the front page 3 section."
-msgstr ""
-
-#: lib/widget-setup.php:52
-msgid "Front Page Testimonials"
-msgstr ""
-
-#: lib/widget-setup.php:53
-msgid "This is the front page testimonials section."
-msgstr ""
-
-#: lib/widget-setup.php:61
-msgid "Front Page Call to Action"
-msgstr ""
-
-#: lib/widget-setup.php:62
-msgid "This is the call to action  section."
-msgstr ""
-
-#: lib/widget-setup.php:69
-msgid "Front Page Offer"
-msgstr ""
-
-#: lib/widget-setup.php:70
-msgid "This is the front page offer section."
 msgstr ""

@@ -1,0 +1,189 @@
+/* # Content Area
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Entries
+--------------------------------------------- */
+.entry {
+    background-color: $white;
+    padding: 30px;
+    margin-bottom: 5%;
+    @include media($screen--s1) {
+        margin-bottom: 40px;
+    }
+    ol,
+    ul {
+        margin-bottom: 28px;
+        margin-left: 40px;
+    }
+    ol > li {
+        list-style-type: decimal;
+    }
+    ul > li {
+        list-style-type: disc;
+    }
+    ol ol,
+    ul ul {
+        margin-bottom: 0;
+    }
+    code {
+        background-color: $base-text-color;
+        color: $background-color;
+    }
+}
+
+body.first-block-align-full.full-width-content {
+    .entry {
+        padding-top: 0;
+        @include media($screen--m) {
+            padding: 0 0 30px 0;
+        }
+    }
+}
+
+body:not(.first-block-align-full).full-width-content {
+    .entry {
+        padding: 30px;
+        @include media($screen--m) {
+            padding: 30px 0;
+        }
+    }
+}
+
+/* ## Entry Meta
+--------------------------------------------- */
+p.entry-meta {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.entry-header .entry-meta {
+    margin-bottom: 24px;
+}
+
+.entry-footer .entry-meta {
+    border-top: 1px solid $background-color;
+    padding-top: 24px;
+}
+
+.entry-categories,
+.entry-tags {
+    display: block;
+}
+
+.entry-comments-link {
+    font-family: $accent-font;
+}
+
+/* ## Pagination
+--------------------------------------------- */
+.pagination {
+    clear: both;
+    margin: 5% auto;
+    @include media($screen--s1) {
+        margin: 40px 0;
+    }
+}
+
+.adjacent-entry-pagination {
+    margin-bottom: 0;
+}
+
+.archive-pagination {
+    li {
+        display: inline;
+    }
+    a {
+        background-color: $white;
+        color: $base-text-color;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 8px 12px;
+        text-decoration: none;
+        border-bottom: none;
+    }
+    .active a,
+    a:focus,
+    a:hover {
+        color: $white;
+    }
+    li a {
+        margin-bottom: 4px;
+        @include media($screen--s1) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* ## Comments
+--------------------------------------------- */
+.comment-respond,
+.entry-comments,
+.entry-pings {
+    background-color: $soft-white;
+    font-size: 16px;
+    padding: 30px;
+    margin-bottom: 5%;
+    @include media($screen--s1) {
+        margin-bottom: 40px;
+    }
+}
+
+.comment-list {
+    li {
+        padding: 40px 0 0 30px;
+    }
+    .depth-1 {
+        padding-left: 0;
+    }
+}
+
+.comment-header {
+    margin-bottom: 30px;
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.comment-content {
+    clear: both;
+    ul > li {
+        list-style-type: disc;
+    }
+}
+
+.comment-respond {
+    input[type="email"],
+    input[type="text"],
+    input[type="url"] {
+        width: 50%;
+    }
+    label {
+        display: block;
+        margin-right: 12px;
+    }
+}
+
+.entry-pings .reply {
+    display: none;
+}
+
+/* # Sidebars
+---------------------------------------------------------------------------------------------------- */
+.sidebar {
+    font-size: 16px;
+    margin-bottom: 5%;
+    @include media($screen--s1) {
+        margin-bottom: 40px;
+    }
+    .widget {
+        background-color: $white;
+        padding: 30px 20px;
+        margin-bottom: 5%;
+        @include media($screen--s1) {
+            padding: 40px 20px;
+            margin-bottom: 0;
+        }
+    }
+}

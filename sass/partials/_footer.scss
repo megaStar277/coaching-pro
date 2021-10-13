@@ -1,0 +1,30 @@
+/* # Site Footer
+---------------------------------------------------------------------------------------------------- */
+.site-footer {
+    font-size: 16px;
+    line-height: 1;
+    padding: 20px 0;
+    text-align: center;
+    .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include media($screen--m) {
+            justify-content: flex-end;
+        }
+    }
+    a {
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        &:focus,
+        &:hover {
+            border-bottom: 1px solid transparent;
+        }
+    }
+    p {
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+}

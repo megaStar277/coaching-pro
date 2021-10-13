@@ -1,0 +1,18 @@
+/* Overrides for colors hover and focus - loads after colors.
+---------------------------------------------------------------------------------------------------- */
+.footer-widgets {
+    .footer-widgets-1,
+    .footer-widgets-2 {
+        a:focus,
+        a:hover {
+            color: $base-text-color;
+            border-bottom-color: transparent;
+        }
+    }
+    .menu-social-menu-container {
+        li > a {
+            color: $white;
+            border-bottom: none;
+        }
+    }
+}
