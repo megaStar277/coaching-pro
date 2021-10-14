@@ -589,10 +589,10 @@ table {
   @media screen and (min-width: 1024px) {
     .site-inner {
       padding: 40px;
-      margin-top: 120px; } }
+      margin-top: 122px; } }
   @media screen and (min-width: 1280px) {
     .site-inner {
-      margin-top: 90px;
+      margin-top: 79px;
       max-width: 1280px; } }
 
 .fixed-header-off .site-inner {
@@ -720,14 +720,17 @@ body.content-sidebar .content-sidebar-wrap {
   .full-width-content.blog-archive .content .pagination {
     width: 100%; }
 
-body.first-block-align-full.full-width-content .site-inner {
+body.first-block-align-full.full-width-content.genesis-title-hidden.genesis-breadcrumbs-hidden .site-inner {
+  padding-top: 0; }
+
+body.first-block-align-full.full-width-content.genesis-title-hidden.genesis-breadcrumbs-hidden.transparent-header .site-inner {
   padding-top: 0; }
   @media screen and (min-width: 1024px) {
-    body.first-block-align-full.full-width-content .site-inner {
+    body.first-block-align-full.full-width-content.genesis-title-hidden.genesis-breadcrumbs-hidden.transparent-header .site-inner {
       margin-top: 0;
       padding: 0 0 40px 0; } }
   @media screen and (min-width: 1280px) {
-    body.first-block-align-full.full-width-content .site-inner {
+    body.first-block-align-full.full-width-content.genesis-title-hidden.genesis-breadcrumbs-hidden.transparent-header .site-inner {
       margin-top: 0; } }
 
 /* # Common Classes
@@ -1653,12 +1656,12 @@ p.entry-meta {
 ---------------------------------------------------------------------------------------------------- */
 /* ## Header Colors
 --------------------------------------------- */
-.home .site-header.sticky:not(.scrolled) {
+.transparent-header .site-header.sticky:not(.scrolled) {
   background-color: transparent; }
 
-.home .site-header:not(.sticky),
-.home .site-header.sticky.scrolled,
-body:not(.home) .site-header {
+.transparent-header .site-header:not(.sticky),
+.transparent-header .site-header.sticky.scrolled,
+body:not(.transparent-header) .site-header {
   background-color: #f8f8f8 !important; }
 
 /* ## Default Menu Colors
@@ -1668,15 +1671,15 @@ body:not(.home) .site-header {
 
 /* Colors for transparent header nav menu */
 @media screen and (min-width: 1024px) {
-  body.first-block-align-full.full-width-content header.sticky:not(.scrolled) .site-title a {
+  body.transparent-header header.sticky:not(.scrolled) .site-title a {
     color: #fff; } }
 
 @media screen and (min-width: 1024px) {
-  body.first-block-align-full.full-width-content header.sticky:not(.scrolled) .site-description {
+  body.transparent-header header.sticky:not(.scrolled) .site-description {
     color: #fff; } }
 
 @media screen and (min-width: 1024px) {
-  body.first-block-align-full.full-width-content header.sticky:not(.scrolled) .genesis-responsive-menu .genesis-nav-menu .menu-item a {
+  body.transparent-header header.sticky:not(.scrolled) .genesis-responsive-menu .genesis-nav-menu .menu-item a {
     color: #fff; } }
 
 .genesis-nav-menu .sub-menu {
@@ -1863,6 +1866,9 @@ input[type="submit"]:hover {
 /* Full-width blocks. */
 .alignfull {
   max-width: 100vw; }
+
+.wp-block-cover.alignfull {
+  width: 100vw; }
 
 /* Wide width blocks. */
 .alignwide {

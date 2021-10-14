@@ -3,13 +3,13 @@
 
 /* ## Header Colors
 --------------------------------------------- */
-.home .site-header.sticky:not(.scrolled) {
+.transparent-header .site-header.sticky:not(.scrolled) {
     background-color: transparent;
 }
 
-.home .site-header:not(.sticky),
-.home .site-header.sticky.scrolled,
-body:not(.home) .site-header {
+.transparent-header .site-header:not(.sticky),
+.transparent-header .site-header.sticky.scrolled,
+body:not(.transparent-header) .site-header {
     background-color: $theme-color8 !important;
 }
 
@@ -21,7 +21,7 @@ body:not(.home) .site-header {
 }
 
 /* Colors for transparent header nav menu */
-body.first-block-align-full.full-width-content {
+body.transparent-header {
     header.sticky:not(.scrolled) {
         .site-title {
             a {

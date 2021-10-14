@@ -64,6 +64,9 @@ include_once( CHILD_THEME_DIR . '/lib/font-functions.php' );
 // Add the social icons functions.
 include_once( CHILD_THEME_DIR . '/lib/icon-functions.php' );
 
+// Custom metaboxes.
+include_once( CHILD_THEME_DIR . '/lib/meta-boxes.php' );
+
 // Add the helper functions.
 include_once( CHILD_THEME_DIR . '/lib/helper-functions.php' );
 

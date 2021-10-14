@@ -41,10 +41,10 @@
     word-wrap: break-word;
     @include media($screen--m) {
         padding: 40px;
-        margin-top: 120px;
+        margin-top: 122px;
     }
     @include media($screen--l) {
-        margin-top: 90px;
+        margin-top: 79px;
         max-width: $max-width;
     }
 }
@@ -211,14 +211,28 @@ body.content-sidebar {
 }
 
 body.first-block-align-full.full-width-content {
-    .site-inner {
-        padding-top: 0;
-        @include media($screen--m) {
-            margin-top: 0;
-            padding: 0 0 40px 0;
+    &.genesis-title-hidden.genesis-breadcrumbs-hidden {
+        .site-inner {
+            padding-top: 0;
+            // @include media($screen--m) {
+            //     margin-top: 0;
+            //     padding: 0 0 40px 0;
+            // }
+            // @include media($screen--l) {
+            //     margin-top: 0;
+            // }
         }
-        @include media($screen--l) {
-            margin-top: 0;
+        &.transparent-header {
+            .site-inner {
+                padding-top: 0;
+                @include media($screen--m) {
+                    margin-top: 0;
+                    padding: 0 0 40px 0;
+                }
+                @include media($screen--l) {
+                    margin-top: 0;
+                }
+            }
         }
     }
 }

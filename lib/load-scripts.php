@@ -15,7 +15,7 @@ add_action( 'wp_enqueue_scripts', 'coaching_pro_enqueue_scripts_styles' );
 function coaching_pro_enqueue_scripts_styles() {
 	$suffix = ( defined( 'COACHING_PRO_DEBUG' ) && COACHING_PRO_DEBUG ) ? '' : '.min';
 
-	$googlefontsURL = '//fonts.googleapis.com/css?family='.get_fonts_list();
+	$googlefontsURL = 'https://fonts.googleapis.com/css?family='.get_fonts_list();
 
 	// Google fonts.
 	wp_enqueue_style( 'coaching-pro-fonts', $googlefontsURL, array(), CHILD_THEME_VERSION );

@@ -23,7 +23,7 @@ add_theme_support( 'editor-styles' );
 add_action( 'enqueue_block_editor_assets', 'coachingpro_enqueue_googlefonts' );
 function coachingpro_enqueue_googlefonts() {
 
-	$googlefontsURL = '//fonts.googleapis.com/css?family='.blockeditor_get_fonts_list();
+	$googlefontsURL = 'https://fonts.googleapis.com/css?family='.blockeditor_get_fonts_list();
 
 	// Google fonts.
 	wp_enqueue_style( 'coaching-pro-blockeditor-googlefonts', $googlefontsURL, array(), CHILD_THEME_VERSION );
@@ -98,12 +98,22 @@ function coachingpro_blocks_body_classes( $classes ) {
 
 	$blocks = (array) parse_blocks( $post_object->post_content );
 
+	// First block type class.
 	if ( isset( $blocks[0]['blockName'] ) ) {
 		$classes[] = 'first-block-' . str_replace( '/', '-', $blocks[0]['blockName'] );
 	}
 
+	// First block alignment class.
 	if ( isset( $blocks[0]['attrs']['align'] ) ) {
 		$classes[] = 'first-block-align-' . $blocks[0]['attrs']['align'];
+	}
+
+	// Transparent header class.
+	$meta = get_post_meta( get_the_ID() );
+	$transheader_checkbox_value = ( isset( $meta['page_transparent_header_value'][0] ) &&  '1' === $meta['page_transparent_header_value'][0] ) ? 1 : 0;
+
+	if ( 0 !== $transheader_checkbox_value ) {
+		$classes[] = 'transparent-header';
 	}
 
 	return $classes;
