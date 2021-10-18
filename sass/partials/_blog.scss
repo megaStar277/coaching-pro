@@ -13,3 +13,13 @@
         }
     }
 }
+
+.featured-post {
+    h2,
+    h3 {
+        margin-bottom: 0;
+    }
+    .entry-title {
+    	text-align: center;
+    }
+}

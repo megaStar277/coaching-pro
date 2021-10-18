@@ -395,12 +395,15 @@ function coaching_pro_color_css() {
 	// Output color for Mobile Menu Button.
 	$css .= "
 
-		button.menu-toggle {
+		button.menu-toggle,
+		.wp-block-search__button {
 			background-color: " . $mobilemenubutton_color . ";
 		}
 
 		button.menu-toggle:hover,
-		button.menu-toggle:focus {
+		button.menu-toggle:focus,
+		.wp-block-search__button:hover,
+		.wp-block-search__button:focus {
 			background-color: " . $color_one . ";
 		}
 	";

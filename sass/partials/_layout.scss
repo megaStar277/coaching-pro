@@ -98,6 +98,19 @@ body.content-sidebar {
             width: 26%;
             flex-basis: 300px;
         }
+        .widget {
+        	padding: 20px 0;
+            &.widget_search {
+                .wp-block-search__inside-wrapper {
+                    border: 2px solid #6D6771;
+                    font-size: 14px;
+                    .wp-block-search__button {
+                        border: 0;
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
     }
 }
 
