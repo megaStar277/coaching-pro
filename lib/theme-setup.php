@@ -200,14 +200,17 @@ function coaching_pro_remove_image_alignment( $attributes ) {
 // Show the featured image on Single Posts and Pages.
 add_action( 'genesis_entry_header', 'coaching_pro_show_featured_post_image', 1 );
 function coaching_pro_show_featured_post_image() {
-	// only show on single posts and pages
-	if ( ! is_single() && ! is_page() || ! has_post_thumbnail() ) {
+
+	// If we are not on a Single Post or Page, then exit.
+	if ( ! is_singular('post') && ! is_page() || ! has_post_thumbnail() ) {
 		return;
 	}
 
+	// If the post has a Featured Image assigned, show it.
 	if ( $image = genesis_get_image( 'format=url&size=featured-image' ) ) {
 		printf( '<img class="post-photo aligncenter" src="%s" alt="%s" />', $image, the_title_attribute( 'echo=0' ) );
 	}
+
 }
 
 // Add a CSS class to the site header if the Sticky Header Customizer option is enabled.
