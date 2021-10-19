@@ -396,12 +396,15 @@ function coaching_pro_color_css() {
 	$css .= "
 
 		button.menu-toggle,
+		button.sub-menu-toggle,
 		.wp-block-search__button {
 			background-color: " . $mobilemenubutton_color . ";
 		}
 
 		button.menu-toggle:hover,
 		button.menu-toggle:focus,
+		button.sub-menu-toggle:hover,
+		button.sub-menu-toggle:focus,
 		.wp-block-search__button:hover,
 		.wp-block-search__button:focus {
 			background-color: " . $color_one . ";

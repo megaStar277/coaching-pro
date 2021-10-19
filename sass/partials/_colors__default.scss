@@ -43,6 +43,21 @@ body.transparent-header {
                             color: #fff;
                         }
                     }
+                    .sub-menu {
+                        background: rgba(0,0,0,0.05);
+                        @include media($screen--m) {
+                            background: rgba(0,0,0,0.66);
+                        }
+                        a {
+                            @include media($screen--m) {
+                                color: $white;
+                            }
+                        }
+                    }
+                    .sub-menu,
+                    .sub-menu a {
+                        border-color: $white;
+                    }
                 }
             }
         }
@@ -53,6 +68,16 @@ body.transparent-header {
                 .menu-item {
                     a {
                         // color: #fff;
+                    }
+                    .sub-menu {
+                        background: $sub-menu-background;
+                        a {
+                            color: $sub-menu-color;
+                        }
+                    }
+                    .sub-menu,
+                    .sub-menu a {
+                        border-color: $white;
                     }
                 }
             }
@@ -84,10 +109,13 @@ body.transparent-header {
     }
 }
 
-.sub-menu-toggle,
-.sub-menu-toggle:focus,
-.sub-menu-toggle:hover {
-    background-color: $sub-menu-background;
+// .sub-menu-toggle,
+.sub-menu-toggle {
+    &:focus,
+    &:hover {
+        background-color: rgba(0,0,0,0.5);
+        color: $white;
+    }
 }
 
 .genesis-responsive-menu {

@@ -1,7 +1,7 @@
 /* Override colors for responsive nav menu - this loads after color schemes.
 ---------------------------------------------------------------------------------------------------- */
 .genesis-nav-menu {
-    .current-menu-item span,
+    .current-menu-item > span,
     a:focus span,
     a:hover span {
         border-bottom: 2px solid;

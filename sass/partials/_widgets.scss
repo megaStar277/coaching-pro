@@ -14,10 +14,12 @@
 .widget {
     margin-bottom: 40px;
     word-wrap: break-word;
-    p:last-child,
-    ul > li:last-of-type {
+    p:last-child {
         margin-bottom: 0;
     }
+    // ul > li:last-of-type {
+    //     margin-bottom: 0;
+    // }
     ul > li {
         margin-bottom: 10px;
         padding-bottom: 10px;
@@ -98,6 +100,12 @@
         .widget-wrap {
             // max-width: 1140px;
             margin: 0 auto;
+            .wp-block-columns {
+                &.alignfull {
+                    margin-bottom: 0;
+                    padding: 0;
+                }
+            }
         }
     }
 }
