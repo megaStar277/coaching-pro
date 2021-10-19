@@ -134,7 +134,7 @@ body.content-sidebar {
 
 .full-width-content {
     .site-inner {
-        padding: 40px 0;
+        padding: 40px 0 0 0;
         max-width: 100%;
         width: 100%;
         @include media($screen--l) {
@@ -240,7 +240,7 @@ body.first-block-align-full.full-width-content {
                 padding-top: 0;
                 @include media($screen--m) {
                     margin-top: 0;
-                    padding: 0 0 40px 0;
+                    padding: 0;
                 }
                 @include media($screen--l) {
                     margin-top: 0;

@@ -35,7 +35,8 @@ body.first-block-align-full.full-width-content {
     .entry {
         padding-top: 0;
         @include media($screen--m) {
-            padding: 0 0 30px 0;
+            margin-bottom: 0;
+            padding: 0;
         }
     }
 }
@@ -166,6 +167,10 @@ p.entry-meta {
 }
 
 .entry-pings .reply {
+    display: none;
+}
+
+.post-edit-link {
     display: none;
 }
 

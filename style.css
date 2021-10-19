@@ -659,7 +659,7 @@ body.content-sidebar .content-sidebar-wrap {
       flex-basis: 300px; } }
 
 .full-width-content .site-inner {
-  padding: 40px 0;
+  padding: 40px 0 0 0;
   max-width: 100%;
   width: 100%; }
   @media screen and (min-width: 1280px) {
@@ -737,7 +737,7 @@ body.first-block-align-full.full-width-content.genesis-title-hidden.genesis-brea
   @media screen and (min-width: 1024px) {
     body.first-block-align-full.full-width-content.genesis-title-hidden.genesis-breadcrumbs-hidden.transparent-header .site-inner {
       margin-top: 0;
-      padding: 0 0 40px 0; } }
+      padding: 0; } }
   @media screen and (min-width: 1280px) {
     body.first-block-align-full.full-width-content.genesis-title-hidden.genesis-breadcrumbs-hidden.transparent-header .site-inner {
       margin-top: 0; } }
@@ -1410,7 +1410,8 @@ body.first-block-align-full.full-width-content .entry {
   padding-top: 0; }
   @media screen and (min-width: 1024px) {
     body.first-block-align-full.full-width-content .entry {
-      padding: 0 0 30px 0; } }
+      margin-bottom: 0;
+      padding: 0; } }
 
 body:not(.first-block-align-full).full-width-content .entry {
   padding: 30px; }
@@ -1519,6 +1520,9 @@ p.entry-meta {
   margin-right: 12px; }
 
 .entry-pings .reply {
+  display: none; }
+
+.post-edit-link {
   display: none; }
 
 /* # Sidebars
