@@ -90,20 +90,12 @@
                                 justify-content: space-between;
                                 align-items: flex-start;
                                 margin-bottom: 0;
-                                &.columns-4 {
-                                    li.product {
-                                        // width: 31%;
-                                    }
-                                }
                                 li.product {
-                                    // width: 30%;
                                     flex: 1;
-                                    // min-width: 25%;
                                     @include media($screen--m) {
                                         min-width: 31%;
                                         max-width: 48%;
                                     }
-                                    // margin-right: 30px;
                                     margin-right: 20px;
                                     margin-bottom: 30px;
                                     &:last-child {
@@ -112,19 +104,6 @@
                                     &:only-child {
                                         margin-right: auto;
                                     }
-                                    // &:nth-child(2n) {
-                                    //     @include media($screen--m) {
-                                    //         margin-right: 0;
-                                    //     }
-                                    //     @include media($screen--l) {
-                                    //         margin-right: auto;
-                                    //     }
-                                    // }
-                                    // &:nth-child(3n) {
-                                    //     @include media($screen--l) {
-                                    //         margin-right: 0;
-                                    //     }
-                                    // }
                                     &.entry {
                                         background-color: transparent;
                                     }
