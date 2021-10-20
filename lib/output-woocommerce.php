@@ -38,7 +38,19 @@ function coachingpro_custom_woocommerce_css() {
 		.woocommerce input.button.woocommerce #respond input#submit.alt,
 		.woocommerce a.button.alt,
 		.woocommerce button.button.alt,
-		.woocommerce input.button.alt {
+		.woocommerce input.button.alt,
+		.woocommerce button[class*="add_to_cart_button"],
+		.woocommerce a[class*="add_to_cart_button"],
+		.woocommerce button.button:disabled,
+		.woocommerce button.button:disabled[disabled],
+		.woocommerce button.button:disabled:hover,
+		.woocommerce button.button:disabled:focus,
+		.woocommerce button.button:disabled[disabled],
+		.woocommerce button.button:disabled[disabled]:hover,
+		.woocommerce button.button:disabled[disabled]:focus,
+		.woocommerce button.button.alt.disabled,
+		.woocommerce button.button.alt.disabled:hover,
+		.woocommerce button.button.alt.disabled:focus {
 			background-color: %1$s;
 			color: %2$s;
 		}
@@ -56,7 +68,11 @@ function coachingpro_custom_woocommerce_css() {
 		.woocommerce button.button.alt:hover,
 		.woocommerce button.button.alt:focus,
 		.woocommerce input.button.alt:hover,
-		.woocommerce input.button.alt:focus {
+		.woocommerce input.button.alt:focus,
+		.woocommerce button[class*="add_to_cart_button"]:hover,
+		.woocommerce button[class*="add_to_cart_button"]:focus,
+		.woocommerce a[class*="add_to_cart_button"]:hover,
+		.woocommerce a[class*="add_to_cart_button"]:focus {
 			background-color: %3$s;
 			color: %4$s;
 		}

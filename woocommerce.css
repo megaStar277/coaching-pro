@@ -6,31 +6,90 @@ html {
 
 /* WOOCOMMERCE STYLES
 ----------------------------------------------------------------------------- */
-.woocommerce-shop #genesis-content .woocommerce {
+/* ALL WOO PAGES
+--------------------------------------- */
+.woocommerce-shop #genesis-content .woocommerce,
+.woocommerce-cart #genesis-content .woocommerce,
+.woocommerce-checkout #genesis-content .woocommerce {
   margin-left: -210px;
   margin-right: -210px;
   max-width: 1200px; }
-  .woocommerce-shop #genesis-content .woocommerce .woocommerce-result-count {
-    display: block;
-    width: 100%;
-    margin-bottom: 30px;
-    text-align: center;
-    font-size: 14px;
-    font-size: 1.4rem; }
-  .woocommerce-shop #genesis-content .woocommerce .woocommerce-ordering {
-    display: none; }
-  .woocommerce-shop #genesis-content .woocommerce ul.products > li.product a.woocommerce-loop-product__link .woocommerce-loop-product__title {
-    font-weight: 600; }
-  .woocommerce-shop #genesis-content .woocommerce ul.products > li.product a.add_to_cart_button {
-    border-radius: 9999px;
-    padding: calc(.667em + 2px) calc(1.333em + 2px); }
+  .woocommerce-shop #genesis-content .woocommerce button.button, .woocommerce-shop #genesis-content .woocommerce button[class*="add_to_cart_button"],
+  .woocommerce-shop #genesis-content .woocommerce a.button,
+  .woocommerce-shop #genesis-content .woocommerce a[class*="add_to_cart_button"],
+  .woocommerce-cart #genesis-content .woocommerce button.button,
+  .woocommerce-cart #genesis-content .woocommerce button[class*="add_to_cart_button"],
+  .woocommerce-cart #genesis-content .woocommerce a.button,
+  .woocommerce-cart #genesis-content .woocommerce a[class*="add_to_cart_button"],
+  .woocommerce-checkout #genesis-content .woocommerce button.button,
+  .woocommerce-checkout #genesis-content .woocommerce button[class*="add_to_cart_button"],
+  .woocommerce-checkout #genesis-content .woocommerce a.button,
+  .woocommerce-checkout #genesis-content .woocommerce a[class*="add_to_cart_button"] {
+    border-radius: 9999px; }
+  .woocommerce-shop #genesis-content .woocommerce form input[type="text"],
+  .woocommerce-shop #genesis-content .woocommerce form input[type="email"],
+  .woocommerce-shop #genesis-content .woocommerce form input[type="phone"],
+  .woocommerce-shop #genesis-content .woocommerce form input[type="tel"],
+  .woocommerce-shop #genesis-content .woocommerce form select,
+  .woocommerce-shop #genesis-content .woocommerce form textarea,
+  .woocommerce-cart #genesis-content .woocommerce form input[type="text"],
+  .woocommerce-cart #genesis-content .woocommerce form input[type="email"],
+  .woocommerce-cart #genesis-content .woocommerce form input[type="phone"],
+  .woocommerce-cart #genesis-content .woocommerce form input[type="tel"],
+  .woocommerce-cart #genesis-content .woocommerce form select,
+  .woocommerce-cart #genesis-content .woocommerce form textarea,
+  .woocommerce-checkout #genesis-content .woocommerce form input[type="text"],
+  .woocommerce-checkout #genesis-content .woocommerce form input[type="email"],
+  .woocommerce-checkout #genesis-content .woocommerce form input[type="phone"],
+  .woocommerce-checkout #genesis-content .woocommerce form input[type="tel"],
+  .woocommerce-checkout #genesis-content .woocommerce form select,
+  .woocommerce-checkout #genesis-content .woocommerce form textarea {
+    border: 1px solid #d3ced2; }
+  .woocommerce-shop #genesis-content .woocommerce li.woocommerce-notice,
+  .woocommerce-cart #genesis-content .woocommerce li.woocommerce-notice,
+  .woocommerce-checkout #genesis-content .woocommerce li.woocommerce-notice {
+    list-style-type: none; }
 
-.single-product #genesis-content .woocommerce button[class*="add_to_cart_button"],
-.single-product #genesis-content .woocommerce a[class*="add_to_cart_button"] {
-  border-radius: 9999px; }
+/* SHOP PAGE
+--------------------------------------- */
+.woocommerce-shop #genesis-content .woocommerce .woocommerce-result-count {
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 14px;
+  font-size: 1.4rem; }
 
+.woocommerce-shop #genesis-content .woocommerce .woocommerce-ordering {
+  display: none; }
+
+.woocommerce-shop #genesis-content .woocommerce ul.products > li.product a.woocommerce-loop-product__link .woocommerce-loop-product__title {
+  font-weight: 600; }
+
+.woocommerce-shop #genesis-content .woocommerce ul.products > li.product a.add_to_cart_button {
+  padding: calc(.667em + 2px) calc(1.333em + 2px); }
+
+/* SINGLE PRODUCT PAGE
+--------------------------------------- */
 .single-product #genesis-content .woocommerce .single-product .product .entry-summary form.cart .quantity input.qty {
   border: 1px solid #d3ced2; }
+
+.single-product #genesis-content .woocommerce .single-product .product .entry-summary form.cart.variations_form table.variations tbody tr td {
+  display: block;
+  width: 100%; }
+  .single-product #genesis-content .woocommerce .single-product .product .entry-summary form.cart.variations_form table.variations tbody tr td select {
+    border: 1px solid #d3ced2;
+    margin-right: 0; }
+
+.single-product #genesis-content .woocommerce .single-product .product .entry-summary form.cart.variations_form .single_variation_wrap .woocommerce-variation-add-to-cart {
+  display: flex; }
+
+.single-product #genesis-content .woocommerce .single-product .product .entry-summary .product_meta {
+  font-size: 15px;
+  font-size: 1.5rem; }
+  .single-product #genesis-content .woocommerce .single-product .product .entry-summary .product_meta > span {
+    display: block;
+    width: 100%; }
 
 .single-product #genesis-content .woocommerce .single-product .product .woocommerce-tabs ul.tabs {
   display: none; }
@@ -68,3 +127,9 @@ html {
         margin-right: auto; }
       .single-product #genesis-content .woocommerce .single-product .product .related.products ul.products li.product.entry {
         background-color: transparent; }
+
+/* CHECKOUT PAGE
+--------------------------------------- */
+.woocommerce-checkout #genesis-content .woocommerce form.checkout h3 {
+  font-size: 36px;
+  font-size: 3.6rem; }

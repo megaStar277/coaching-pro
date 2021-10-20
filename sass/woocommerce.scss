@@ -6,13 +6,46 @@
 
 /* WOOCOMMERCE STYLES
 ----------------------------------------------------------------------------- */
-.woocommerce-shop {
+
+/* ALL WOO PAGES
+--------------------------------------- */
+.woocommerce-shop,
+.woocommerce-cart,
+.woocommerce-checkout {
     #genesis-content {
-        // width: 100%;
         .woocommerce {
             margin-left: -210px;
             margin-right: -210px;
             max-width: 1200px;
+            button,
+            a {
+                &.button,
+                &[class*="add_to_cart_button"] {
+                    border-radius: 9999px;
+                }
+            }
+            form {
+                input[type="text"],
+                input[type="email"],
+                input[type="phone"],
+                input[type="tel"],
+                select,
+                textarea {
+                    border: 1px solid #d3ced2;
+                }
+            }
+            li.woocommerce-notice {
+                list-style-type: none;
+            }
+        }
+    }
+}
+
+/* SHOP PAGE
+--------------------------------------- */
+.woocommerce-shop {
+    #genesis-content {
+        .woocommerce {
             .woocommerce-result-count {
                 display: block;
                 width: 100%;
@@ -34,7 +67,6 @@
                         }
                     }
                     a.add_to_cart_button {
-                        border-radius: 9999px;
                         padding: calc(.667em + 2px) calc(1.333em + 2px);
                     }
                 }
@@ -43,15 +75,11 @@
     }
 }
 
+/* SINGLE PRODUCT PAGE
+--------------------------------------- */
 .single-product {
     #genesis-content {
         .woocommerce {
-            button,
-            a {
-                &[class*="add_to_cart_button"] {
-                    border-radius: 9999px;
-                }
-            }
             .single-product {
                 .product {
                     .entry-summary {
@@ -60,6 +88,34 @@
                                 input.qty {
                                     border: 1px solid #d3ced2;
                                 }
+                            }
+                            &.variations_form {
+                                table.variations {
+                                    tbody {
+                                        tr {
+                                            td {
+                                                display: block;
+                                                width: 100%;
+                                                select {
+                                                    border: 1px solid #d3ced2;
+                                                    margin-right: 0;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .single_variation_wrap {
+                                    .woocommerce-variation-add-to-cart {
+                                        display: flex;
+                                    }
+                                }
+                            }
+                        }
+                        .product_meta {
+                            font-size: 15px;
+                            & > span {
+                                display: block;
+                                width: 100%;
                             }
                         }
                     }
@@ -111,6 +167,20 @@
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+/* CHECKOUT PAGE
+--------------------------------------- */
+.woocommerce-checkout {
+    #genesis-content {
+        .woocommerce {
+            form.checkout {
+                h3 {
+                    font-size: 36px;
                 }
             }
         }
