@@ -78,3 +78,8 @@ include_once( CHILD_THEME_DIR . '/lib/block-functions.php' );
 
 // Load Block Patterns.
 include_once( CHILD_THEME_DIR . '/lib/block-patterns.php' );
+
+// Custom functions for WooCommerce.
+if ( class_exists( 'WooCommerce' ) ) {
+	include_once CHILD_THEME_DIR . '/lib/output-woocommerce.php';
+}

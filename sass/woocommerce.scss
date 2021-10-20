@@ -1,0 +1,139 @@
+// Import Bourbon, Neat
+@import 'node_modules/bourbon/core/bourbon';
+@import 'node_modules/bourbon-neat/app/assets/stylesheets/neat';
+
+@import 'partials/variables';
+
+/* WOOCOMMERCE STYLES
+----------------------------------------------------------------------------- */
+.woocommerce-shop {
+    #genesis-content {
+        // width: 100%;
+        .woocommerce {
+            margin-left: -210px;
+            margin-right: -210px;
+            max-width: 1200px;
+            .woocommerce-result-count {
+                display: block;
+                width: 100%;
+                margin-bottom: 30px;
+                text-align: center;
+                font-size: 14px;
+            }
+            .woocommerce-ordering {
+                display: none;
+            }
+            ul.products {
+                & > li.product {
+                    a.woocommerce-loop-product__link {
+                        img {
+
+                        }
+                        .woocommerce-loop-product__title {
+                            font-weight: 600;
+                        }
+                    }
+                    a.add_to_cart_button {
+                        border-radius: 9999px;
+                        padding: calc(.667em + 2px) calc(1.333em + 2px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.single-product {
+    #genesis-content {
+        .woocommerce {
+            button,
+            a {
+                &[class*="add_to_cart_button"] {
+                    border-radius: 9999px;
+                }
+            }
+            .single-product {
+                .product {
+                    .entry-summary {
+                        form.cart {
+                            .quantity {
+                                input.qty {
+                                    border: 1px solid #d3ced2;
+                                }
+                            }
+                        }
+                    }
+                    .woocommerce-tabs {
+                        ul.tabs {
+                            display: none;
+                        }
+                        .woocommerce-Tabs-panel {
+                            h2 {
+                                display: none;
+                            }
+                        }
+                    }
+                    .related {
+                        &.products {
+                            clear: both;
+                            margin-top: 30px;
+                            padding: 20px;
+                            & > h2 {
+                                font-size: 20px;
+                                font-weight: 600;
+                                margin-bottom: 20px;
+                            }
+                            ul.products {
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                justify-content: space-between;
+                                align-items: flex-start;
+                                margin-bottom: 0;
+                                &.columns-4 {
+                                    li.product {
+                                        // width: 31%;
+                                    }
+                                }
+                                li.product {
+                                    // width: 30%;
+                                    flex: 1;
+                                    // min-width: 25%;
+                                    @include media($screen--m) {
+                                        min-width: 31%;
+                                        max-width: 48%;
+                                    }
+                                    // margin-right: 30px;
+                                    margin-right: 20px;
+                                    margin-bottom: 30px;
+                                    &:last-child {
+                                        margin-right: 0;
+                                    }
+                                    &:only-child {
+                                        margin-right: auto;
+                                    }
+                                    // &:nth-child(2n) {
+                                    //     @include media($screen--m) {
+                                    //         margin-right: 0;
+                                    //     }
+                                    //     @include media($screen--l) {
+                                    //         margin-right: auto;
+                                    //     }
+                                    // }
+                                    // &:nth-child(3n) {
+                                    //     @include media($screen--l) {
+                                    //         margin-right: 0;
+                                    //     }
+                                    // }
+                                    &.entry {
+                                        background-color: transparent;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

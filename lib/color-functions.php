@@ -239,7 +239,7 @@ function coaching_pro_color_settings() {
 
 	// -----------------------------.
 
-    // Add 'Links Color' Setting.
+    // Add 'WooCommerce Accent Color' Setting.
 	$wp_customize->add_setting(
 		'coachpro_theme_linkscolor_setting',
 		array(
@@ -284,6 +284,49 @@ function coaching_pro_color_settings() {
 			)
 		)
 	);
+
+	// -----------------------------.
+
+	// Add color settings for WooCommerce.
+	if ( class_exists( 'WooCommerce' ) ) {
+
+		// Separator.
+		$wp_customize->add_setting( 'coachingpro_separator_2', array(
+			'sanitize_callback' => 'coachingpro_sanitize',
+		) );
+		$wp_customize->add_control(
+			new Separator_Control(
+				$wp_customize,
+				'coachingpro_separator_2',
+				array(
+					'section' => 'color_palette_section',
+				)
+			)
+		);
+
+		// Add 'WooCommerce Accent Color' Setting.
+		$wp_customize->add_setting(
+			'coachpro_theme_wooaccentcolor_setting',
+			array(
+				'default'           => $appearance['default-colors']['color2'],
+				'sanitize_callback' => 'sanitize_hex_color',
+			)
+		);
+
+		// Add 'WooCommerce Accent Color' Control.
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'coachpro_theme_wooaccentcolor_setting',
+				array(
+					'label'    => __( 'WooCommerce Accent Color', 'coaching-pro' ),
+					'section'  => 'color_palette_section',
+					'settings' => 'coachpro_theme_wooaccentcolor_setting',
+				)
+			)
+		);
+
+	}
 
 	// -----------------------------.
 

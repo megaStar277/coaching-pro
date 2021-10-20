@@ -39,6 +39,19 @@ function coaching_pro_enqueue_scripts_styles() {
 
 }
 
+// Enqueue custom styles for Third-Party plugins.
+add_action( 'wp_enqueue_scripts', 'coachingpro_custom_plugin_styles' );
+function coachingpro_custom_plugin_styles() {
+
+	// WooCommerce styles.
+	if ( class_exists( 'WooCommerce' ) ) {
+		if ( is_woocommerce() || is_page( array( 'cart', 'checkout' ) ) ) {
+			wp_enqueue_style( genesis_get_theme_handle() . '-woocommerce-custom-styles', get_stylesheet_directory_uri() . '/woocommerce.css', array(), genesis_get_theme_version() );
+		}
+	}
+
+}
+
 // Returns a URL-encoded list of Google Fonts to enqueue.
 function get_fonts_list() {
 
