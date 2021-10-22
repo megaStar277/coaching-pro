@@ -11,12 +11,16 @@
 --------------------------------------- */
 .woocommerce-shop,
 .woocommerce-cart,
-.woocommerce-checkout {
+.woocommerce-checkout,
+.woocommerce-account {
     #genesis-content {
         .woocommerce {
-            margin-left: -210px;
-            margin-right: -210px;
-            max-width: 1200px;
+            max-width: 100%;
+            @include media($screen--l) {
+                margin-left: -210px;
+                margin-right: -210px;
+                max-width: 1200px;
+            }
             button,
             a {
                 &.button,
@@ -29,6 +33,7 @@
                 input[type="email"],
                 input[type="phone"],
                 input[type="tel"],
+                input[type="password"],
                 select,
                 textarea {
                     border: 1px solid #d3ced2;
@@ -181,6 +186,106 @@
             form.checkout {
                 h3 {
                     font-size: 36px;
+                }
+            }
+        }
+    }
+}
+
+/* MY ACCOUNT PAGE
+--------------------------------------- */
+.woocommerce-account {
+    #genesis-content {
+        .entry-header {
+            margin-bottom: 30px;
+        }
+        .woocommerce {
+            nav.woocommerce-MyAccount-navigation {
+                width: 100%;
+                margin-bottom: 30px;
+                padding: 10px;
+                background-color: #f7f6f7;
+                border-top: 3px solid;
+                column-count: 1;
+                @include media($screen--s) {
+                    column-count: 2;
+                }
+                @include media($screen--m) {
+                    padding: 20px;
+                }
+                @include media($screen--l) {
+                    width: auto;
+                    margin-bottom: 0;
+                    padding: 30px;
+                    column-count: 1;
+                }
+                ul {
+                    margin-left: 0;
+                    margin-bottom: 0;
+                    li {
+                    	list-style-type: none;
+                    	margin: 0 0 10px 0;
+                    	padding-top: 10px;
+                    	border-top: none;
+                    	width: 100%;
+                    	display: block;
+                    	text-align: left;
+                    	font-size: 16px;
+                        &.is-active {
+                        	font-size: 16px;
+                        }
+                        a {
+                        	text-decoration: none;
+                        	border-bottom: none;
+                            &::before {
+                            	font-family: 'Font Awesome 5 Free';
+                            	display: inline-block;
+                            	width: 20px;
+                            	text-align: center;
+                            	margin: 0 10px 0 0;
+                            }
+                        }
+                        &[class*="dashboard"] a::before {
+                        	content:"\f015";
+                        	font-weight: 900;
+                        }
+                        &[class*="orders"] a::before {
+                        	content:"\f022";
+                        }
+                        &[class*="subscriptions"] a::before {
+                        	content:"\f073";
+                        }
+                        &[class*="downloads"] a::before {
+                        	content:"\f019";
+                        	font-weight: 900;
+                        }
+                        &[class*="edit-address"] a::before {
+                        	content:"\f303";
+                        	font-weight: 900;
+                        }
+                        &[class*="payment-methods"] a::before {
+                        	content:"\f09d";
+                        }
+                        &[class*="edit-account"] a::before {
+                        	content:"\f007";
+                        	font-weight: 900;
+                        }
+                        &[class*="customer-logout"] a::before {
+                        	content:"\f2f5";
+                        	font-weight: 900;
+                        }
+                    }
+                }
+            }
+            .woocommerce-MyAccount-content {
+                width: 100%;
+                @include media($screen--l) {
+                    width: 78%;
+                }
+                form.edit-account {
+                    button[type="submit"] {
+                        margin-top: 30px;
+                    }
                 }
             }
         }

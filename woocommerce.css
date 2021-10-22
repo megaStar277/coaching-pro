@@ -10,10 +10,17 @@ html {
 --------------------------------------- */
 .woocommerce-shop #genesis-content .woocommerce,
 .woocommerce-cart #genesis-content .woocommerce,
-.woocommerce-checkout #genesis-content .woocommerce {
-  margin-left: -210px;
-  margin-right: -210px;
-  max-width: 1200px; }
+.woocommerce-checkout #genesis-content .woocommerce,
+.woocommerce-account #genesis-content .woocommerce {
+  max-width: 100%; }
+  @media screen and (min-width: 1280px) {
+    .woocommerce-shop #genesis-content .woocommerce,
+    .woocommerce-cart #genesis-content .woocommerce,
+    .woocommerce-checkout #genesis-content .woocommerce,
+    .woocommerce-account #genesis-content .woocommerce {
+      margin-left: -210px;
+      margin-right: -210px;
+      max-width: 1200px; } }
   .woocommerce-shop #genesis-content .woocommerce button.button, .woocommerce-shop #genesis-content .woocommerce button[class*="add_to_cart_button"],
   .woocommerce-shop #genesis-content .woocommerce a.button,
   .woocommerce-shop #genesis-content .woocommerce a[class*="add_to_cart_button"],
@@ -24,30 +31,45 @@ html {
   .woocommerce-checkout #genesis-content .woocommerce button.button,
   .woocommerce-checkout #genesis-content .woocommerce button[class*="add_to_cart_button"],
   .woocommerce-checkout #genesis-content .woocommerce a.button,
-  .woocommerce-checkout #genesis-content .woocommerce a[class*="add_to_cart_button"] {
+  .woocommerce-checkout #genesis-content .woocommerce a[class*="add_to_cart_button"],
+  .woocommerce-account #genesis-content .woocommerce button.button,
+  .woocommerce-account #genesis-content .woocommerce button[class*="add_to_cart_button"],
+  .woocommerce-account #genesis-content .woocommerce a.button,
+  .woocommerce-account #genesis-content .woocommerce a[class*="add_to_cart_button"] {
     border-radius: 9999px; }
   .woocommerce-shop #genesis-content .woocommerce form input[type="text"],
   .woocommerce-shop #genesis-content .woocommerce form input[type="email"],
   .woocommerce-shop #genesis-content .woocommerce form input[type="phone"],
   .woocommerce-shop #genesis-content .woocommerce form input[type="tel"],
+  .woocommerce-shop #genesis-content .woocommerce form input[type="password"],
   .woocommerce-shop #genesis-content .woocommerce form select,
   .woocommerce-shop #genesis-content .woocommerce form textarea,
   .woocommerce-cart #genesis-content .woocommerce form input[type="text"],
   .woocommerce-cart #genesis-content .woocommerce form input[type="email"],
   .woocommerce-cart #genesis-content .woocommerce form input[type="phone"],
   .woocommerce-cart #genesis-content .woocommerce form input[type="tel"],
+  .woocommerce-cart #genesis-content .woocommerce form input[type="password"],
   .woocommerce-cart #genesis-content .woocommerce form select,
   .woocommerce-cart #genesis-content .woocommerce form textarea,
   .woocommerce-checkout #genesis-content .woocommerce form input[type="text"],
   .woocommerce-checkout #genesis-content .woocommerce form input[type="email"],
   .woocommerce-checkout #genesis-content .woocommerce form input[type="phone"],
   .woocommerce-checkout #genesis-content .woocommerce form input[type="tel"],
+  .woocommerce-checkout #genesis-content .woocommerce form input[type="password"],
   .woocommerce-checkout #genesis-content .woocommerce form select,
-  .woocommerce-checkout #genesis-content .woocommerce form textarea {
+  .woocommerce-checkout #genesis-content .woocommerce form textarea,
+  .woocommerce-account #genesis-content .woocommerce form input[type="text"],
+  .woocommerce-account #genesis-content .woocommerce form input[type="email"],
+  .woocommerce-account #genesis-content .woocommerce form input[type="phone"],
+  .woocommerce-account #genesis-content .woocommerce form input[type="tel"],
+  .woocommerce-account #genesis-content .woocommerce form input[type="password"],
+  .woocommerce-account #genesis-content .woocommerce form select,
+  .woocommerce-account #genesis-content .woocommerce form textarea {
     border: 1px solid #d3ced2; }
   .woocommerce-shop #genesis-content .woocommerce li.woocommerce-notice,
   .woocommerce-cart #genesis-content .woocommerce li.woocommerce-notice,
-  .woocommerce-checkout #genesis-content .woocommerce li.woocommerce-notice {
+  .woocommerce-checkout #genesis-content .woocommerce li.woocommerce-notice,
+  .woocommerce-account #genesis-content .woocommerce li.woocommerce-notice {
     list-style-type: none; }
 
 /* SHOP PAGE
@@ -133,3 +155,88 @@ html {
 .woocommerce-checkout #genesis-content .woocommerce form.checkout h3 {
   font-size: 36px;
   font-size: 3.6rem; }
+
+/* MY ACCOUNT PAGE
+--------------------------------------- */
+.woocommerce-account #genesis-content .entry-header {
+  margin-bottom: 30px; }
+
+.woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation {
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: #f7f6f7;
+  border-top: 3px solid;
+  -webkit-column-count: 1;
+     -moz-column-count: 1;
+          column-count: 1; }
+  @media screen and (min-width: 600px) {
+    .woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation {
+      -webkit-column-count: 2;
+         -moz-column-count: 2;
+              column-count: 2; } }
+  @media screen and (min-width: 1024px) {
+    .woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation {
+      padding: 20px; } }
+  @media screen and (min-width: 1280px) {
+    .woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation {
+      width: auto;
+      margin-bottom: 0;
+      padding: 30px;
+      -webkit-column-count: 1;
+         -moz-column-count: 1;
+              column-count: 1; } }
+  .woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation ul {
+    margin-left: 0;
+    margin-bottom: 0; }
+    .woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation ul li {
+      list-style-type: none;
+      margin: 0 0 10px 0;
+      padding-top: 10px;
+      border-top: none;
+      width: 100%;
+      display: block;
+      text-align: left;
+      font-size: 16px;
+      font-size: 1.6rem; }
+      .woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation ul li.is-active {
+        font-size: 16px;
+        font-size: 1.6rem; }
+      .woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation ul li a {
+        text-decoration: none;
+        border-bottom: none; }
+        .woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation ul li a::before {
+          font-family: 'Font Awesome 5 Free';
+          display: inline-block;
+          width: 20px;
+          text-align: center;
+          margin: 0 10px 0 0; }
+      .woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation ul li[class*="dashboard"] a::before {
+        content: "\f015";
+        font-weight: 900; }
+      .woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation ul li[class*="orders"] a::before {
+        content: "\f022"; }
+      .woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation ul li[class*="subscriptions"] a::before {
+        content: "\f073"; }
+      .woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation ul li[class*="downloads"] a::before {
+        content: "\f019";
+        font-weight: 900; }
+      .woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation ul li[class*="edit-address"] a::before {
+        content: "\f303";
+        font-weight: 900; }
+      .woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation ul li[class*="payment-methods"] a::before {
+        content: "\f09d"; }
+      .woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation ul li[class*="edit-account"] a::before {
+        content: "\f007";
+        font-weight: 900; }
+      .woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation ul li[class*="customer-logout"] a::before {
+        content: "\f2f5";
+        font-weight: 900; }
+
+.woocommerce-account #genesis-content .woocommerce .woocommerce-MyAccount-content {
+  width: 100%; }
+  @media screen and (min-width: 1280px) {
+    .woocommerce-account #genesis-content .woocommerce .woocommerce-MyAccount-content {
+      width: 78%; } }
+  .woocommerce-account #genesis-content .woocommerce .woocommerce-MyAccount-content form.edit-account button[type="submit"] {
+    margin-top: 30px; }

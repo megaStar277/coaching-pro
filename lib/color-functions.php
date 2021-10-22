@@ -392,8 +392,13 @@ function coaching_pro_color_css() {
 		}
 	";
 
-	// Output colors for non-editable buttons: pagination, read more links, etc.
+	// Output colors for non-editable buttons: navigation menu, pagination, read more links, etc.
 	$css .= "
+
+		.genesis-responsive-menu .genesis-nav-menu li.current-menu-item > a,
+		.genesis-responsive-menu .genesis-nav-menu li.current_page_ancestor > a {
+			color: " . $color_two . ";
+		}
 
 		.pagination li a {
 			background-color: " . $color_one . ";
