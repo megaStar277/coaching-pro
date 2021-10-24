@@ -330,6 +330,49 @@ function coaching_pro_color_settings() {
 
 	// -----------------------------.
 
+	// Add color settings for Easy Digital Downloads.
+	if ( class_exists( 'Easy_Digital_Downloads' ) ) {
+
+		// Separator.
+		$wp_customize->add_setting( 'coachingpro_separator_3', array(
+			'sanitize_callback' => 'coachingpro_sanitize',
+		) );
+		$wp_customize->add_control(
+			new Separator_Control(
+				$wp_customize,
+				'coachingpro_separator_3',
+				array(
+					'section' => 'color_palette_section',
+				)
+			)
+		);
+
+		// Add 'Easy Digital Downloads Accent Color' Setting.
+		$wp_customize->add_setting(
+			'coachpro_theme_eddaccentcolor_setting',
+			array(
+				'default'           => $appearance['default-colors']['color2'],
+				'sanitize_callback' => 'sanitize_hex_color',
+			)
+		);
+
+		// Add 'Easy Digital Downloads Accent Color' Control.
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'coachpro_theme_eddaccentcolor_setting',
+				array(
+					'label'    => __( 'Easy Digital Downloads Accent Color', 'coaching-pro' ),
+					'section'  => 'color_palette_section',
+					'settings' => 'coachpro_theme_eddaccentcolor_setting',
+				)
+			)
+		);
+
+	}
+
+	// -----------------------------.
+
 }
 
 // Get the Appearance settings.

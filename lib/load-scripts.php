@@ -50,6 +50,13 @@ function coachingpro_custom_plugin_styles() {
 		}
 	}
 
+	// Easy Digital Downloads styles.
+	if ( class_exists( 'Easy_Digital_Downloads' ) ) {
+		if ( is_post_type_archive( 'download' ) || is_singular( 'download' ) || edd_is_checkout() ) {
+			wp_enqueue_style( genesis_get_theme_handle() . '-edd-custom-styles', get_stylesheet_directory_uri() . '/easydigitaldownloads.css', array(), genesis_get_theme_version() );
+		}
+	}
+
 }
 
 // Returns a URL-encoded list of Google Fonts to enqueue.

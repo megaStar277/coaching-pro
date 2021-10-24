@@ -83,3 +83,8 @@ include_once( CHILD_THEME_DIR . '/lib/block-patterns.php' );
 if ( class_exists( 'WooCommerce' ) ) {
 	include_once CHILD_THEME_DIR . '/lib/output-woocommerce.php';
 }
+
+// Custom functions for Easy Digital Downloads.
+if ( class_exists( 'Easy_Digital_Downloads' ) ) {
+	include_once CHILD_THEME_DIR . '/lib/output-easydigitaldownloads.php';
+}

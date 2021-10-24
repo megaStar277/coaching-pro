@@ -1,0 +1,70 @@
+// Import Bourbon, Neat
+@import 'node_modules/bourbon/core/bourbon';
+@import 'node_modules/bourbon-neat/app/assets/stylesheets/neat';
+
+@import 'partials/variables';
+
+/* EASY DIGITAL DOWNLOADS STYLES
+----------------------------------------------------------------------------- */
+
+/* GLOBAL STYLES
+--------------------------------------- */
+.edd-archive {
+    #genesis-content {
+        button,
+        a {
+            &.button {
+                border-radius: 9999px;
+                margin-top: 1em;
+                padding: calc(.667em + 2px) calc(1.333em + 2px);
+                border: none;
+            }
+        }
+        form {
+            input[type="text"],
+            input[type="email"],
+            input[type="phone"],
+            input[type="tel"],
+            input[type="password"],
+            select,
+            textarea {
+                border: 1px solid #d3ced2;
+            }
+        }
+    }
+}
+
+/* ARCHIVE PAGE
+--------------------------------------- */
+.edd-archive {
+    #genesis-content {
+        .edd-products-wrap {
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            @include media($screen--l) {
+                margin-left: -210px;
+                margin-right: -210px;
+                max-width: 1200px;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .edd-product {
+                &.threecol {
+                    width: 100%;
+                    @include media($screen--l) {
+                        flex-basis: 30.75%;
+                    }
+                }
+                .title {
+                    font-size: 1em;
+                    font-weight: 600;
+                }
+                .product-price {
+                    font-size: .857em;
+                }
+            }
+        }
+    }
+}
