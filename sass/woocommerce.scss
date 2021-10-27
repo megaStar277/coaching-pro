@@ -42,6 +42,24 @@
             li.woocommerce-notice {
                 list-style-type: none;
             }
+            nav.woocommerce-pagination {
+                ul.page-numbers {
+                    border: 1px solid #ccc;
+                    li {
+                        border: 0;
+                        .page-numbers {
+                            margin-bottom: 0;
+                            padding: calc(.667em + 2px) calc(1.333em + 2px);
+                            font-weight: 600;
+                            line-height: 1;
+                            border: 0;
+                            &.current {
+
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

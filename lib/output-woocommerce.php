@@ -50,7 +50,10 @@ function coachingpro_custom_woocommerce_css() {
 		.woocommerce button.button:disabled[disabled]:focus,
 		.woocommerce button.button.alt.disabled,
 		.woocommerce button.button.alt.disabled:hover,
-		.woocommerce button.button.alt.disabled:focus {
+		.woocommerce button.button.alt.disabled:focus,
+		.woocommerce nav.woocommerce-pagination ul li a:focus,
+		.woocommerce nav.woocommerce-pagination ul li a:hover,
+		.woocommerce nav.woocommerce-pagination ul li span.current {
 			background-color: %1$s;
 			color: %2$s;
 		}
@@ -97,7 +100,8 @@ function coachingpro_custom_woocommerce_css() {
 			border-top-color: %1$s;
 		}
 
-		.single-product #genesis-content .woocommerce .single-product .related.products {
+		.single-product #genesis-content .woocommerce .single-product .related.products,
+		.woocommerce nav.woocommerce-pagination ul li a {
 			background-color: %6$s;
 		}
 

@@ -27,6 +27,43 @@ add_action( 'genesis_loop', 'custom_edd_archive_loop' );
 
 function custom_edd_archive_loop() {
 
+    // genesis_entry_header_markup_open();
+    // genesis_do_post_title();
+    // genesis_entry_header_markup_close();
+
+    // Add Article tag.
+    genesis_markup(
+		[
+			'open'    => '<article class="page type-page entry">',
+			'context' => 'entry',
+		]
+	);
+
+    // Add page title.
+    $pageheader_content = genesis_markup(
+		[
+			'open'    => '<h1 %s>',
+			'close'   => '</h1>',
+			'content' => __( 'Downloads', 'coachingpro' ),
+			'context' => 'entry-title',
+            'echo'    => false,
+		]
+	);
+    genesis_markup(
+        [
+            'open'    => '<header %s>',
+            'close'   => '</header>',
+            'context' => 'entry-header',
+            'content' => $pageheader_content,
+        ]
+    );
+
+    function get_downloads_archive_title( $content ) {
+
+
+
+    }
+
     // Get current page var.
     $current_page = get_query_var( 'paged' );
 
@@ -55,7 +92,7 @@ function custom_edd_archive_loop() {
         while ( $products->have_posts() ) {
             $products->the_post();
             ?>
-            <div class="threecol edd-product product <?php if( $i % 4 == 0 ) { echo 'last'; } ?>">
+            <div class="threecol edd-product product">
 
                 <?php // Product Image. ?>
                 <div class="product-image">
@@ -102,7 +139,8 @@ function custom_edd_archive_loop() {
         ?>
         </div><!-- end .edd-products-wrap -->
 
-        <div class="pagination">
+        <div class="edd-pagination-wrap">
+            <div class="edd-pagination">
             <?php
                 $big = 999999999; // need an unlikely integer
                 echo paginate_links( array(
@@ -112,6 +150,7 @@ function custom_edd_archive_loop() {
                     'total' => $products->max_num_pages
                 ) );
             ?>
+            </div>
         </div>
     <?php } else { ?>
 

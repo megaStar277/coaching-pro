@@ -13,6 +13,8 @@ html {
   border-radius: 9999px;
   margin-top: 1em;
   padding: calc(.667em + 2px) calc(1.333em + 2px);
+  font-size: 100%;
+  font-weight: 600;
   border: none; }
 
 .edd-archive #genesis-content form input[type="text"],
@@ -24,27 +26,47 @@ html {
 .edd-archive #genesis-content form textarea {
   border: 1px solid #d3ced2; }
 
+.edd-archive #genesis-content .edd-pagination-wrap {
+  display: block;
+  margin-top: 40px;
+  text-align: center; }
+  .edd-archive #genesis-content .edd-pagination-wrap .edd-pagination {
+    display: inline-block;
+    white-space: nowrap;
+    margin: 1px;
+    padding: 0;
+    clear: both;
+    border: 1px solid #ccc; }
+    .edd-archive #genesis-content .edd-pagination-wrap .edd-pagination .page-numbers {
+      display: inline-block;
+      float: left;
+      margin-bottom: 0;
+      padding: calc(.667em + 2px) calc(1.333em + 2px);
+      font-weight: 600;
+      line-height: 1;
+      border: 0; }
+
 /* ARCHIVE PAGE
 --------------------------------------- */
-.edd-archive #genesis-content .edd-products-wrap {
+.edd-archive #genesis-content article.entry .entry-title {
+  margin-bottom: 30px;
+  text-align: center; }
+
+.edd-archive #genesis-content article.entry .edd-products-wrap {
   max-width: 100%;
-  display: flex;
-  flex-direction: column; }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 31%);
+  grid-gap: 2%;
+  justify-content: space-between; }
   @media screen and (min-width: 1280px) {
-    .edd-archive #genesis-content .edd-products-wrap {
+    .edd-archive #genesis-content article.entry .edd-products-wrap {
       margin-left: -210px;
       margin-right: -210px;
-      max-width: 1200px;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between; } }
-  .edd-archive #genesis-content .edd-products-wrap .edd-product.threecol {
-    width: 100%; }
-    @media screen and (min-width: 1280px) {
-      .edd-archive #genesis-content .edd-products-wrap .edd-product.threecol {
-        flex-basis: 30.75%; } }
-  .edd-archive #genesis-content .edd-products-wrap .edd-product .title {
-    font-size: 1em;
-    font-weight: 600; }
-  .edd-archive #genesis-content .edd-products-wrap .edd-product .product-price {
-    font-size: .857em; }
+      max-width: 1200px; } }
+  .edd-archive #genesis-content article.entry .edd-products-wrap .edd-product {
+    margin-bottom: 30px; }
+    .edd-archive #genesis-content article.entry .edd-products-wrap .edd-product .title {
+      font-size: 1em;
+      font-weight: 600; }
+    .edd-archive #genesis-content article.entry .edd-products-wrap .edd-product .product-price {
+      font-size: .857em; }

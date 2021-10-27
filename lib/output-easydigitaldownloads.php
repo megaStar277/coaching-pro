@@ -19,10 +19,13 @@ function coachingpro_custom_edd_colors_css() {
 	$edd_accent_color = get_theme_mod( 'coachpro_theme_eddaccentcolor_setting', $appearance['default-colors']['color2'] );
 
 	$button_hover_bg_color = get_theme_mod( 'coachpro_theme_color_1_setting', $appearance['default-colors']['color1'] );
+	$bg_color1 = get_theme_mod( 'coachpro_theme_bgcolor_1_setting', $appearance['default-colors']['bgcolor1'] );
 
 	// Determine contrasting colors for button text.
 	$button_text_color = coaching_pro_color_contrast( $edd_accent_color );
 	$button_hover_text_color = coaching_pro_color_contrast( $button_hover_bg_color );
+
+
 
 	$css = '';
 
@@ -33,7 +36,10 @@ function coachingpro_custom_edd_colors_css() {
 		.edd-product input.button,
 		.edd-product a.button.blue,
 		.edd-product button.button.blue,
-		.edd-product input.button.blue {
+		.edd-product input.button.blue,
+		.edd-pagination-wrap .edd-pagination .page-numbers:focus,
+		.edd-pagination-wrap .edd-pagination .page-numbers:hover,
+		.edd-pagination-wrap .edd-pagination .page-numbers.current {
 			background-color: %1$s;
 			color: %2$s;
 		}
@@ -54,11 +60,20 @@ function coachingpro_custom_edd_colors_css() {
 			color: %4$s;
 		}
 
+		.edd-product .product-price {
+			color: %1$s;
+		}
+
+		.edd-pagination-wrap .edd-pagination .page-numbers {
+			background-color: %5$s;
+		}
+
 		',
 		$edd_accent_color,
 		$button_text_color,
 		$button_hover_bg_color,
-		$button_hover_text_color
+		$button_hover_text_color,
+		$bg_color1
 
 	);
 

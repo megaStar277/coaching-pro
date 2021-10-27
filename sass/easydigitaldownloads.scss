@@ -17,6 +17,8 @@
                 border-radius: 9999px;
                 margin-top: 1em;
                 padding: calc(.667em + 2px) calc(1.333em + 2px);
+                font-size: 100%;
+                font-weight: 600;
                 border: none;
             }
         }
@@ -31,6 +33,28 @@
                 border: 1px solid #d3ced2;
             }
         }
+        .edd-pagination-wrap {
+            display: block;
+            margin-top: 40px;
+            text-align: center;
+            .edd-pagination {
+                display: inline-block;
+                white-space: nowrap;
+                margin: 1px;
+                padding: 0;
+                clear: both;
+                border: 1px solid #ccc;
+                .page-numbers {
+                    display: inline-block;
+                    float: left;
+                    margin-bottom: 0;
+                    padding: calc(.667em + 2px) calc(1.333em + 2px);
+                    font-weight: 600;
+                    line-height: 1;
+                    border: 0;
+                }
+            }
+        }
     }
 }
 
@@ -38,31 +62,34 @@
 --------------------------------------- */
 .edd-archive {
     #genesis-content {
-        .edd-products-wrap {
-            max-width: 100%;
-            display: flex;
-            flex-direction: column;
-            @include media($screen--l) {
-                margin-left: -210px;
-                margin-right: -210px;
-                max-width: 1200px;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-between;
+        article.entry {
+            .entry-title {
+                margin-bottom: 30px;
+                text-align: center;
             }
-            .edd-product {
-                &.threecol {
-                    width: 100%;
-                    @include media($screen--l) {
-                        flex-basis: 30.75%;
+            .edd-products-wrap {
+                max-width: 100%;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, 31%);
+                grid-gap: 2%;
+                justify-content: space-between;
+                @include media($screen--l) {
+                    margin-left: -210px;
+                    margin-right: -210px;
+                    max-width: 1200px;
+                }
+                .edd-product {
+                    margin-bottom: 30px;
+                    &.threecol {
+                        //
                     }
-                }
-                .title {
-                    font-size: 1em;
-                    font-weight: 600;
-                }
-                .product-price {
-                    font-size: .857em;
+                    .title {
+                        font-size: 1em;
+                        font-weight: 600;
+                    }
+                    .product-price {
+                        font-size: .857em;
+                    }
                 }
             }
         }
