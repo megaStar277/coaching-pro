@@ -25,18 +25,16 @@ function coachingpro_custom_edd_colors_css() {
 	$button_text_color = coaching_pro_color_contrast( $edd_accent_color );
 	$button_hover_text_color = coaching_pro_color_contrast( $button_hover_bg_color );
 
-
-
 	$css = '';
 
 	$css .= sprintf(
 		'
-		.edd-product a.button,
-		.edd-product button.button,
-		.edd-product input.button,
-		.edd-product a.button.blue,
-		.edd-product button.button.blue,
-		.edd-product input.button.blue,
+		.edd-page #genesis-content a.button,
+		.edd-page #genesis-content button.button,
+		.edd-page #genesis-content input.button,
+		.edd-page #genesis-content a.button.blue,
+		.edd-page #genesis-content button.button.blue,
+		.edd-page #genesis-content input.button.blue,
 		.edd-pagination-wrap .edd-pagination .page-numbers:focus,
 		.edd-pagination-wrap .edd-pagination .page-numbers:hover,
 		.edd-pagination-wrap .edd-pagination .page-numbers.current {
@@ -44,23 +42,23 @@ function coachingpro_custom_edd_colors_css() {
 			color: %2$s;
 		}
 
-		.edd-product a.button:hover,
-		.edd-product button.button:hover,
-		.edd-product input.button:hover,
-		.edd-product a.button:focus,
-		.edd-product button.button:focus,
-		.edd-product input.button:focus,
-		.edd-product a.button.blue:hover,
-		.edd-product button.button.blue:hover,
-		.edd-product input.button.blue:hover,
-		.edd-product a.button.blue:focus,
-		.edd-product button.button.blue:focus,
-		.edd-product input.button.blue:focus {
+		.edd-page #genesis-content a.button:hover,
+		.edd-page #genesis-content button.button:hover,
+		.edd-page #genesis-content input.button:hover,
+		.edd-page #genesis-content a.button:focus,
+		.edd-page #genesis-content button.button:focus,
+		.edd-page #genesis-content input.button:focus,
+		.edd-page #genesis-content a.button.blue:hover,
+		.edd-page #genesis-content button.button.blue:hover,
+		.edd-page #genesis-content input.button.blue:hover,
+		.edd-page #genesis-content a.button.blue:focus,
+		.edd-page #genesis-content button.button.blue:focus,
+		.edd-page #genesis-content input.button.blue:focus {
 			background-color: %3$s;
 			color: %4$s;
 		}
 
-		.edd-product .product-price {
+		.edd-page #genesis-content .product-price {
 			color: %1$s;
 		}
 

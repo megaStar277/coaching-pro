@@ -395,6 +395,9 @@ function coaching_pro_color_css() {
 	$color_one = get_theme_mod( 'coachpro_theme_color_1_setting', $appearance['default-colors']['color1'] );
 	$color_two = get_theme_mod( 'coachpro_theme_color_2_setting', $appearance['default-colors']['color2'] );
 
+	$color_bg1 = get_theme_mod( 'coachpro_theme_bgcolor_1_setting', $appearance['default-colors']['bgcolor1'] );
+	$color_bg2 = get_theme_mod( 'coachpro_theme_bgcolor_2_setting', $appearance['default-colors']['bgcolor2'] );
+
 	$links_color = get_theme_mod( 'coachpro_theme_linkscolor_setting', $appearance['default-colors']['textcolor1'] );
 	$mobilemenubutton_color = get_theme_mod( 'coachpro_theme_mobilemenubutton_setting', $appearance['default-colors']['color2'] );
 
@@ -438,8 +441,16 @@ function coaching_pro_color_css() {
 	// Output colors for non-editable buttons: navigation menu, pagination, read more links, etc.
 	$css .= "
 
+		.genesis-responsive-menu .genesis-nav-menu {
+			background-color: " . $color_bg2 . ";
+		}
+
+		.genesis-responsive-menu .genesis-nav-menu .sub-menu {
+			background-color: " . $color_bg1 . ";
+		}
+
 		.genesis-responsive-menu .genesis-nav-menu li.current-menu-item > a,
-		.genesis-responsive-menu .genesis-nav-menu li.current_page_ancestor > a {
+		.genesis-responsive-menu .genesis-nav-menu li.current-menu-ancestor > a {
 			color: " . $color_two . ";
 		}
 

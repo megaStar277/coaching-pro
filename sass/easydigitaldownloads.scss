@@ -9,7 +9,7 @@
 
 /* GLOBAL STYLES
 --------------------------------------- */
-.edd-archive {
+.edd-page {
     #genesis-content {
         button,
         a {
@@ -60,7 +60,7 @@
 
 /* ARCHIVE PAGE
 --------------------------------------- */
-.edd-archive {
+.edd-page.edd-archive {
     #genesis-content {
         article.entry {
             .entry-title {
@@ -91,6 +91,18 @@
                         font-size: .857em;
                     }
                 }
+            }
+        }
+    }
+}
+
+/* SINGLE DOWNLOAD PAGE
+--------------------------------------- */
+.edd-page.edd-single-download {
+    #genesis-content {
+        article.entry {
+            header.entry-header {
+                margin: 30px 0;
             }
         }
     }

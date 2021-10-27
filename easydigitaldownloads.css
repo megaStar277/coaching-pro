@@ -8,8 +8,8 @@ html {
 ----------------------------------------------------------------------------- */
 /* GLOBAL STYLES
 --------------------------------------- */
-.edd-archive #genesis-content button.button,
-.edd-archive #genesis-content a.button {
+.edd-page #genesis-content button.button,
+.edd-page #genesis-content a.button {
   border-radius: 9999px;
   margin-top: 1em;
   padding: calc(.667em + 2px) calc(1.333em + 2px);
@@ -17,27 +17,27 @@ html {
   font-weight: 600;
   border: none; }
 
-.edd-archive #genesis-content form input[type="text"],
-.edd-archive #genesis-content form input[type="email"],
-.edd-archive #genesis-content form input[type="phone"],
-.edd-archive #genesis-content form input[type="tel"],
-.edd-archive #genesis-content form input[type="password"],
-.edd-archive #genesis-content form select,
-.edd-archive #genesis-content form textarea {
+.edd-page #genesis-content form input[type="text"],
+.edd-page #genesis-content form input[type="email"],
+.edd-page #genesis-content form input[type="phone"],
+.edd-page #genesis-content form input[type="tel"],
+.edd-page #genesis-content form input[type="password"],
+.edd-page #genesis-content form select,
+.edd-page #genesis-content form textarea {
   border: 1px solid #d3ced2; }
 
-.edd-archive #genesis-content .edd-pagination-wrap {
+.edd-page #genesis-content .edd-pagination-wrap {
   display: block;
   margin-top: 40px;
   text-align: center; }
-  .edd-archive #genesis-content .edd-pagination-wrap .edd-pagination {
+  .edd-page #genesis-content .edd-pagination-wrap .edd-pagination {
     display: inline-block;
     white-space: nowrap;
     margin: 1px;
     padding: 0;
     clear: both;
     border: 1px solid #ccc; }
-    .edd-archive #genesis-content .edd-pagination-wrap .edd-pagination .page-numbers {
+    .edd-page #genesis-content .edd-pagination-wrap .edd-pagination .page-numbers {
       display: inline-block;
       float: left;
       margin-bottom: 0;
@@ -48,25 +48,30 @@ html {
 
 /* ARCHIVE PAGE
 --------------------------------------- */
-.edd-archive #genesis-content article.entry .entry-title {
+.edd-page.edd-archive #genesis-content article.entry .entry-title {
   margin-bottom: 30px;
   text-align: center; }
 
-.edd-archive #genesis-content article.entry .edd-products-wrap {
+.edd-page.edd-archive #genesis-content article.entry .edd-products-wrap {
   max-width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, 31%);
   grid-gap: 2%;
   justify-content: space-between; }
   @media screen and (min-width: 1280px) {
-    .edd-archive #genesis-content article.entry .edd-products-wrap {
+    .edd-page.edd-archive #genesis-content article.entry .edd-products-wrap {
       margin-left: -210px;
       margin-right: -210px;
       max-width: 1200px; } }
-  .edd-archive #genesis-content article.entry .edd-products-wrap .edd-product {
+  .edd-page.edd-archive #genesis-content article.entry .edd-products-wrap .edd-product {
     margin-bottom: 30px; }
-    .edd-archive #genesis-content article.entry .edd-products-wrap .edd-product .title {
+    .edd-page.edd-archive #genesis-content article.entry .edd-products-wrap .edd-product .title {
       font-size: 1em;
       font-weight: 600; }
-    .edd-archive #genesis-content article.entry .edd-products-wrap .edd-product .product-price {
+    .edd-page.edd-archive #genesis-content article.entry .edd-products-wrap .edd-product .product-price {
       font-size: .857em; }
+
+/* SINGLE DOWNLOAD PAGE
+--------------------------------------- */
+.edd-page.edd-single-download #genesis-content article.entry header.entry-header {
+  margin: 30px 0; }

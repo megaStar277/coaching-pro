@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // Add a body class for the EDD Archive page.
 add_filter( 'body_class', 'coaching_pro_edd_archive_body_class' );
 function coaching_pro_edd_archive_body_class( $classes ) {
-	$classes[] = 'edd-archive';
+	$classes[] = 'edd-page edd-archive';
 	return $classes;
 }
 
