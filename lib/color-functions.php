@@ -441,12 +441,16 @@ function coaching_pro_color_css() {
 	// Output colors for non-editable buttons: navigation menu, pagination, read more links, etc.
 	$css .= "
 
-		.genesis-responsive-menu .genesis-nav-menu {
-			background-color: " . $color_bg2 . ";
-		}
+		@media screen and (max-width: 1023px) {
 
-		.genesis-responsive-menu .genesis-nav-menu .sub-menu {
-			background-color: " . $color_bg1 . ";
+			.site-header .genesis-responsive-menu .genesis-nav-menu {
+				background-color: " . $color_bg2 . ";
+			}
+
+			.site-header .genesis-responsive-menu .genesis-nav-menu .sub-menu {
+				background-color: " . $color_bg1 . ";
+			}
+
 		}
 
 		.genesis-responsive-menu .genesis-nav-menu li.current-menu-item > a,
