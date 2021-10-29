@@ -88,3 +88,8 @@ if ( class_exists( 'WooCommerce' ) ) {
 if ( class_exists( 'Easy_Digital_Downloads' ) ) {
 	include_once CHILD_THEME_DIR . '/lib/output-easydigitaldownloads.php';
 }
+
+// Custom functions for WPForms plugin.
+if ( class_exists( 'WPForms' ) ) {
+	include_once CHILD_THEME_DIR . '/lib/output-wpforms.php';
+}

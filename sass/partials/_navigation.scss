@@ -279,7 +279,7 @@
                     /* 3RD LEVEL DEPTH */
                     .sub-menu {
                         @include media($screen--m) {
-                            left: 100%;
+                            left: calc(100% + 10px);
                             top: -10px;
                             width: 200px;
                             .menu-item {
