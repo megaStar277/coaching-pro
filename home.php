@@ -17,11 +17,7 @@ function coaching_pro_blog_archive_body_class( $classes ) {
 	return $classes;
 }
 
-// Reposition the Page Title.
-remove_action( 'genesis_before_loop', 'genesis_do_posts_page_heading' );
-add_action( 'genesis_before_content', 'genesis_do_posts_page_heading' );
-
-// Reposition the Featured Image to display before the Post Title.
+// Reposition Featured Images to display before Post Titles.
 remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
 add_action( 'genesis_entry_header', 'genesis_do_post_image', 1 );
 

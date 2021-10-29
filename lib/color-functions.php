@@ -401,6 +401,10 @@ function coaching_pro_color_css() {
 	$links_color = get_theme_mod( 'coachpro_theme_linkscolor_setting', $appearance['default-colors']['textcolor1'] );
 	$mobilemenubutton_color = get_theme_mod( 'coachpro_theme_mobilemenubutton_setting', $appearance['default-colors']['color2'] );
 
+	// Determine contrasting colors for button text.
+	$button_text_color = coaching_pro_color_contrast( $color_two );
+	$button_hover_text_color = coaching_pro_color_contrast( $color_one );
+
     $css = '';
 
     foreach ( $editor_color_palette as $color_info ) {
@@ -458,24 +462,30 @@ function coaching_pro_color_css() {
 			color: " . $color_two . ";
 		}
 
-		.pagination li a {
-			background-color: " . $color_one . ";
-			color: #fff;
+		/* PAGINATION */
+		.archive-pagination ul {
+			background-color: " . $color_bg1 . ";
 		}
 
-		.pagination li a:hover {
+		.archive-pagination ul li a,
+		.archive-pagination ul li.pagination-omission {
+			background-color: " . $color_bg1 . ";
+			color: " . $links_color . ";
+		}
+
+		.archive-pagination ul li a:focus,
+		.archive-pagination ul li a:hover,
+		.archive-pagination ul li.active a {
+			background-color: " . $color_two . ";
+			color: " . $button_hover_text_color . ";
+		}
+
+		a.more-link.button {
 			background-color: " . $color_two . ";
 		}
 
-		a.more-link.button,
-		.pagination li.active a {
-			background-color: " . $color_two . ";
-		}
-
-		a.more-link.button:hover,
-		.pagination li.active a:hover {
+		a.more-link.button:hover {
 			background-color: " . $color_one . ";
-			border-bottom: none;
 		}
 	";
 

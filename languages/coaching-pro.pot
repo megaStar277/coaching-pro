@@ -29,76 +29,164 @@ msgstr ""
 msgid "Sitemap"
 msgstr ""
 
-#: config/appearance.php:61, lib/color-functions.php:49
+#: config/appearance.php:63, lib/color-functions.php:49
 msgid "Color 1"
 msgstr ""
 
-#: config/appearance.php:66, lib/color-functions.php:73
+#: config/appearance.php:68, lib/color-functions.php:73
 msgid "Color 2"
 msgstr ""
 
-#: config/appearance.php:71, lib/color-functions.php:97
+#: config/appearance.php:73, lib/color-functions.php:97
 msgid "Color 3"
 msgstr ""
 
-#: config/appearance.php:76, lib/color-functions.php:121
+#: config/appearance.php:78, lib/color-functions.php:121
 msgid "Color 4"
 msgstr ""
 
-#: config/appearance.php:81, lib/color-functions.php:145
+#: config/appearance.php:83, lib/color-functions.php:145
 msgid "Text Color 1"
 msgstr ""
 
-#: config/appearance.php:86, lib/color-functions.php:169
+#: config/appearance.php:88, lib/color-functions.php:169
 msgid "Text Color 2"
 msgstr ""
 
-#: config/appearance.php:91, lib/color-functions.php:193
+#: config/appearance.php:93, lib/color-functions.php:193
 msgid "Background Color 1"
 msgstr ""
 
-#: config/appearance.php:96, lib/color-functions.php:217
+#: config/appearance.php:98, lib/color-functions.php:217
 msgid "Background Color 2"
 msgstr ""
 
-#: config/appearance.php:101
+#: config/appearance.php:103
 msgid "White"
 msgstr ""
 
-#: config/appearance.php:106
+#: config/appearance.php:108
 msgid "Black"
 msgstr ""
 
-#: config/appearance.php:113, lib/font-functions.php:115
+#: config/appearance.php:115, lib/font-functions.php:116
 msgid "H1"
 msgstr ""
 
-#: config/appearance.php:119, lib/font-functions.php:138
+#: config/appearance.php:121, lib/font-functions.php:139
 msgid "H2"
 msgstr ""
 
-#: config/appearance.php:125, lib/font-functions.php:161
+#: config/appearance.php:127, lib/font-functions.php:162
 msgid "H3"
 msgstr ""
 
-#: config/appearance.php:131, lib/font-functions.php:184
+#: config/appearance.php:133, lib/font-functions.php:185
 msgid "H4"
 msgstr ""
 
-#: config/appearance.php:137, lib/font-functions.php:207
+#: config/appearance.php:139, lib/font-functions.php:208
 msgid "H5"
 msgstr ""
 
-#: config/appearance.php:143, lib/font-functions.php:230
+#: config/appearance.php:145, lib/font-functions.php:231
 msgid "H6"
 msgstr ""
 
-#: config/appearance.php:149, lib/font-functions.php:253
+#: config/appearance.php:151, lib/font-functions.php:254
+msgid "Primary Nav Menu"
+msgstr ""
+
+#: config/appearance.php:157, lib/font-functions.php:277
 msgid "Body Text"
+msgstr ""
+
+#: lib/block-patterns.php:17
+msgctxt "Block pattern category"
+msgid "Coaching Pro"
+msgstr ""
+
+#: lib/block-patterns.php:44
+msgid "Main Hero"
+msgstr ""
+
+#: lib/block-patterns.php:45
+msgctxt "Block pattern description"
+msgid "A full-width hero image section with heading, supporting text, and a button."
+msgstr ""
+
+#: lib/block-patterns.php:61
+msgid "Hero 2-columns"
+msgstr ""
+
+#: lib/block-patterns.php:62
+msgctxt "Block pattern description"
+msgid "A full-width section with two columns: one column containing a hero image, the other column containing heading text, supporting text, and a button."
+msgstr ""
+
+#: lib/block-patterns.php:78
+msgid "Basic 2-columns"
+msgstr ""
+
+#: lib/block-patterns.php:79
+msgctxt "Block pattern description"
+msgid "A simple full-width section with two columns, each containing heading text, supporting text, and a button."
+msgstr ""
+
+#: lib/block-patterns.php:95
+msgid "Features 3-columns"
+msgstr ""
+
+#: lib/block-patterns.php:96
+msgctxt "Block pattern description"
+msgid "A full-width section with heading text, supporting text, and 3-columns."
+msgstr ""
+
+#: lib/block-patterns.php:112
+msgid "Blog Grid"
+msgstr ""
+
+#: lib/block-patterns.php:113
+msgctxt "Block pattern description"
+msgid "A full-width section to showcase blog posts. Contains heading text, sub-heading text, supporting text, and a 2-column grid of your latest blog posts."
+msgstr ""
+
+#: lib/block-patterns.php:129
+msgid "Testimonials Section"
+msgstr ""
+
+#: lib/block-patterns.php:130
+msgctxt "Block pattern description"
+msgid "A full-width section to showcase testimonials. Contains heading text, sub-heading text, supporting text, and a rotating slider of your testimonials."
+msgstr ""
+
+#: lib/block-patterns.php:146
+msgid "Newsletter Opt-In"
+msgstr ""
+
+#: lib/block-patterns.php:147
+msgctxt "Block pattern description"
+msgid "A full-width section to promote newsletter signups or other content. Contains a background hero image, heading text, sub-heading text, supporting text, and a place to add your own opt-in form block."
 msgstr ""
 
 #: lib/color-functions.php:27
 msgid "Color Palette"
+msgstr ""
+
+#: lib/color-functions.php:257
+msgid "Links Color"
+msgstr ""
+
+#: lib/color-functions.php:281
+msgid "Mobile Menu Button Color"
+msgstr ""
+
+#: lib/color-functions.php:322
+msgid "WooCommerce Accent Color"
+msgstr ""
+
+#: lib/color-functions.php:365
+msgid "Easy Digital Downloads Accent Color"
 msgstr ""
 
 #: lib/customize-colors.php:286, lib/customize-colors.php:338
@@ -149,7 +237,19 @@ msgstr ""
 msgid "Navigation Text Hover Color"
 msgstr ""
 
-#: lib/font-functions.php:93
+#: lib/customize.php:20
+msgid "Coaching Pro Settings"
+msgstr ""
+
+#: lib/customize.php:41
+msgid "Sticky Header"
+msgstr ""
+
+#: lib/customize.php:44
+msgid "Enable or Disable the Sticky Header. Turning this ON will keep the header in place while you scroll the page. Turning this OFF will make the header scroll with the rest of the page content. This effect is disabled for mobile devices."
+msgstr ""
+
+#: lib/font-functions.php:94
 msgid "Fonts"
 msgstr ""
 
@@ -161,30 +261,30 @@ msgstr ""
 msgid "Please define an SVG icon filename."
 msgstr ""
 
-#: lib/load-scripts.php:132
+#: lib/load-scripts.php:105
 msgid "Menu"
 msgstr ""
 
-#: lib/load-scripts.php:134
+#: lib/load-scripts.php:107
 msgid "Submenu"
 msgstr ""
 
-#: lib/theme-setup.php:53
+#: lib/theme-setup.php:39
 msgid "Featured Image"
 msgstr ""
 
-#: lib/theme-setup.php:90
+#: lib/theme-setup.php:68
 msgid "Primary Menu"
 msgstr ""
 
-#: lib/theme-setup.php:90
+#: lib/theme-setup.php:68
 msgid "Footer Menu"
 msgstr ""
 
-#: lib/theme-setup.php:180
+#: lib/theme-setup.php:151
 msgid "Read more"
 msgstr ""
 
-#: lib/theme-setup.php:180
+#: lib/theme-setup.php:151
 msgid "about"
 msgstr ""

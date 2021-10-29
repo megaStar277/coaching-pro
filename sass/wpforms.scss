@@ -6,27 +6,25 @@
 
 /* WPFORMS STYLES
 ----------------------------------------------------------------------------- */
-.wpforms-widget {
-    .wpforms-container {
-        form.wpforms-form {
-            button,
-            button[type="submit"],
-            a.button {
-                border-radius: 9999px;
-                border: none !important;
-            }
-            .wpforms-field-container {
-                input[type="text"],
-                input[type="email"],
-                input[type="phone"],
-                input[type="tel"],
-                input[type="password"],
-                select,
-                textarea {
-                    border: 1px solid #d3ced2;
-                    &.wpforms-error {
-                        border: 1px solid #cc0000;
-                    }
+.wpforms-container {
+    form.wpforms-form {
+        button,
+        button[type="submit"],
+        a.button {
+            border-radius: 9999px;
+            border: none !important;
+        }
+        .wpforms-field-container {
+            input[type="text"],
+            input[type="email"],
+            input[type="phone"],
+            input[type="tel"],
+            input[type="password"],
+            select,
+            textarea {
+                border: 1px solid #d3ced2;
+                &.wpforms-error {
+                    border: 1px solid #cc0000;
                 }
             }
         }

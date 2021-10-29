@@ -27,32 +27,32 @@ function coachingpro_custom_wpforms_colors_css() {
 
 	$css .= sprintf(
 		'
-		.wpforms-widget .wpforms-container form.wpforms-form button,
-		.wpforms-widget .wpforms-container form.wpforms-form button[type="submit"],
-		.wpforms-widget .wpforms-container form.wpforms-form a.button,
-		.wpforms-widget .wpforms-container form.wpforms-form button.white:hover,
-		.wpforms-widget .wpforms-container form.wpforms-form button.white:focus,
-		.wpforms-widget .wpforms-container form.wpforms-form button[type="submit"].white:hover,
-		.wpforms-widget .wpforms-container form.wpforms-form button[type="submit"].white:focus,
-		.wpforms-widget .wpforms-container form.wpforms-form a.button.white:hover,
-		.wpforms-widget .wpforms-container form.wpforms-form a.button.white:focus {
+		div.wpforms-container-full form.wpforms-form button,
+		div.wpforms-container-full form.wpforms-form button[type=submit],
+		div.wpforms-container-full form.wpforms-form a.button,
+		div.wpforms-container-full form.wpforms-form button.white:hover,
+		div.wpforms-container-full form.wpforms-form button.white:focus,
+		div.wpforms-container-full form.wpforms-form button[type=submit].white:hover,
+		div.wpforms-container-full form.wpforms-form button[type=submit].white:focus,
+		div.wpforms-container-full form.wpforms-form a.button.white:hover,
+		div.wpforms-container-full form.wpforms-form a.button.white:focus {
 			background-color: %1$s;
 			color: %2$s;
 		}
 
-		.wpforms-widget .wpforms-container form.wpforms-form button.white,
-		.wpforms-widget .wpforms-container form.wpforms-form button[type="submit"].white,
-		.wpforms-widget .wpforms-container form.wpforms-form a.button.white {
+		div.wpforms-container-full form.wpforms-form button.white,
+		div.wpforms-container-full form.wpforms-form button[type=submit].white,
+		div.wpforms-container-full form.wpforms-form a.button.white {
 			background-color: #fff;
 			color: %3$s;
 		}
 
-		.wpforms-widget .wpforms-container form.wpforms-form button:hover,
-		.wpforms-widget .wpforms-container form.wpforms-form button:focus,
-		.wpforms-widget .wpforms-container form.wpforms-form button[type="submit"]:hover,
-		.wpforms-widget .wpforms-container form.wpforms-form button[type="submit"]:focus,
-		.wpforms-widget .wpforms-container form.wpforms-form a.button:hover,
-		.wpforms-widget .wpforms-container form.wpforms-form a.button:focus {
+		div.wpforms-container-full form.wpforms-form button:hover,
+		div.wpforms-container-full form.wpforms-form button:focus,
+		div.wpforms-container-full form.wpforms-form button[type=submit]:hover,
+		div.wpforms-container-full form.wpforms-form button[type=submit]:focus,
+		div.wpforms-container-full form.wpforms-form a.button:hover,
+		div.wpforms-container-full form.wpforms-form a.button:focus {
 			background-color: %3$s;
 			color: %4$s;
 		}

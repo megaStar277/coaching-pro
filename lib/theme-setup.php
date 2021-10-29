@@ -6,6 +6,7 @@
  *
  * @package Coaching Pro Theme
  */
+
 // Add HTML5 markup structure.
 add_theme_support( 'html5', array( 'caption', 'comment-form', 'comment-list', 'gallery', 'search-form' ) );
 
@@ -22,17 +23,6 @@ genesis_unregister_layout( 'sidebar-content-sidebar' );
 
 // Unregister secondary sidebar.
 unregister_sidebar( 'sidebar-alt' );
-
-// Add support for custom header.
-add_theme_support( 'custom-header', array(
-	'width'           => 600,
-	'height'          => 120,
-	'header-selector' => '.site-title a',
-	'header-text'     => false,
-	'flex-height'     => true,
-	'flex-width'     => true,
-) );
-
 
 // Add support for after entry widget.
 add_theme_support( 'genesis-after-entry-widget-area' );
@@ -133,7 +123,6 @@ remove_filter( 'get_search_form', 'genesis_search_form' );
 remove_action( 'genesis_after_content_sidebar_wrap', 'genesis_get_sidebar_alt' );
 add_action( 'genesis_after_content','genesis_get_sidebar_alt' );
 
-
 // Customize the entry meta header.
 add_filter( 'genesis_post_info', 'coaching_pro_post_info_filter' );
 function coaching_pro_post_info_filter( $post_info ) {
@@ -174,7 +163,6 @@ function coaching_pro_do_post_subtitle() {
 		}
 	}
 }
-
 
 // Remove 'You are here' from the front of the breadcrumb trail.
 add_filter( 'genesis_breadcrumb_args', 'coaching_pro_prefix_breadcrumb' );

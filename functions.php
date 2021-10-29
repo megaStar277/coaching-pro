@@ -11,7 +11,7 @@
  */
 
 // Start the engine.
-include_once( get_template_directory() . '/lib/init.php' );
+require_once get_template_directory() . '/lib/init.php';
 
 // Load constants - use constants in code instead of functions to improve performance. Hat Tip to Tonya at Knowthecode.io.
 $child_theme = wp_get_theme();
@@ -32,8 +32,9 @@ if ( defined( 'COACHING_PRO_DEBUG' ) && COACHING_PRO_DEBUG  ) {
 }
 define( 'ROOT_DOMAIN_URL', home_url() );
 define( 'CHILD_SITE_NAME', get_bloginfo( 'name' ) );
+
 // Setup Theme.
-include_once( CHILD_THEME_DIR . '/lib/theme-defaults.php' );
+require_once CHILD_THEME_DIR . '/lib/theme-defaults.php';
 
 // Set Localization (do not remove).
 add_action( 'after_setup_theme','coaching_pro_localization_setup' );
@@ -47,49 +48,49 @@ function coaching_pro_localization_setup() {
 }
 
 // Load Theme Setup and Configuration.
-include_once( CHILD_THEME_DIR . '/lib/theme-setup.php' );
+require_once CHILD_THEME_DIR . '/lib/theme-setup.php';
 
 // Color functions.
-include_once( CHILD_THEME_DIR . '/lib/color-functions.php' );
+require_once CHILD_THEME_DIR . '/lib/color-functions.php';
 
 // Import Customizer custom toggle control.
 require_once CHILD_THEME_DIR . '/lib/class-coaching-pro-toggle-control.php';
 
 // Customizer functions.
-include_once( CHILD_THEME_DIR . '/lib/customize.php' );
+require_once CHILD_THEME_DIR . '/lib/customize.php';
 
 // Font functions.
-include_once( CHILD_THEME_DIR . '/lib/font-functions.php' );
+require_once CHILD_THEME_DIR . '/lib/font-functions.php';
 
 // Add the social icons functions.
-include_once( CHILD_THEME_DIR . '/lib/icon-functions.php' );
+require_once CHILD_THEME_DIR . '/lib/icon-functions.php';
 
 // Custom metaboxes.
-include_once( CHILD_THEME_DIR . '/lib/meta-boxes.php' );
+require_once CHILD_THEME_DIR . '/lib/meta-boxes.php';
 
 // Add the helper functions.
-include_once( CHILD_THEME_DIR . '/lib/helper-functions.php' );
+require_once CHILD_THEME_DIR . '/lib/helper-functions.php';
 
 // Load Scripts and Styles.
-include_once( CHILD_THEME_DIR . '/lib/load-scripts.php' );
+require_once CHILD_THEME_DIR . '/lib/load-scripts.php';
 
 // Load Block Editor functions.
-include_once( CHILD_THEME_DIR . '/lib/block-functions.php' );
+require_once CHILD_THEME_DIR . '/lib/block-functions.php';
 
 // Load Block Patterns.
-include_once( CHILD_THEME_DIR . '/lib/block-patterns.php' );
+require_once CHILD_THEME_DIR . '/lib/block-patterns.php';
 
 // Custom functions for WooCommerce.
 if ( class_exists( 'WooCommerce' ) ) {
-	include_once CHILD_THEME_DIR . '/lib/output-woocommerce.php';
+	require_once CHILD_THEME_DIR . '/lib/output-woocommerce.php';
 }
 
 // Custom functions for Easy Digital Downloads.
 if ( class_exists( 'Easy_Digital_Downloads' ) ) {
-	include_once CHILD_THEME_DIR . '/lib/output-easydigitaldownloads.php';
+	require_once CHILD_THEME_DIR . '/lib/output-easydigitaldownloads.php';
 }
 
 // Custom functions for WPForms plugin.
 if ( class_exists( 'WPForms' ) ) {
-	include_once CHILD_THEME_DIR . '/lib/output-wpforms.php';
+	require_once CHILD_THEME_DIR . '/lib/output-wpforms.php';
 }

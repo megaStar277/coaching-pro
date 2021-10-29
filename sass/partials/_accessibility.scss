@@ -37,6 +37,9 @@
 .more-link {
     position: relative;
     margin-top: 12px;
+    &:hover {
+        border-bottom: 0;
+    }
 }
 
 /* # Skip Links

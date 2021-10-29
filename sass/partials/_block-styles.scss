@@ -120,6 +120,9 @@
 	}
 }
 
+/* GENESIS BLOCKS
+--------------------------------------------- */
+
 /* Genesis Advanced Columns - Inner Column blocks. */
 .gb-block-layout-column-inner {
 	& > .wp-block-image {
@@ -141,7 +144,8 @@
 
 /* Blog post grid. */
 .gb-block-post-grid {
-	.gb-post-grid-items {
+	.gb-post-grid-items.is-grid {
+		grid-gap: 2em;
 		article.entry {
 			background-color: transparent;
 			.gb-block-post-grid-title {
