@@ -1,5 +1,8 @@
 /* BLOG STYLES
 ----------------------------------------------------------------------------- */
+
+/* BLOG PAGE
+----------------------------- */
 .blog {
     &.blog-archive {
         .content-sidebar-wrap {
@@ -50,6 +53,8 @@
     }
 }
 
+/* FEATURED POST
+----------------------------- */
 .featured-post {
     h2,
     h3 {
@@ -57,5 +62,64 @@
     }
     .entry-title {
     	text-align: center;
+    }
+}
+
+
+/* ARCHIVE PAGE
+----------------------------- */
+.page-archive {
+    .site-container {
+        .site-inner {
+            .content-sidebar-wrap {
+                flex-wrap: wrap;
+                .content {
+                    .archive-description {
+                        width: 100%;
+                        padding: 0;
+                        padding-left: 0;
+                        padding-right: 0;
+                        text-align: center;
+                        .archive-title {
+                            text-align: center;
+                            font-size: 36px;
+                            padding: 30px;
+                            @include media($screen--l) {
+                                padding: 12px 30px;
+                                font-size: 36px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.full-width-content {
+        #genesis-content {
+            .breadcrumb {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+    .pagination {
+        text-align: center;
+        ul {
+            display: inline-block;
+            text-align: center;
+            border: 1px solid #ccc;
+            li {
+                float: left;
+                border: 0;
+                & > a,
+                &.pagination-omission {
+                    margin-bottom: 0;
+                    padding: calc(.667em + 2px) calc(1.333em + 2px);
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 1;
+                }
+            }
+        }
     }
 }

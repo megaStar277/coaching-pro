@@ -696,20 +696,20 @@ body.content-sidebar .content-sidebar-wrap {
           max-width: 1280px;
           padding: 0 30px; } }
 
-.full-width-content.blog-archive .archive-description {
+.full-width-content.blog-archive .archive-description, .full-width-content.page-archive .archive-description {
   padding-left: 0;
   padding-right: 0; }
-  .full-width-content.blog-archive .archive-description h1 {
+  .full-width-content.blog-archive .archive-description h1, .full-width-content.page-archive .archive-description h1 {
     font-size: 36px;
     font-size: 3.6rem; }
 
-.full-width-content.blog-archive .content {
+.full-width-content.blog-archive .content, .full-width-content.page-archive .content {
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: none; }
   @media screen and (min-width: 1024px) {
-    .full-width-content.blog-archive .content {
+    .full-width-content.blog-archive .content, .full-width-content.page-archive .content {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -717,18 +717,18 @@ body.content-sidebar .content-sidebar-wrap {
       max-width: 100%;
       margin-left: auto;
       margin-right: auto; } }
-  .full-width-content.blog-archive .content article.entry {
+  .full-width-content.blog-archive .content article.entry, .full-width-content.page-archive .content article.entry {
     width: 100%; }
     @media screen and (min-width: 1024px) {
-      .full-width-content.blog-archive .content article.entry {
+      .full-width-content.blog-archive .content article.entry, .full-width-content.page-archive .content article.entry {
         width: 31%; } }
-    .full-width-content.blog-archive .content article.entry h2.entry-title a {
+    .full-width-content.blog-archive .content article.entry h2.entry-title a, .full-width-content.page-archive .content article.entry h2.entry-title a {
       font-size: 20px;
       font-size: 2rem; }
-    .full-width-content.blog-archive .content article.entry .entry-content {
+    .full-width-content.blog-archive .content article.entry .entry-content, .full-width-content.page-archive .content article.entry .entry-content {
       font-size: 17px;
       font-size: 1.7rem; }
-  .full-width-content.blog-archive .content .pagination {
+  .full-width-content.blog-archive .content .pagination, .full-width-content.page-archive .content .pagination {
     width: 100%; }
 
 body.first-block-align-full.full-width-content.genesis-title-hidden.genesis-breadcrumbs-hidden .site-inner {
@@ -794,9 +794,6 @@ body.first-block-align-full.full-width-content.genesis-title-hidden.genesis-brea
   margin-bottom: 0; }
 
 .bypostauthor {
-  margin: auto; }
-
-.sticky {
   margin: auto; }
 
 /* ## Search Form
@@ -1561,6 +1558,8 @@ p.entry-meta {
 
 /* BLOG STYLES
 ----------------------------------------------------------------------------- */
+/* BLOG PAGE
+----------------------------- */
 .blog.blog-archive .content-sidebar-wrap {
   flex-wrap: wrap; }
   .blog.blog-archive .content-sidebar-wrap .archive-description {
@@ -1598,12 +1597,56 @@ p.entry-meta {
         font-weight: 600;
         line-height: 1; }
 
+/* FEATURED POST
+----------------------------- */
 .featured-post h2,
 .featured-post h3 {
   margin-bottom: 0; }
 
 .featured-post .entry-title {
   text-align: center; }
+
+/* ARCHIVE PAGE
+----------------------------- */
+.page-archive .site-container .site-inner .content-sidebar-wrap {
+  flex-wrap: wrap; }
+  .page-archive .site-container .site-inner .content-sidebar-wrap .content .archive-description {
+    width: 100%;
+    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center; }
+    .page-archive .site-container .site-inner .content-sidebar-wrap .content .archive-description .archive-title {
+      text-align: center;
+      font-size: 36px;
+      font-size: 3.6rem;
+      padding: 30px; }
+      @media screen and (min-width: 1280px) {
+        .page-archive .site-container .site-inner .content-sidebar-wrap .content .archive-description .archive-title {
+          padding: 12px 30px;
+          font-size: 36px;
+          font-size: 3.6rem; } }
+
+.page-archive.full-width-content #genesis-content .breadcrumb {
+  margin-left: 0;
+  margin-right: 0; }
+
+.page-archive .pagination {
+  text-align: center; }
+  .page-archive .pagination ul {
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #ccc; }
+    .page-archive .pagination ul li {
+      float: left;
+      border: 0; }
+      .page-archive .pagination ul li > a, .page-archive .pagination ul li.pagination-omission {
+        margin-bottom: 0;
+        padding: calc(.667em + 2px) calc(1.333em + 2px);
+        font-size: 16px;
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1; }
 
 /* # Site Footer
 ---------------------------------------------------------------------------------------------------- */

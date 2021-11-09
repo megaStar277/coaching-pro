@@ -178,7 +178,8 @@ body.content-sidebar {
             }
         }
     }
-    &.blog-archive {
+    &.blog-archive,
+    &.page-archive {
         .archive-description {
             padding-left: 0;
             padding-right: 0;
