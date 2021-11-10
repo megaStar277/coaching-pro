@@ -53,7 +53,7 @@ body:not(.first-block-align-full).full-width-content {
 /* ## Entry Meta
 --------------------------------------------- */
 p.entry-meta {
-    font-size: 16px;
+    font-size: 0.8em;
     margin-bottom: 0;
 }
 
@@ -71,17 +71,31 @@ p.entry-meta {
     display: block;
 }
 
-.entry-comments-link {
-    font-family: $accent-font;
-}
-
 /* ## Pagination
 --------------------------------------------- */
 .pagination {
     clear: both;
     margin: 5% auto;
+    text-align: center;
     @include media($screen--s1) {
         margin: 40px 0;
+    }
+    ul {
+        display: inline-block;
+        text-align: center;
+        border: 1px solid #ccc;
+        li {
+            float: left;
+            border: 0;
+            & > a,
+            &.pagination-omission {
+                margin-bottom: 0;
+                padding: calc(.667em + 2px) calc(1.333em + 2px);
+                font-size: 1em;
+                font-weight: 600;
+                line-height: 1;
+            }
+        }
     }
 }
 
@@ -123,7 +137,7 @@ p.entry-meta {
 .entry-comments,
 .entry-pings {
     background-color: $soft-white;
-    font-size: 16px;
+    font-size: 0.8em;
     padding: 30px;
     margin-bottom: 5%;
     @include media($screen--s1) {
@@ -177,7 +191,7 @@ p.entry-meta {
 /* # Sidebars
 ---------------------------------------------------------------------------------------------------- */
 .sidebar {
-    font-size: 16px;
+    font-size: $body-font-size;
     margin-bottom: 5%;
     @include media($screen--s1) {
         margin-bottom: 40px;

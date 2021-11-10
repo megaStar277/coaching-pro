@@ -98,8 +98,7 @@ html {
   width: 100%;
   margin-bottom: 30px;
   text-align: center;
-  font-size: 14px;
-  font-size: 1.4rem; }
+  font-size: 14px; }
 
 .woocommerce-shop #genesis-content .woocommerce .woocommerce-ordering {
   display: none; }
@@ -126,8 +125,7 @@ html {
   display: flex; }
 
 .single-product #genesis-content .woocommerce .single-product .product .entry-summary .product_meta {
-  font-size: 15px;
-  font-size: 1.5rem; }
+  font-size: 15px; }
   .single-product #genesis-content .woocommerce .single-product .product .entry-summary .product_meta > span {
     display: block;
     width: 100%; }
@@ -144,7 +142,6 @@ html {
   padding: 20px; }
   .single-product #genesis-content .woocommerce .single-product .product .related.products > h2 {
     font-size: 20px;
-    font-size: 2rem;
     font-weight: 600;
     margin-bottom: 20px; }
   .single-product #genesis-content .woocommerce .single-product .product .related.products ul.products {
@@ -172,8 +169,7 @@ html {
 /* CHECKOUT PAGE
 --------------------------------------- */
 .woocommerce-checkout #genesis-content .woocommerce form.checkout h3 {
-  font-size: 36px;
-  font-size: 3.6rem; }
+  font-size: 36px; }
 
 /* MY ACCOUNT PAGE
 --------------------------------------- */
@@ -216,11 +212,9 @@ html {
       width: 100%;
       display: block;
       text-align: left;
-      font-size: 16px;
-      font-size: 1.6rem; }
+      font-size: 16px; }
       .woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation ul li.is-active {
-        font-size: 16px;
-        font-size: 1.6rem; }
+        font-size: 16px; }
       .woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation ul li a {
         text-decoration: none;
         border-bottom: none; }

@@ -12,9 +12,9 @@
                 padding: 0;
                 .archive-title {
                     padding: 30px;
+                    font-size: $h1-font-size;
                     @include media($screen--l) {
                         padding: 12px 30px;
-                        font-size: 36px;
                     }
                 }
             }
@@ -30,25 +30,15 @@
                 }
             }
         }
-        .pagination {
-            text-align: center;
-            ul {
-                display: inline-block;
-                text-align: center;
-                border: 1px solid #ccc;
-                li {
-                    float: left;
-                    border: 0;
-                    & > a,
-                    &.pagination-omission {
-                        margin-bottom: 0;
-                        padding: calc(.667em + 2px) calc(1.333em + 2px);
-                        font-size: 16px;
-                        font-weight: 600;
-                        line-height: 1;
-                    }
-                }
-            }
+    }
+}
+
+/* SINGLE POST
+----------------------------- */
+.single-post {
+    .entry-header {
+        .entry-title {
+            line-height: 1.5;
         }
     }
 }
@@ -82,11 +72,10 @@
                         text-align: center;
                         .archive-title {
                             text-align: center;
-                            font-size: 36px;
+                            font-size: $h1-font-size;
                             padding: 30px;
                             @include media($screen--l) {
                                 padding: 12px 30px;
-                                font-size: 36px;
                             }
                         }
                     }
@@ -102,23 +91,17 @@
             }
         }
     }
-    .pagination {
-        text-align: center;
-        ul {
-            display: inline-block;
-            text-align: center;
-            border: 1px solid #ccc;
-            li {
-                float: left;
-                border: 0;
-                & > a,
-                &.pagination-omission {
-                    margin-bottom: 0;
-                    padding: calc(.667em + 2px) calc(1.333em + 2px);
-                    font-size: 16px;
-                    font-weight: 600;
-                    line-height: 1;
-                }
+}
+
+/* SHARED STYLES
+----------------------------- */
+.blog-archive,
+.page-archive {
+    .content {
+        article.entry {
+            h2.entry-title {
+                font-size: $h3-font-size;
+                line-height: 1.5;
             }
         }
     }

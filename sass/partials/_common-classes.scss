@@ -25,7 +25,7 @@
 --------------------------------------------- */
 .breadcrumb {
     background-color: $white;
-    font-size: 16px;
+    // font-size: 16px;
     margin-bottom: 1px;
     padding: 12px 30px;
 }
@@ -34,7 +34,7 @@
 .archive-description,
 .author-box {
     background-color: $white;
-    font-size: 18px;
+    // font-size: 18px;
     padding: 30px;
     margin-bottom: 0;
     @include media($screen--m) {
@@ -139,8 +139,7 @@ input:focus:-ms-input-placeholder {
     position: relative;
     input {
         padding: 10px;
-        font-size: 14px;
-        font-size: 1.4rem;
+        // font-size: 14px;
         &[type="submit"] {
             height: 20px;
             width: 20px;
@@ -161,8 +160,8 @@ input:focus:-ms-input-placeholder {
 .archive-description .entry-title,
 .archive-title,
 .author-box-title {
-    font-size: 24px;
-    font-weight: 400;
+    // font-size: 24px;
+    // font-weight: 400;
 }
 
 .entry-title {
@@ -236,7 +235,7 @@ img.alignright {
 
 .gallery-caption,
 .wp-caption-text {
-    font-size: 14px;
+    font-size: 0.8em;
     font-weight: 600;
     margin: 0;
     text-align: center;

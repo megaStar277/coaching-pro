@@ -76,24 +76,24 @@ $wrap-max-width-large: $max-width;
 // Global Font Families
 //------------------------------------------------------------------------------
 $sans-serif: Helvetica, Arial, sans-serif;
-$accent-font: 'Times New Roman', serif;
-$mono: Courier, monospace; // Base Font Families
+$mono: Courier, monospace;
 
 // Base Typography
 //------------------------------------------------------------------------------
 $html-font-size: 62.5%;
-$base-font-size: 18px;
-$base-font-weight: 300;
-$base-line-height: 1.625;
-$heading-line-height: 1.25;
+
+$body-font-weight: 300;
+$body-line-height: 1.6;
+
+$heading-line-height: 1.5;
 $heading-font-weight: 300;
-$base-font-size-smaller: 16px;
 
 // Heading Font Properties
 //------------------------------------------------------------------------------
-$h1-font-size: 36px;
-$h2-font-size: 30px;
-$h3-font-size: 24px;
-$h4-font-size: 20px;
-$h5-font-size: 18px;
-$h6-font-size: 16px;
+$body-font-size: clamp( 14px, calc(.45vw + 1rem), 17px );
+$h1-font-size: clamp( 36px, calc(3.5vw + 1rem), 64px ); // 36px;
+$h2-font-size: clamp( 24px, calc(1.66vw + 1rem), 50px ); // 30px;
+$h3-font-size: clamp( 20px, calc(0.8vw + 1rem), 42px ); // 24px;
+$h4-font-size: clamp( 18px, calc(0.8vw + 1rem), 36px ); // 20px;
+$h5-font-size: clamp( 17px, calc(0.5vw + 1rem), 24px ); // 18px;
+$h6-font-size: clamp( 16px, calc(0.4vw + 1rem), 20px ); // 16px;

@@ -70,35 +70,18 @@
     .widget {
         margin: 0;
     }
-    .widget-wrap {
-        // padding: 20px;
-    }
 }
 
 .footer-widgets-1 {
-    // display: flex;
     display: block;
     width: 100%;
     max-width: 100%;
-    // flex-direction: row;
-    @include media($screen--s2) {
-        // max-width: 25%;
-        // flex-basis: 300px;
-    }
-    @include media($screen--m) {
-        // flex-basis: 400px;
-    }
     & > section {
         display: block;
         width: auto;
         margin: 0 auto;
-        // min-height: 200px;
         overflow: hidden;
-        // justify-content: center;
-        // align-items: center;
-        // flex: 1 0 auto;
         .widget-wrap {
-            // max-width: 1140px;
             margin: 0 auto;
             .wp-block-columns {
                 &.alignfull {
@@ -118,28 +101,28 @@
     width: 0;
 }
 
-.footer-widgets-2 {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: stretch;
-    width: 100%;
-    flex: 1 0 auto;
-    padding: 10px;
-    @include media($screen--s2) {
-        flex: 1;
-        width: 75%;
-    }
-    @include media($screen--m) {
-        padding: 30px;
-    }
-    @include media($screen--xl) {
-        flex: 1;
-        width: 75%;
-    }
-    .widget {
-        flex: 1 1 320px;
-        margin: 30px;
-        display: inline-block;
-    }
-}
+// .footer-widgets-2 {
+//     display: flex;
+//     flex-flow: row wrap;
+//     justify-content: space-evenly;
+//     align-items: stretch;
+//     width: 100%;
+//     flex: 1 0 auto;
+//     padding: 10px;
+//     @include media($screen--s2) {
+//         flex: 1;
+//         width: 75%;
+//     }
+//     @include media($screen--m) {
+//         padding: 30px;
+//     }
+//     @include media($screen--xl) {
+//         flex: 1;
+//         width: 75%;
+//     }
+//     .widget {
+//         flex: 1 1 320px;
+//         margin: 30px;
+//         display: inline-block;
+//     }
+// }

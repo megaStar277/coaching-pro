@@ -30,12 +30,12 @@ gulp.task('styles', async function() {
                 "last 1 version"
             ]
         }),
-        pxtorem({
-            replace: false,
-            propList: ['font-size'],
-            mediaQuery: false,
-            rootValue: 10
-        })
+        // pxtorem({
+        //     replace: false,
+        //     propList: ['font-size', '!clamp'],
+        //     mediaQuery: false,
+        //     rootValue: 10
+        // })
     ];
 
     return gulp.src('sass/*.scss')
