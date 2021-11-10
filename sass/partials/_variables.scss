@@ -88,7 +88,7 @@ $body-line-height: 1.6;
 $heading-line-height: 1.5;
 $heading-font-weight: 300;
 
-// Heading Font Properties
+// Fluid Typography - responsive font sizes
 //------------------------------------------------------------------------------
 $body-font-size: clamp( 14px, calc(.45vw + 1rem), 17px );
 $h1-font-size: clamp( 36px, calc(3.5vw + 1rem), 64px ); // 36px;

@@ -151,6 +151,32 @@ function genesis_read_more_link() {
 	return '...</p><p><a href="'. get_permalink() .'" class="more-link button">' . __( 'Read more', 'coaching-pro' ) . '<span class="screen-reader-text"> ' . __( 'about', 'coaching-pro' ) . ' ' . get_the_title() . '</span></a>';
 }
 
+// Add 'read more' button at the end of short posts.
+add_action( 'genesis_entry_content', 'coachingpro_short_posts_add_read_more' );
+function coachingpro_short_posts_add_read_more() {
+
+	// If this is a single Post or Page, exit.
+    if ( is_singular() ) {
+        return;
+    }
+
+	// Get the content.
+	$content = get_post_field( 'post_content', get_the_ID() );
+
+	// Count the words in the content.
+    $word_count = str_word_count( strip_tags( $content ) );
+
+	// Create an integer for comparison.
+	$wc_int = intval( $word_count );
+
+	// If the content is shorter than the default excerpt limit, show the button.
+	if ( $wc_int <= 54 ) {
+		echo '<p><a href="'. get_permalink() .'" class="more-link button">' . __( 'Read more', 'coaching-pro' ) . '<span class="screen-reader-text"> ' . __( 'about', 'coaching-pro' ) . ' ' . get_the_title() . '</span></a>';
+	}
+
+}
+
+
 // If the plugin WPSubtitle is active, add subtitles to single posts.
 add_action( 'genesis_entry_header', 'coaching_pro_do_post_subtitle', 11 );
 function coaching_pro_do_post_subtitle() {

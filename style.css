@@ -1549,9 +1549,6 @@ p.entry-meta {
 .featured-post h3 {
   margin-bottom: 0; }
 
-.featured-post .entry-title {
-  text-align: center; }
-
 /* ARCHIVE PAGE
 ----------------------------- */
 .page-archive .site-container .site-inner .content-sidebar-wrap {
@@ -1900,18 +1897,16 @@ input[type="submit"]:hover {
 
 /* BLOCK STYLES
 ----------------------------------------------------------------------------- */
-/* Image block. */
-.wp-block-image img {
-  display: block; }
-
-/* Full-width blocks. */
+/* FULL WIDTH
+----------------------------- */
 .alignfull {
   max-width: 100vw; }
 
 .wp-block-cover.alignfull {
   width: 100vw; }
 
-/* Wide width blocks. */
+/* WIDE WIDTH
+----------------------------- */
 .alignwide {
   margin-left: calc( -99vw / 2 + 100% / 2);
   margin-right: calc( -99vw / 2 + 100% / 2);
@@ -1923,7 +1918,8 @@ input[type="submit"]:hover {
       margin-right: -210px;
       max-width: 1200px; } }
 
-/* Button blocks. */
+/* BUTTON
+----------------------------- */
 .wp-block-button.alignleft {
   margin-right: 2em; }
 
@@ -1933,14 +1929,16 @@ input[type="submit"]:hover {
 .wp-block-button .wp-block-button__link {
   border-bottom: 0 !important; }
 
-/* Cover blocks. */
+/* COVER
+----------------------------- */
 .wp-block-cover.alignleft {
   margin-right: 2em; }
 
 .wp-block-cover.alignright {
   margin-left: 2em; }
 
-/* Image blocks. */
+/* IMAGE
+----------------------------- */
 .wp-block-image.alignleft {
   margin-right: 2em; }
 
@@ -1950,11 +1948,21 @@ input[type="submit"]:hover {
 .wp-block-image.alignwide, .wp-block-image.alignfull {
   margin-bottom: 30px; }
 
-/* Embed blocks. */
+.wp-block-image img {
+  display: block; }
+
+/* EMBED
+----------------------------- */
 .wp-block-embed.alignwide, .wp-block-embed.alignfull {
   margin-bottom: 30px; }
 
-/* Blocks in Full-width layout pages. */
+/* LATEST POSTS
+----------------------------- */
+.wp-block-latest-posts li a {
+  font-weight: bold; }
+
+/* BLOCKS IN FULL WIDTH PAGES
+----------------------------- */
 .full-width-content .site-inner .entry-content .alignfull {
   margin-left: calc( -100vw / 2 + 100% / 2);
   margin-right: calc( -100vw / 2 + 100% / 2);
@@ -1965,7 +1973,8 @@ input[type="submit"]:hover {
   margin-right: calc( -100vw / 2 + 100% / 2);
   max-width: 100vw; }
 
-/* Blocks in Sidebar layout pages. */
+/* BLOCKS IN SIDEBAR PAGES
+----------------------------- */
 .content-sidebar .entry-content .alignfull,
 .content-sidebar .entry-content .alignwide,
 .sidebar-content .entry-content .alignfull,
@@ -1973,7 +1982,8 @@ input[type="submit"]:hover {
   margin: 0 0 2em;
   width: 100%; }
 
-/* Group blocks. */
+/* GROUP
+----------------------------- */
 .wp-block-group:not(.alignwide):not(.alignfull) * {
   max-width: 690px;
   margin-left: 0; }
@@ -1983,8 +1993,29 @@ input[type="submit"]:hover {
   max-width: 100%;
   margin-left: 0; }
 
+/* PULLQUOTE
+----------------------------- */
+.wp-block-pullquote, .wp-block-pullquote.is-style-solid-color.has-background {
+  padding: 10px 20px; }
+  .wp-block-pullquote blockquote, .wp-block-pullquote.is-style-solid-color.has-background blockquote {
+    max-width: 100%; }
+    .wp-block-pullquote blockquote::before,
+    .wp-block-pullquote blockquote p,
+    .wp-block-pullquote blockquote cite, .wp-block-pullquote.is-style-solid-color.has-background blockquote::before,
+    .wp-block-pullquote.is-style-solid-color.has-background blockquote p,
+    .wp-block-pullquote.is-style-solid-color.has-background blockquote cite {
+      text-align: center;
+      font-style: normal; }
+    .wp-block-pullquote blockquote > p, .wp-block-pullquote.is-style-solid-color.has-background blockquote > p {
+      line-height: 1.25;
+      margin-bottom: 28px; }
+    .wp-block-pullquote blockquote > cite, .wp-block-pullquote.is-style-solid-color.has-background blockquote > cite {
+      display: block;
+      width: 100%;
+      text-transform: uppercase; }
+
 /* GENESIS BLOCKS
---------------------------------------------- */
+----------------------------- */
 /* Genesis Advanced Columns - Inner Column blocks. */
 .gb-block-layout-column-inner > .wp-block-image {
   margin-bottom: 0; }
@@ -2010,27 +2041,6 @@ input[type="submit"]:hover {
       font-weight: 700; }
       .gb-block-post-grid .gb-post-grid-items.is-grid article.entry a.gb-block-post-grid-more-link:hover {
         text-decoration: underline; }
-
-/* PULLQUOTE BLOCKS
---------------------------------------------- */
-.wp-block-pullquote, .wp-block-pullquote.is-style-solid-color.has-background {
-  padding: 10px 20px; }
-  .wp-block-pullquote blockquote, .wp-block-pullquote.is-style-solid-color.has-background blockquote {
-    max-width: 100%; }
-    .wp-block-pullquote blockquote::before,
-    .wp-block-pullquote blockquote p,
-    .wp-block-pullquote blockquote cite, .wp-block-pullquote.is-style-solid-color.has-background blockquote::before,
-    .wp-block-pullquote.is-style-solid-color.has-background blockquote p,
-    .wp-block-pullquote.is-style-solid-color.has-background blockquote cite {
-      text-align: center;
-      font-style: normal; }
-    .wp-block-pullquote blockquote > p, .wp-block-pullquote.is-style-solid-color.has-background blockquote > p {
-      line-height: 1.25;
-      margin-bottom: 28px; }
-    .wp-block-pullquote blockquote > cite, .wp-block-pullquote.is-style-solid-color.has-background blockquote > cite {
-      display: block;
-      width: 100%;
-      text-transform: uppercase; }
 
 /* # Plugins
 ---------------------------------------------------------------------------------------------------- */
