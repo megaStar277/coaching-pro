@@ -7,9 +7,6 @@
     background-color: $white;
     padding: 30px;
     margin-bottom: 5%;
-    @include media($screen--s1) {
-        margin-bottom: 40px;
-    }
     ol,
     ul {
         margin-bottom: 28px;
@@ -46,6 +43,31 @@ body:not(.first-block-align-full).full-width-content {
         padding: 30px;
         @include media($screen--m) {
             padding: 30px 0;
+        }
+    }
+}
+
+body {
+    &.page {
+        #genesis-content {
+            & > article.entry {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                @include media($screen--m) {
+                    padding-bottom: 30px;
+                }
+            }
+        }
+    }
+    &:not(.page) {
+        #genesis-content {
+            & > article.entry {
+                margin-bottom: 0;
+                // padding-bottom: 0;
+                @include media($screen--m) {
+                    padding-bottom: 30px;
+                }
+            }
         }
     }
 }
