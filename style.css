@@ -662,6 +662,7 @@ body.first-block-align-full.full-width-content.genesis-title-hidden.genesis-brea
 /* GRID LAYOUT
 ----------------------------- */
 .grid-wrapper {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, 100%); }
   @media screen and (min-width: 1024px) {

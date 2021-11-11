@@ -11,6 +11,7 @@
 --------------------------------------- */
 .edd-page {
     #genesis-content {
+        padding-bottom: 40px;
         button,
         a {
             &.button {
@@ -70,19 +71,20 @@
             .edd-products-wrap {
                 max-width: 100%;
                 display: grid;
-                grid-template-columns: repeat(auto-fill, 31%);
-                grid-gap: 2%;
+                grid-template-columns: repeat(auto-fill, 100%);
                 justify-content: space-between;
+                @include media($screen--m){
+                    grid-template-columns: repeat(auto-fill, 48%);
+                    grid-gap: 2%;
+                }
                 @include media($screen--l) {
+                    grid-template-columns: repeat(auto-fill, 31%);
                     margin-left: -210px;
                     margin-right: -210px;
                     max-width: 1200px;
                 }
                 .edd-product {
                     margin-bottom: 30px;
-                    &.threecol {
-                        //
-                    }
                     .title {
                         font-size: 1em;
                         font-weight: 600;
@@ -105,5 +107,100 @@
                 margin: 30px 0;
             }
         }
+    }
+}
+
+/* FULL-WIDTH PAGES
+--------------------------------------- */
+.full-width-content {
+    &.edd-page {
+        #genesis-content {
+            & > .entry {
+                & > .entry-content {
+                    // width: 100%;
+                    margin-left: 0;
+                    margin-right: 0;
+                    @include media($screen--l) {
+                        margin-left: -250px;
+                        margin-right: -250px;
+                        max-width: 1280px;
+                        padding: 0 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* CHECKOUT PAGE
+--------------------------------------- */
+#edd_checkout_cart_form {
+    #edd_checkout_cart {
+        thead {
+            display: none;
+            @include media($screen--l) {
+                display: table-header-group;
+            }
+        }
+        tbody {
+            tr {
+                display: block;
+                margin-bottom: 20px;
+                @include media($screen--l) {
+                    display: table-row;
+                    margin-bottom: 0;
+                }
+                &:nth-child(even) {
+                    background-color: rgba(0,0,0,0.025);
+                    @include media($screen--l) {
+                        background-color: transparent;
+                    }
+                }
+                td {
+                    display: block;
+                    width: 100%;
+                    background-color: transparent;
+                    border: 0;
+                    @include media($screen--l) {
+                        display: table-cell;
+                        width: auto;
+                        background-color: #fff;
+                        border: 1px solid #eee;
+                    }
+                    &.edd_cart_item_price {
+                        text-align: right;
+                        @include media($screen--l) {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* LOGIN FORM
+--------------------------------------- */
+#edd_login_form {
+    background-color: $soft-white;
+    margin-bottom: 40px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    label {
+        font-weight: bold;
+    }
+    input[type="text"],
+    input[type="password"] {
+        border: 1px solid #ccc;
+    }
+    input[type="submit"] {
+        border-radius: 9999px;
+        margin-top: 1em;
+        padding: calc(.667em + 2px) calc(1.333em + 2px);
+        font-size: 100%;
+        font-weight: 600;
+        border: none;
     }
 }

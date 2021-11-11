@@ -12,6 +12,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 add_filter( 'body_class', 'coaching_pro_edd_archive_body_class' );
 function coaching_pro_edd_archive_body_class( $classes ) {
 	$classes[] = 'page-archive';
+    global $post;
+    if ( 'download' === $post->post_type ) {
+        $classes[] = 'edd-page edd-archive';
+    }
 	return $classes;
 }
 
@@ -51,10 +55,46 @@ function coaching_pro_post_title_wrap( $wrap ) {
 }
 
 // Customize the post header meta.
-add_filter( 'genesis_post_info', 'sp_post_info_filter' );
-function sp_post_info_filter($post_info) {
-	$post_info = '[post_date format="M j, Y"]';
+add_filter( 'genesis_post_info', 'coachingpro_post_info_filter' );
+function coachingpro_post_info_filter($post_info) {
+
+    global $post;
+    if ( 'download' === $post->post_type ) {
+        $post_info = '';
+    } else {
+    	$post_info = '[post_date format="M j, Y"]';
+    }
 	return $post_info;
+}
+
+// Add product purchase button for 'Download' products.
+add_action( 'genesis_after_entry_content', 'coachingpro_add_download_cpt_buttons', 99 );
+function coachingpro_add_download_cpt_buttons() {
+
+    // Get post info.
+    global $post;
+
+    // If this is not a Download CPT, then exit.
+    if ( 'download' !== $post->post_type ) {
+        return;
+    }
+
+    // Init empty var.
+    $content = '';
+
+    // If the price function exists...
+    if( function_exists( 'edd_price' ) ) {
+        $content .= '<div class="product-buttons">';
+
+        if( !edd_has_variable_prices( $post->ID ) ) {
+            $content .= edd_get_purchase_link( $post->ID, 'Add to Cart', 'button' );
+        }
+
+        $content .= '</div><!--end .product-buttons-->';
+    }
+
+    echo $content;
+
 }
 
 // Remove the post footer meta.
