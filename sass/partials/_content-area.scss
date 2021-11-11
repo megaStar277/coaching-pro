@@ -53,9 +53,6 @@ body {
             & > article.entry {
                 margin-bottom: 0;
                 padding-bottom: 0;
-                @include media($screen--m) {
-                    padding-bottom: 30px;
-                }
             }
         }
     }
