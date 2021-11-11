@@ -109,6 +109,15 @@ html {
 .woocommerce-shop #genesis-content .woocommerce ul.products > li.product a.add_to_cart_button {
   padding: calc(.667em + 2px) calc(1.333em + 2px); }
 
+/* SHARED STYLES
+--------------------------------------- */
+.woocommerce ul.products li.product .onsale,
+.woocommerce .single-product .onsale {
+  padding: calc(0.667em + 2px) calc(1.333em + 2px);
+  line-height: 1;
+  min-height: 0;
+  border-radius: 9999px; }
+
 /* SINGLE PRODUCT PAGE
 --------------------------------------- */
 .single-product #genesis-content .woocommerce .single-product .product .entry-summary form.cart .quantity input.qty {
@@ -165,6 +174,10 @@ html {
         margin-right: auto; }
       .single-product #genesis-content .woocommerce .single-product .product .related.products ul.products li.product.entry {
         background-color: transparent; }
+
+.single-product #genesis-content .woocommerce .single-product .product .onsale {
+  top: 10px;
+  left: 10px; }
 
 /* CHECKOUT PAGE
 --------------------------------------- */

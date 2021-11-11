@@ -53,7 +53,9 @@ function coachingpro_custom_woocommerce_css() {
 		.woocommerce button.button.alt.disabled:focus,
 		.woocommerce nav.woocommerce-pagination ul li a:focus,
 		.woocommerce nav.woocommerce-pagination ul li a:hover,
-		.woocommerce nav.woocommerce-pagination ul li span.current {
+		.woocommerce nav.woocommerce-pagination ul li span.current,
+		.woocommerce ul.products li.product span.onsale,
+		.woocommerce .single-product span.onsale {
 			background-color: %1$s;
 			color: %2$s;
 		}

@@ -98,6 +98,20 @@
     }
 }
 
+/* SHARED STYLES
+--------------------------------------- */
+.woocommerce {
+    ul.products li.product,
+    .single-product {
+        .onsale {
+            padding: calc(0.667em + 2px) calc(1.333em + 2px);
+            line-height: 1;
+            min-height: 0;
+            border-radius: 9999px;
+        }
+    }
+}
+
 /* SINGLE PRODUCT PAGE
 --------------------------------------- */
 .single-product {
@@ -189,6 +203,10 @@
                                 }
                             }
                         }
+                    }
+                    .onsale {
+                        top: 10px;
+                        left: 10px;
                     }
                 }
             }
