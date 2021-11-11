@@ -109,6 +109,9 @@ html {
 .woocommerce-shop #genesis-content .woocommerce ul.products > li.product a.add_to_cart_button {
   padding: calc(.667em + 2px) calc(1.333em + 2px); }
 
+.woocommerce-shop #genesis-content .woocommerce ul.products > li.product a.added_to_cart {
+  margin-left: 20px; }
+
 /* SHARED STYLES
 --------------------------------------- */
 .woocommerce ul.products li.product .onsale,
