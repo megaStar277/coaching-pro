@@ -217,6 +217,24 @@
     }
 }
 
+/* CART PAGE
+--------------------------------------- */
+.woocommerce-cart {
+    #genesis-content {
+        form.woocommerce-cart-form {
+            &,
+            .quantity {
+                input {
+                    &,
+                    &.qty {
+                        border: 1px solid #d3ced2;
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* CHECKOUT PAGE
 --------------------------------------- */
 .woocommerce-checkout {
@@ -327,6 +345,17 @@
                     }
                 }
             }
+        }
+    }
+}
+
+/* BLOCKS
+--------------------------------------- */
+.wc-block-grid {
+    ul.wc-block-grid__products {
+        margin-left: 0;
+        li.wc-block-grid__product {
+            list-style: none;
         }
     }
 }

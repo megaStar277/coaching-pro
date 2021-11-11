@@ -55,7 +55,8 @@ function coachingpro_custom_woocommerce_css() {
 		.woocommerce nav.woocommerce-pagination ul li a:hover,
 		.woocommerce nav.woocommerce-pagination ul li span.current,
 		.woocommerce ul.products li.product span.onsale,
-		.woocommerce .single-product span.onsale {
+		.woocommerce .single-product span.onsale,
+		.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link {
 			background-color: %1$s;
 			color: %2$s;
 		}
@@ -77,7 +78,9 @@ function coachingpro_custom_woocommerce_css() {
 		.woocommerce button[class*="add_to_cart_button"]:hover,
 		.woocommerce button[class*="add_to_cart_button"]:focus,
 		.woocommerce a[class*="add_to_cart_button"]:hover,
-		.woocommerce a[class*="add_to_cart_button"]:focus {
+		.woocommerce a[class*="add_to_cart_button"]:focus,
+		.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link:hover,
+		.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link:focus {
 			background-color: %3$s;
 			color: %4$s;
 		}
@@ -108,6 +111,11 @@ function coachingpro_custom_woocommerce_css() {
 		}
 
 		.woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation {
+			border-color: %1$s;
+		}
+
+		.wc-block-grid__product-onsale {
+			color: %1$s;
 			border-color: %1$s;
 		}
 

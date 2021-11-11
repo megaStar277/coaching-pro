@@ -182,6 +182,13 @@ html {
   top: 10px;
   left: 10px; }
 
+/* CART PAGE
+--------------------------------------- */
+.woocommerce-cart #genesis-content form.woocommerce-cart-form input, .woocommerce-cart #genesis-content form.woocommerce-cart-form input.qty,
+.woocommerce-cart #genesis-content form.woocommerce-cart-form .quantity input,
+.woocommerce-cart #genesis-content form.woocommerce-cart-form .quantity input.qty {
+  border: 1px solid #d3ced2; }
+
 /* CHECKOUT PAGE
 --------------------------------------- */
 .woocommerce-checkout #genesis-content .woocommerce form.checkout h3 {
@@ -269,3 +276,10 @@ html {
       width: 78%; } }
   .woocommerce-account #genesis-content .woocommerce .woocommerce-MyAccount-content form.edit-account button[type="submit"] {
     margin-top: 30px; }
+
+/* BLOCKS
+--------------------------------------- */
+.wc-block-grid ul.wc-block-grid__products {
+  margin-left: 0; }
+  .wc-block-grid ul.wc-block-grid__products li.wc-block-grid__product {
+    list-style: none; }
