@@ -281,10 +281,10 @@ msgstr ""
 msgid "Footer Menu"
 msgstr ""
 
-#: lib/theme-setup.php:151
+#: lib/theme-setup.php:151, lib/theme-setup.php:174
 msgid "Read more"
 msgstr ""
 
-#: lib/theme-setup.php:151
+#: lib/theme-setup.php:151, lib/theme-setup.php:174
 msgid "about"
 msgstr ""

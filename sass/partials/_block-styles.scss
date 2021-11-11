@@ -163,6 +163,7 @@
 /* Genesis Advanced Columns - Inner Column blocks. */
 .gb-block-layout-column-inner {
 	& > .wp-block-image {
+		display: inline-block;
 		margin-bottom: 0;
 		a.link-has-image {
 			border-bottom: 0;
