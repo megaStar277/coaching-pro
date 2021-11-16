@@ -121,6 +121,9 @@ html {
   min-height: 0;
   border-radius: 9999px; }
 
+.woocommerce-pagination {
+  margin-bottom: 40px; }
+
 /* SINGLE PRODUCT PAGE
 --------------------------------------- */
 .single-product #genesis-content .woocommerce .single-product .product .entry-summary form.cart .quantity input.qty {

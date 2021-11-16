@@ -13,14 +13,19 @@
     #genesis-content {
         padding-bottom: 40px;
         button,
-        a {
-            &.button {
-                border-radius: 9999px;
-                margin-top: 1em;
-                padding: calc(.667em + 2px) calc(1.333em + 2px);
-                font-size: 100%;
-                font-weight: 600;
-                border: none;
+        a.button,
+        #edd-purchase-button,
+		.edd-submit,
+		[type=submit].edd-submit {
+            border-radius: 9999px;
+            margin-top: 1em;
+            padding: calc(.667em + 2px) calc(1.333em + 2px);
+            font-size: 100%;
+            font-weight: 600;
+            border: none;
+            &.edd-apply-discount {
+                font-size: 80%;
+                margin-top: 0;
             }
         }
         form {
@@ -134,49 +139,59 @@
 
 /* CHECKOUT PAGE
 --------------------------------------- */
-#edd_checkout_cart_form {
-    #edd_checkout_cart {
-        thead {
-            display: none;
-            @include media($screen--l) {
-                display: table-header-group;
-            }
-        }
-        tbody {
-            tr {
-                display: block;
-                margin-bottom: 20px;
+.edd-checkout {
+    #edd_checkout_cart_form {
+        #edd_checkout_cart {
+            thead {
+                display: none;
                 @include media($screen--l) {
-                    display: table-row;
-                    margin-bottom: 0;
+                    display: table-header-group;
                 }
-                &:nth-child(even) {
-                    background-color: rgba(0,0,0,0.025);
-                    @include media($screen--l) {
-                        background-color: transparent;
-                    }
-                }
-                td {
+            }
+            tbody {
+                tr {
                     display: block;
-                    width: 100%;
-                    background-color: transparent;
-                    border: 0;
+                    margin-bottom: 20px;
                     @include media($screen--l) {
-                        display: table-cell;
-                        width: auto;
-                        background-color: #fff;
-                        border: 1px solid #eee;
+                        display: table-row;
+                        margin-bottom: 0;
                     }
-                    &.edd_cart_item_price {
-                        text-align: right;
+                    &:nth-child(even) {
+                        background-color: rgba(0,0,0,0.025);
                         @include media($screen--l) {
-                            text-align: left;
+                            background-color: transparent;
+                        }
+                    }
+                    td {
+                        display: block;
+                        width: 100%;
+                        background-color: transparent;
+                        border: 0;
+                        @include media($screen--l) {
+                            display: table-cell;
+                            width: auto;
+                            background-color: #fff;
+                            border: 1px solid #eee;
+                        }
+                        &.edd_cart_item_price {
+                            text-align: right;
+                            @include media($screen--l) {
+                                text-align: left;
+                            }
                         }
                     }
                 }
             }
         }
     }
+}
+
+/* SHARED STYLES
+--------------------------------------- */
+#edd_checkout_wrap .edd_empty_cart,
+.entry-content .edd-no-purchases {
+    display: block;
+    text-align: center;
 }
 
 

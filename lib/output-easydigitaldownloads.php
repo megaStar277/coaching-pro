@@ -38,7 +38,10 @@ function coachingpro_custom_edd_colors_css() {
 		.edd-pagination-wrap .edd-pagination .page-numbers:focus,
 		.edd-pagination-wrap .edd-pagination .page-numbers:hover,
 		.edd-pagination-wrap .edd-pagination .page-numbers.current,
-		#edd_login_form input[type="submit"] {
+		#edd_login_form input[type="submit"],
+		#edd-purchase-button,
+		.edd-submit,
+		[type=submit].edd-submit {
 			background-color: %1$s;
 			color: %2$s;
 		}
@@ -56,7 +59,13 @@ function coachingpro_custom_edd_colors_css() {
 		.edd-page #genesis-content button.button.blue:focus,
 		.edd-page #genesis-content input.button.blue:focus,
 		#edd_login_form input[type="submit"]:hover,
-		#edd_login_form input[type="submit"]:focus {
+		#edd_login_form input[type="submit"]:focus,
+		#edd-purchase-button:hover,
+		#edd-purchase-button:focus,
+		.edd-submit:hover,
+		.edd-submit:focus,
+		[type=submit].edd-submit:hover,
+		[type=submit].edd-submit:focus {
 			background-color: %3$s;
 			color: %4$s;
 		}
