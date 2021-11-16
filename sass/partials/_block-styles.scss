@@ -34,8 +34,16 @@
 	&.alignright {
 		margin-left: 2em;
 	}
-	.wp-block-button__link {
-		border-bottom: 0 !important;
+	&:not(.is-style-outline) {
+		.wp-block-button__link {
+			border-bottom: 0 !important;
+		}
+	}
+	&.is-style-outline {
+		.wp-block-button__link {
+			border-bottom-width: 2px !important;
+			border-bottom-style: solid !important;
+		}
 	}
 }
 

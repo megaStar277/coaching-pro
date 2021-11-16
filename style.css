@@ -1968,8 +1968,12 @@ input[type="submit"]:hover {
 .wp-block-button.alignright {
   margin-left: 2em; }
 
-.wp-block-button .wp-block-button__link {
+.wp-block-button:not(.is-style-outline) .wp-block-button__link {
   border-bottom: 0 !important; }
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+  border-bottom-width: 2px !important;
+  border-bottom-style: solid !important; }
 
 /* COVER
 ----------------------------- */

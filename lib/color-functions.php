@@ -409,6 +409,8 @@ function coaching_pro_color_css() {
 
     foreach ( $editor_color_palette as $color_info ) {
 
+		$contrast_color = coaching_pro_color_contrast( $color_info['color'] );
+
 		$css .= "
 
 		.site-container .has-{$color_info['slug']}-color,
@@ -416,6 +418,7 @@ function coaching_pro_color_css() {
 		.site-container .wp-block-button.is-style-outline .wp-block-button__link.has-{$color_info['slug']}-color {
 			color: {$color_info['color']};
 		}
+
 		.site-container .has-{$color_info['slug']}-background-color,
 		.site-container .wp-block-button .wp-block-button__link.has-{$color_info['slug']}-background-color {
 			background-color: {$color_info['color']};
@@ -423,6 +426,13 @@ function coaching_pro_color_css() {
 
 		.site-container .wp-block-pullquote.is-style-solid-color.has-{$color_info['slug']}-background-color {
 			background-color: {$color_info['color']} !important;
+		}
+
+		.site-container .wp-block-button.is-style-outline .wp-block-button__link.has-{$color_info['slug']}-color:hover,
+		.site-container .wp-block-button.is-style-outline .wp-block-button__link.has-{$color_info['slug']}-color:focus {
+			background-color: {$color_info['color']};
+			border: 2px solid {$color_info['color']};
+			color: {$contrast_color};
 		}
 
 		.site-container .wp-block-button.is-style-outline .wp-block-button__link.has-{$color_info['slug']}-background-color {
