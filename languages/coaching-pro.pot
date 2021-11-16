@@ -189,54 +189,6 @@ msgstr ""
 msgid "Easy Digital Downloads Accent Color"
 msgstr ""
 
-#: lib/customize-colors.php:286, lib/customize-colors.php:338
-msgid "Color Scheme"
-msgstr ""
-
-#: lib/customize-colors.php:340
-msgid "Career"
-msgstr ""
-
-#: lib/customize-colors.php:341
-msgid "Executives"
-msgstr ""
-
-#: lib/customize-colors.php:342
-msgid "Health and Fitness"
-msgstr ""
-
-#: lib/customize-colors.php:343
-msgid "Relationships"
-msgstr ""
-
-#: lib/customize-colors.php:344
-msgid "Custom"
-msgstr ""
-
-#: lib/customize-colors.php:364
-msgid "Custom Color #1"
-msgstr ""
-
-#: lib/customize-colors.php:385
-msgid "Custom Color #2"
-msgstr ""
-
-#: lib/customize-colors.php:406
-msgid "Custom Color #3"
-msgstr ""
-
-#: lib/customize-colors.php:427
-msgid "Custom Color #4"
-msgstr ""
-
-#: lib/customize-colors.php:448
-msgid "Navigation Text Color"
-msgstr ""
-
-#: lib/customize-colors.php:469
-msgid "Navigation Text Hover Color"
-msgstr ""
-
 #: lib/customize.php:20
 msgid "Coaching Pro Settings"
 msgstr ""
