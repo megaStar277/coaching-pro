@@ -148,7 +148,7 @@ add_filter( 'excerpt_more', 'genesis_read_more_link' );
 add_filter( 'get_the_content_more_link', 'genesis_read_more_link' );
 add_filter( 'the_content_more_link', 'genesis_read_more_link' );
 function genesis_read_more_link() {
-	return '...</p><p><a href="'. get_permalink() .'" class="more-link button">' . __( 'Read more', 'coaching-pro' ) . '<span class="screen-reader-text"> ' . __( 'about', 'coaching-pro' ) . ' ' . get_the_title() . '</span></a>';
+	return '...</p><p><a href="'. get_permalink() .'" class="more-link button" role="button">' . __( 'Read more', 'coaching-pro' ) . '<span class="screen-reader-text"> ' . __( 'about', 'coaching-pro' ) . ' ' . get_the_title() . '</span></a>';
 }
 
 // Add 'read more' button at the end of short posts.
@@ -171,7 +171,7 @@ function coachingpro_short_posts_add_read_more() {
 
 	// If the content is shorter than the default excerpt limit, show the button.
 	if ( $wc_int <= 54 ) {
-		echo '<p><a href="'. get_permalink() .'" class="more-link button">' . __( 'Read more', 'coaching-pro' ) . '<span class="screen-reader-text"> ' . __( 'about', 'coaching-pro' ) . ' ' . get_the_title() . '</span></a>';
+		echo '<p><a href="'. get_permalink() .'" class="more-link button" role="button">' . __( 'Read more', 'coaching-pro' ) . '<span class="screen-reader-text"> ' . __( 'about', 'coaching-pro' ) . ' ' . get_the_title() . '</span></a>';
 	}
 
 }
