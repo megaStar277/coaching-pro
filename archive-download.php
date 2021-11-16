@@ -77,7 +77,9 @@ function custom_edd_archive_loop() {
     $product_args = array(
         'post_type' => 'download',
         'posts_per_page' => $per_page,
-        'offset' => $offset
+        'offset' => $offset,
+        'orderby' => 'title',
+        'order' => 'ASC',
     );
 
     // Create new query.
@@ -152,13 +154,14 @@ function custom_edd_archive_loop() {
             ?>
             </div>
         </div>
-    <?php } else { ?>
-
-        <h2 class="center">Not Found</h2>
-        <p class="center">Sorry, but you are looking for something that isn't here.</p>
-        <?php get_search_form(); ?>
-
-    <?php }
+    <?php
+    } else {
+    // Show 'No Downloads Found' Message
+    ?>
+        <h2 class="center"><?php echo __( 'No Downloads Found', 'coachingpro' ); ?></h2>
+        <p class="center"><?php echo __( 'Sorry, we couldn\'t find any Downloads.', 'coachingpro' ); ?></p>
+    <?php
+    }
 
 }
 
