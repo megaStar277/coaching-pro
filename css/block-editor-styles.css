@@ -4,7 +4,7 @@
   -webkit-font-smoothing: antialiased; }
 
 .editor-styles-wrapper {
-  font-size: 18px;
+  font-size: clamp(14px, calc(1vw + 1rem), 17px);
   font-weight: 300;
   line-height: 1.625;
   -webkit-font-smoothing: antialiased;
@@ -14,7 +14,8 @@
   .editor-styles-wrapper ul,
   .editor-styles-wrapper ol,
   .editor-styles-wrapper dl {
-    font-size: 18px;
+    font-size: clamp(14px, calc(1vw + 1rem), 17px);
+    font-weight: 300;
     line-height: 1.625; }
 
 /* Regular content width.
@@ -53,28 +54,29 @@
 .editor-styles-wrapper h4,
 .editor-styles-wrapper h5,
 .editor-styles-wrapper h6 {
-  font-weight: 400;
-  line-height: 1.2;
+  font-weight: 300;
   margin: 0 0 10px;
   padding: 0; }
 
 .editor-styles-wrapper h1 {
-  font-size: 30px; }
+  font-size: clamp(36px, calc(3.5vw + 1rem), 60px);
+  line-height: 1.25; }
 
 .editor-styles-wrapper h2 {
-  font-size: 28px; }
+  font-size: clamp(24px, calc(2.8vw + 1rem), 48px);
+  line-height: 1.25; }
 
 .editor-styles-wrapper h3 {
-  font-size: 24px; }
+  font-size: clamp(20px, calc(2vw + 1rem), 38px); }
 
 .editor-styles-wrapper h4 {
-  font-size: 20px; }
+  font-size: clamp(18px, calc(1.75vw + 1rem), 30px); }
 
 .editor-styles-wrapper h5 {
-  font-size: 18px; }
+  font-size: clamp(17px, calc(1.25vw + 1rem), 24px); }
 
 .editor-styles-wrapper h6 {
-  font-size: 16px; }
+  font-size: clamp(16px, calc(1vw + 1rem), 20px); }
 
 .editor-styles-wrapper b,
 .editor-styles-wrapper strong {
@@ -84,9 +86,8 @@
   font-family: monospace; }
 
 .editor-post-title__block .editor-post-title__input {
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 1.2;
+  font-size: clamp(36px, calc(3.5vw + 1rem), 60px);
+  line-height: 1.25;
   margin: 0 0 20px; }
 
 .editor-styles-wrapper p.has-drop-cap:not(:focus)::first-letter {

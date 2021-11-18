@@ -168,22 +168,42 @@
 /* GENESIS BLOCKS
 ----------------------------- */
 
-/* Genesis Advanced Columns - Inner Column blocks. */
-.gb-block-layout-column-inner {
-	& > .wp-block-image {
-		display: inline-block;
-		margin-bottom: 0;
-		a.link-has-image {
-			border-bottom: 0;
+/* Genesis Advanced Columns */
+.wp-block-genesis-blocks-gb-columns {
+	/* Inner Column blocks. */
+	.gb-block-layout-column-inner {
+		& > .wp-block-image {
+			display: inline-block;
+			margin-bottom: 0;
+			a.link-has-image {
+				border-bottom: 0;
+			}
 		}
 	}
-}
-
-/* Genesis Advanced Columns - One-Column blocks. */
-.wp-block-genesis-blocks-gb-columns.one-column {
-	.wp-block-genesis-blocks-gb-columns.gb-layout-columns-3 {
+	/* One-Column blocks. */
+	&.one-column {
+		.wp-block-genesis-blocks-gb-columns.gb-layout-columns-3 {
+			.wp-block-image {
+				margin-bottom: 30px;
+			}
+		}
+	}
+	/* Small Logos */
+	&.logos-small {
 		.wp-block-image {
 			margin-bottom: 30px;
+			@include media($screen--m) {
+				margin-bottom: 0;
+			}
+			img {
+				display: block;
+				width: 100%;
+				max-width: 100px;
+				height: auto;
+				@include media($screen--m) {
+					max-width: 200px;
+				}
+			}
 		}
 	}
 }

@@ -90,10 +90,10 @@ $heading-font-weight: 300;
 
 // Fluid Typography - responsive font sizes
 //------------------------------------------------------------------------------
-$body-font-size: clamp( 14px, calc(.45vw + 1rem), 17px );
-$h1-font-size: clamp( 36px, calc(3.5vw + 1rem), 64px ); // 36px;
-$h2-font-size: clamp( 24px, calc(1.66vw + 1rem), 50px ); // 30px;
-$h3-font-size: clamp( 20px, calc(0.8vw + 1rem), 42px ); // 24px;
-$h4-font-size: clamp( 18px, calc(0.8vw + 1rem), 36px ); // 20px;
-$h5-font-size: clamp( 17px, calc(0.5vw + 1rem), 24px ); // 18px;
-$h6-font-size: clamp( 16px, calc(0.4vw + 1rem), 20px ); // 16px;
+$body-font-size: clamp( 14px, calc(1vw + 1rem), 17px );
+$h1-font-size: clamp( 36px, calc(3.5vw + 1rem), 60px );
+$h2-font-size: clamp( 24px, calc(2.8vw + 1rem), 48px );
+$h3-font-size: clamp( 20px, calc(2vw + 1rem), 38px );
+$h4-font-size: clamp( 18px, calc(1.75vw + 1rem), 30px );
+$h5-font-size: clamp( 17px, calc(1.25vw + 1rem), 24px );
+$h6-font-size: clamp( 16px, calc(1vw + 1rem), 20px );

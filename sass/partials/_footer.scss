@@ -9,9 +9,6 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        @include media($screen--m) {
-            justify-content: flex-end;
-        }
     }
     a {
         text-decoration: none;

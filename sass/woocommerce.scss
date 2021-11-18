@@ -263,7 +263,7 @@
         .woocommerce {
             nav.woocommerce-MyAccount-navigation {
                 width: 100%;
-                margin-bottom: 30px;
+                margin-bottom: 40px;
                 padding: 10px;
                 background-color: #f7f6f7;
                 border-top: 3px solid;
@@ -276,7 +276,6 @@
                 }
                 @include media($screen--l) {
                     width: auto;
-                    margin-bottom: 0;
                     padding: 30px;
                     column-count: 1;
                 }

@@ -204,7 +204,7 @@ html {
 
 .woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   padding: 10px;
   background-color: #f7f6f7;
   border-top: 3px solid;
@@ -222,7 +222,6 @@ html {
   @media screen and (min-width: 1280px) {
     .woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation {
       width: auto;
-      margin-bottom: 0;
       padding: 30px;
       -webkit-column-count: 1;
          -moz-column-count: 1;

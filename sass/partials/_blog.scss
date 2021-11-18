@@ -97,8 +97,9 @@
     .content {
         article.entry {
             h2.entry-title {
-                font-size: $h3-font-size;
-                line-height: 1.5;
+                font-size: $h4-font-size;
+                // line-height: 1.5;
+                line-height: 1.25;
             }
         }
     }
