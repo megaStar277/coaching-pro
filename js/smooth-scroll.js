@@ -82,6 +82,8 @@ jQuery(document).ready(function ($) {
 		}
 	};
 
+	addScrolled();
+
 	// Get the current .site-header height in px
 	function getSiteHeaderHeight() {
 
