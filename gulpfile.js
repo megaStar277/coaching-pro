@@ -14,12 +14,12 @@ var autoprefixer = require('autoprefixer');
 var concat = require('gulp-concat');
 var del = require('del');
 var gulp = require('gulp');
+var merge = require('merge-stream');
 var postcss = require('gulp-postcss');
 var pxtorem = require('postcss-pxtorem');
 var sass = require('gulp-sass')(require('node-sass'));
 var wpPot = require('gulp-wp-pot');
 var zip = require('gulp-zip');
-var merge = require('merge-stream');
 
 // Generates all stylesheet files from SASS.
 gulp.task('styles-new', async function() {
@@ -94,7 +94,7 @@ gulp.task('pot', function() {
 // Zip all theme files and put into /dist/ folder.
 gulp.task('zip', async function() {
     return gulp.src([
-        'config/*',
+        'config/**/*',
         'css/*',
         'images/*',
         'includes/**/*',
