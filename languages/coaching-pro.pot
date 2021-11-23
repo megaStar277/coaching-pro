@@ -213,11 +213,11 @@ msgstr ""
 msgid "Please define an SVG icon filename."
 msgstr ""
 
-#: lib/load-scripts.php:105
+#: lib/load-scripts.php:127
 msgid "Menu"
 msgstr ""
 
-#: lib/load-scripts.php:107
+#: lib/load-scripts.php:129
 msgid "Submenu"
 msgstr ""
 

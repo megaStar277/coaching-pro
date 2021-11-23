@@ -47,7 +47,6 @@
       }
     }
     a {
-        //color: $base-color-5;
         display: block;
         padding: 15px 20px;
         text-decoration: none;
@@ -70,7 +69,6 @@
             }
         }
         .sub-menu {
-            // border-top: 1px dotted $base-color-5;
             border-top: none;
             left: -9999px;
             opacity: 0;
@@ -218,15 +216,10 @@
                 width: 100%;
                 font-weight: bold;
                 @include media($screen--m) {
-                    // width: auto;
                     display: block;
-                    // padding: 32px 20px;
                     text-decoration: none;
                     border-bottom: none;
                     font-weight: normal;
-                    // width: 300px;
-                    // max-width: 300px;
-                    // border: 1px dotted $base-color-5;
                     border-top: 0;
                     border: none;
                     padding: 20px;
@@ -250,16 +243,13 @@
                 margin: 0;
                 padding: 10px 0 10px 10px;
                 opacity: 1;
-                // padding-left: 15px;
                 position: static;
                 width: 100%;
                 @include media($screen--m) {
-                    // border-top: 1px dotted $base-color-5;
                     padding: 10px;
                     left: -9999px;
                     opacity: 0;
                     position: absolute;
-                    // padding-left: 0;
                     transition: opacity .4s ease-in-out;
                     z-index: 99;
                     width: 240px;

@@ -6,12 +6,9 @@
  */
 
 add_action( 'wp_enqueue_scripts', 'coachingpro_custom_wpforms_colors_css' );
-/**
- * Forces the WooCommerce elements to use the "Mobile Menu Button Color" Customizer setting.
- */
 function coachingpro_custom_wpforms_colors_css() {
 
-	wp_enqueue_style( genesis_get_theme_handle() . '-wpforms-custom-styles', get_theme_file_uri( '/wpforms.css' ) );
+	wp_enqueue_style( genesis_get_theme_handle() . '-wpforms-custom-styles', get_stylesheet_directory_uri() . '/css/wpforms.css' );
 
 	$appearance = genesis_get_config( 'appearance' );
 

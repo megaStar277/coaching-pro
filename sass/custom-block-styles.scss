@@ -1,0 +1,28 @@
+// Import Bourbon, Neat
+@import 'node_modules/bourbon/core/bourbon';
+@import 'node_modules/bourbon-neat/app/assets/stylesheets/neat';
+
+@import 'partials/variables';
+
+/* CUSTOM BLOCK STYLES
+----------------------------------------------------------------------------- */
+
+/* Image */
+.wp-block-image {
+	/* Rounded Corners style. */
+	&.is-style-roundedcorners {
+        img {
+    		border-radius: $global-border-radius;
+        }
+	}
+}
+
+/* GENESIS BLOCKS
+----------------------------- */
+/* Genesis Advanced Columns */
+.wp-block-genesis-blocks-gb-columns {
+	/* Rounded Corners style. */
+	&.is-style-roundedcorners {
+		border-radius: $global-border-radius;
+	}
+}

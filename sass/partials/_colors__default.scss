@@ -179,8 +179,8 @@ input[type="submit"]:hover {
 .archive-pagination {
     li {
         a {
-            background: lighten($grey, 25);
-            color: darken($soft-black,10);
+            background: $theme-color7;
+            color: $soft-black;
         }
     }
     .active {
@@ -208,26 +208,4 @@ input[type="submit"]:hover {
 
 .footer-widgets {
     background-color: $white;
-    .footer-widgets-1 {
-        // background: $grey;
-        a {
-            // color: $white;
-            // border-color: $white;
-            &:focus,
-            &:hover {
-                // color: $base-color-6;
-            }
-        }
-        section:last-child {
-            // color: $white;
-        }
-    }
-    .menu-social-menu-container {
-        li {
-            & > a {
-                color: $white;
-                border-bottom: none;
-            }
-        }
-    }
 }

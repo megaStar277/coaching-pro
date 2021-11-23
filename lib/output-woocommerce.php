@@ -6,12 +6,9 @@
  */
 
 add_action( 'wp_enqueue_scripts', 'coachingpro_custom_woocommerce_css' );
-/**
- * Forces the WooCommerce elements to use the "Mobile Menu Button Color" Customizer setting.
- */
 function coachingpro_custom_woocommerce_css() {
 
-	wp_enqueue_style( genesis_get_theme_handle() . '-woocommerce-custom-styles', get_theme_file_uri( '/woocommerce.css' ) );
+	wp_enqueue_style( genesis_get_theme_handle() . '-woocommerce-custom-styles', get_stylesheet_directory_uri() . '/css/woocommerce.css' );
 
 	$appearance = genesis_get_config( 'appearance' );
 
@@ -108,10 +105,6 @@ function coachingpro_custom_woocommerce_css() {
 		.single-product #genesis-content .woocommerce .single-product .related.products,
 		.woocommerce nav.woocommerce-pagination ul li a {
 			background-color: %6$s;
-		}
-
-		.woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation {
-			border-color: %1$s;
 		}
 
 		.wc-block-grid__product-onsale {

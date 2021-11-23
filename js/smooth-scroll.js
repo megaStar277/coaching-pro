@@ -108,13 +108,13 @@ jQuery(document).ready(function ($) {
 
 	}
 
-	//$( document ).on('scroll', addScrolled);
-    $( window ).smartscroll( function(e) {
+	$( window ).on('scroll', function(e) {
+    // $( window ).smartscroll( function(e) {
         addScrolled();
     } );
 
-	//$( window ).on('resize', addScrolled);
-    $( window ).smartresize( function(e) {
+	$( window ).on('resize', function(e) {
+    // $( window ).smartresize( function(e) {
         addScrolled();
     } );
 

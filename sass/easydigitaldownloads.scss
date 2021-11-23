@@ -17,7 +17,7 @@
         #edd-purchase-button,
 		.edd-submit,
 		[type=submit].edd-submit {
-            border-radius: 9999px;
+            border-radius: $global-border-radius;
             margin-top: 1em;
             padding: calc(.667em + 2px) calc(1.333em + 2px);
             font-size: 100%;
@@ -50,6 +50,8 @@
                 padding: 0;
                 clear: both;
                 border: 1px solid #ccc;
+                border-radius: $global-border-radius;
+                overflow: hidden;
                 .page-numbers {
                     display: inline-block;
                     float: left;
@@ -90,9 +92,26 @@
                 }
                 .edd-product {
                     margin-bottom: 30px;
-                    .title {
-                        font-size: 1em;
-                        font-weight: 600;
+                    .product-image {
+                        line-height: 0;
+                        margin-bottom: 1em;
+                        a {
+                            display: inline-block;
+                            img {
+                                display: block;
+                                border-radius: $global-border-radius;
+                            }
+                        }
+                    }
+                    a {
+                        display: inline-block;
+                        border-bottom: 0;
+                        .title {
+                            font-size: 1em;
+                            font-weight: 600;
+                            margin: 0;
+                            padding: 0.5em 0;
+                        }
                     }
                     .product-price {
                         font-size: .857em;
@@ -211,7 +230,7 @@
         border: 1px solid #ccc;
     }
     input[type="submit"] {
-        border-radius: 9999px;
+        border-radius: $global-border-radius;
         margin-top: 1em;
         padding: calc(.667em + 2px) calc(1.333em + 2px);
         font-size: 100%;

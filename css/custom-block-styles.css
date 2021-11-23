@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+/* CUSTOM BLOCK STYLES
+----------------------------------------------------------------------------- */
+/* Image */
+.wp-block-image {
+  /* Rounded Corners style. */ }
+  .wp-block-image.is-style-roundedcorners img {
+    border-radius: 4px; }
+
+/* GENESIS BLOCKS
+----------------------------- */
+/* Genesis Advanced Columns */
+.wp-block-genesis-blocks-gb-columns {
+  /* Rounded Corners style. */ }
+  .wp-block-genesis-blocks-gb-columns.is-style-roundedcorners {
+    border-radius: 4px; }

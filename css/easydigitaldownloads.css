@@ -1,0 +1,183 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+/* EASY DIGITAL DOWNLOADS STYLES
+----------------------------------------------------------------------------- */
+/* GLOBAL STYLES
+--------------------------------------- */
+.edd-page #genesis-content {
+  padding-bottom: 40px; }
+  .edd-page #genesis-content button,
+  .edd-page #genesis-content a.button,
+  .edd-page #genesis-content #edd-purchase-button,
+  .edd-page #genesis-content .edd-submit,
+  .edd-page #genesis-content [type=submit].edd-submit {
+    border-radius: 4px;
+    margin-top: 1em;
+    padding: calc(.667em + 2px) calc(1.333em + 2px);
+    font-size: 100%;
+    font-weight: 600;
+    border: none; }
+    .edd-page #genesis-content button.edd-apply-discount,
+    .edd-page #genesis-content a.button.edd-apply-discount,
+    .edd-page #genesis-content #edd-purchase-button.edd-apply-discount,
+    .edd-page #genesis-content .edd-submit.edd-apply-discount,
+    .edd-page #genesis-content [type=submit].edd-submit.edd-apply-discount {
+      font-size: 80%;
+      margin-top: 0; }
+  .edd-page #genesis-content form input[type="text"],
+  .edd-page #genesis-content form input[type="email"],
+  .edd-page #genesis-content form input[type="phone"],
+  .edd-page #genesis-content form input[type="tel"],
+  .edd-page #genesis-content form input[type="password"],
+  .edd-page #genesis-content form select,
+  .edd-page #genesis-content form textarea {
+    border: 1px solid #d3ced2; }
+  .edd-page #genesis-content .edd-pagination-wrap {
+    display: block;
+    margin-top: 40px;
+    text-align: center; }
+    .edd-page #genesis-content .edd-pagination-wrap .edd-pagination {
+      display: inline-block;
+      white-space: nowrap;
+      margin: 1px;
+      padding: 0;
+      clear: both;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      overflow: hidden; }
+      .edd-page #genesis-content .edd-pagination-wrap .edd-pagination .page-numbers {
+        display: inline-block;
+        float: left;
+        margin-bottom: 0;
+        padding: calc(.667em + 2px) calc(1.333em + 2px);
+        font-weight: 600;
+        line-height: 1;
+        border: 0; }
+
+/* ARCHIVE PAGE
+--------------------------------------- */
+.edd-page.edd-archive #genesis-content article.entry .entry-title {
+  margin-bottom: 30px;
+  text-align: center; }
+
+.edd-page.edd-archive #genesis-content article.entry .edd-products-wrap {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100%);
+  justify-content: space-between; }
+  @media screen and (min-width: 1024px) {
+    .edd-page.edd-archive #genesis-content article.entry .edd-products-wrap {
+      grid-template-columns: repeat(auto-fill, 48%);
+      grid-gap: 2%; } }
+  @media screen and (min-width: 1280px) {
+    .edd-page.edd-archive #genesis-content article.entry .edd-products-wrap {
+      grid-template-columns: repeat(auto-fill, 31%);
+      margin-left: -210px;
+      margin-right: -210px;
+      max-width: 1200px; } }
+  .edd-page.edd-archive #genesis-content article.entry .edd-products-wrap .edd-product {
+    margin-bottom: 30px; }
+    .edd-page.edd-archive #genesis-content article.entry .edd-products-wrap .edd-product .product-image {
+      line-height: 0;
+      margin-bottom: 1em; }
+      .edd-page.edd-archive #genesis-content article.entry .edd-products-wrap .edd-product .product-image a {
+        display: inline-block; }
+        .edd-page.edd-archive #genesis-content article.entry .edd-products-wrap .edd-product .product-image a img {
+          display: block;
+          border-radius: 4px; }
+    .edd-page.edd-archive #genesis-content article.entry .edd-products-wrap .edd-product a {
+      display: inline-block;
+      border-bottom: 0; }
+      .edd-page.edd-archive #genesis-content article.entry .edd-products-wrap .edd-product a .title {
+        font-size: 1em;
+        font-weight: 600;
+        margin: 0;
+        padding: 0.5em 0; }
+    .edd-page.edd-archive #genesis-content article.entry .edd-products-wrap .edd-product .product-price {
+      font-size: .857em; }
+
+/* SINGLE DOWNLOAD PAGE
+--------------------------------------- */
+.edd-page.edd-single-download #genesis-content article.entry header.entry-header {
+  margin: 30px 0; }
+
+/* FULL-WIDTH PAGES
+--------------------------------------- */
+.full-width-content.edd-page #genesis-content > .entry > .entry-content {
+  margin-left: 0;
+  margin-right: 0; }
+  @media screen and (min-width: 1280px) {
+    .full-width-content.edd-page #genesis-content > .entry > .entry-content {
+      margin-left: -250px;
+      margin-right: -250px;
+      max-width: 1280px;
+      padding: 0 30px; } }
+
+/* CHECKOUT PAGE
+--------------------------------------- */
+.edd-checkout #edd_checkout_cart_form #edd_checkout_cart thead {
+  display: none; }
+  @media screen and (min-width: 1280px) {
+    .edd-checkout #edd_checkout_cart_form #edd_checkout_cart thead {
+      display: table-header-group; } }
+
+.edd-checkout #edd_checkout_cart_form #edd_checkout_cart tbody tr {
+  display: block;
+  margin-bottom: 20px; }
+  @media screen and (min-width: 1280px) {
+    .edd-checkout #edd_checkout_cart_form #edd_checkout_cart tbody tr {
+      display: table-row;
+      margin-bottom: 0; } }
+  .edd-checkout #edd_checkout_cart_form #edd_checkout_cart tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.025); }
+    @media screen and (min-width: 1280px) {
+      .edd-checkout #edd_checkout_cart_form #edd_checkout_cart tbody tr:nth-child(even) {
+        background-color: transparent; } }
+  .edd-checkout #edd_checkout_cart_form #edd_checkout_cart tbody tr td {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: 0; }
+    @media screen and (min-width: 1280px) {
+      .edd-checkout #edd_checkout_cart_form #edd_checkout_cart tbody tr td {
+        display: table-cell;
+        width: auto;
+        background-color: #fff;
+        border: 1px solid #eee; } }
+    .edd-checkout #edd_checkout_cart_form #edd_checkout_cart tbody tr td.edd_cart_item_price {
+      text-align: right; }
+      @media screen and (min-width: 1280px) {
+        .edd-checkout #edd_checkout_cart_form #edd_checkout_cart tbody tr td.edd_cart_item_price {
+          text-align: left; } }
+
+/* SHARED STYLES
+--------------------------------------- */
+#edd_checkout_wrap .edd_empty_cart,
+.entry-content .edd-no-purchases {
+  display: block;
+  text-align: center; }
+
+/* LOGIN FORM
+--------------------------------------- */
+#edd_login_form {
+  background-color: #f5f5f5;
+  margin-bottom: 40px;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 6px; }
+  #edd_login_form label {
+    font-weight: bold; }
+  #edd_login_form input[type="text"],
+  #edd_login_form input[type="password"] {
+    border: 1px solid #ccc; }
+  #edd_login_form input[type="submit"] {
+    border-radius: 4px;
+    margin-top: 1em;
+    padding: calc(.667em + 2px) calc(1.333em + 2px);
+    font-size: 100%;
+    font-weight: 600;
+    border: none; }

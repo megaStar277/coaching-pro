@@ -1,0 +1,40 @@
+/* # Sidebar
+---------------------------------------------------------------------------------------------------- */
+.sidebar {
+    font-size: $body-font-size;
+    margin-bottom: 5%;
+    @include media($screen--s1) {
+        margin-bottom: 40px;
+    }
+    .widget {
+        &.widget_search {
+            margin-bottom: 40px;
+            padding: 0;
+            .wp-block-search__inside-wrapper {
+                border: 2px solid $theme-color5;
+                border-radius: $global-border-radius;
+                .wp-block-search__button {
+                    background-color: $theme-color2;
+                    border: 0;
+                    border-radius: $global-border-radius;
+                }
+            }
+        }
+        .wp-block-latest-posts__list {
+            a {
+                &:hover {
+                    color: $theme-color2;
+                }
+            }
+            .wp-block-latest-posts__featured-image {
+                a {
+                    display: inline-block;
+                    img {
+                        display: inline-block;
+                        border-radius: $global-border-radius;
+                    }
+                }
+            }
+        }
+    }
+}

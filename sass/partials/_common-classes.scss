@@ -30,21 +30,21 @@
     padding: 12px 30px;
 }
 
-.after-entry,
 .archive-description,
 .author-box {
     background-color: $white;
-    // font-size: 18px;
     padding: 30px;
     margin-bottom: 0;
-    @include media($screen--m) {
-        padding: 30px;
-    }
 }
 
 .after-entry {
     background-color: $soft-white;
     margin: 0 0 24px;
+    padding: 30px;
+    border-radius: $global-border-radius;
+    h2 {
+        font-size: $h3-font-size;
+    }
 }
 
 .archive-description p:last-child,
@@ -97,7 +97,7 @@
         position: absolute;
         right: 3px;
         top: 3px;
-        border-radius: 0;
+        border-radius: $global-border-radius;
         .icon {
             height: 24px;
             top: -4px;

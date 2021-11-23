@@ -45,6 +45,9 @@
 			border-bottom-style: solid !important;
 		}
 	}
+	.wp-block-button__link {
+		border-radius: $global-border-radius;
+	}
 }
 
 /* COVER
@@ -170,6 +173,10 @@
 
 /* Genesis Advanced Columns */
 .wp-block-genesis-blocks-gb-columns {
+	/* Rounded Corners style. */
+	&.is-style-roundedcorners {
+		border-radius: $global-border-radius;
+	}
 	/* Inner Column blocks. */
 	.gb-block-layout-column-inner {
 		& > .wp-block-image {
@@ -214,6 +221,11 @@
 		grid-gap: 2em;
 		article.entry {
 			background-color: transparent;
+			.gb-block-post-grid-image {
+				img {
+					border-radius: $global-border-radius;
+				}
+			}
 			.gb-block-post-grid-title {
 				a {
 					border-bottom: 0;

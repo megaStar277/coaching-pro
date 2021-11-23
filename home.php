@@ -17,6 +17,24 @@ function coaching_pro_blog_archive_body_class( $classes ) {
 	return $classes;
 }
 
+// Open grid wrapper markup.
+add_action( 'genesis_before_while', 'coachingpro_open_grid_wrapper', 1 );
+function coachingpro_open_grid_wrapper() {
+    genesis_markup( array(
+		'open'    => '<div %s>',
+		'context' => 'grid-wrapper',
+	) );
+}
+
+// Close grid wrapper markup.
+add_action( 'genesis_after_endwhile', 'coachingpro_close_grid_wrapper', 1 );
+function coachingpro_close_grid_wrapper() {
+    genesis_markup( array(
+		'close'    => '</div>',
+		'context' => 'grid-wrapper',
+	) );
+}
+
 // Reposition Featured Images to display before Post Titles.
 remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
 add_action( 'genesis_entry_header', 'genesis_do_post_image', 1 );

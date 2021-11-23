@@ -4,7 +4,7 @@
 /* ## Entries
 --------------------------------------------- */
 .entry {
-    background-color: $white;
+    // background-color: $white;
     padding: 30px;
     margin-bottom: 5%;
     ol,
@@ -103,6 +103,8 @@ p.entry-meta {
         display: inline-block;
         text-align: center;
         border: 1px solid #ccc;
+        border-radius: $global-border-radius;
+        overflow: hidden;
         li {
             float: left;
             border: 0;
@@ -205,23 +207,4 @@ p.entry-meta {
 
 .post-edit-link {
     display: none;
-}
-
-/* # Sidebars
----------------------------------------------------------------------------------------------------- */
-.sidebar {
-    font-size: $body-font-size;
-    margin-bottom: 5%;
-    @include media($screen--s1) {
-        margin-bottom: 40px;
-    }
-    .widget {
-        background-color: $white;
-        padding: 30px 20px;
-        margin-bottom: 5%;
-        @include media($screen--s1) {
-            padding: 40px 20px;
-            margin-bottom: 0;
-        }
-    }
 }

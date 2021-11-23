@@ -17,30 +17,22 @@ $theme-color6: #8a8a8a;
 $theme-color7: #f0efee;
 $theme-color8: #f8f8f8;
 
-// Health and Fitness (default)
-//-------------------------------------
-$base-color-1: #f48104;
-$base-color-2: #d3d81c;
-$base-color-3: #2d2a5f;
-$base-color-4: #a6acac;
-$base-color-5: $white;
-$base-color-6: $base-color-3;
-
 // Background colors
 //-------------------------------------
 $background-color: $white;
-$medium-background-color: #E7E5E7;
 
 // Menu items
 //-------------------------------------
-$xmenu-color: $white;
-$xmenu-color--hover: $base-color-3;
 $sub-menu-color: $soft-black;
-$sub-menu-background: lighten($grey, 25);
+$sub-menu-background: $theme-color7;
 
 // Base colors for text and links
 //-------------------------------------
 $base-text-color: $soft-black;
+
+// Border Radius
+//-------------------------------------
+$global-border-radius: 4px;
 
 // Global Screen Sizes - was 1440px
 //------------------------------------------------------------------------------

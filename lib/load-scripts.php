@@ -39,6 +39,23 @@ function coaching_pro_enqueue_scripts_styles() {
 
 }
 
+
+// Block Editor Assets.
+add_action( 'enqueue_block_editor_assets', 'coachingpro_enqueue_block_editor_scripts'  );
+function coachingpro_enqueue_block_editor_scripts() {
+
+    // Enqueue Block Style Variations.
+    wp_enqueue_script( 'blockstylevariations-js', get_stylesheet_directory_uri() . '/js/block-style-variations.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+}
+
+// Custom Block Styles.
+add_action( 'enqueue_block_assets', 'coachingpro_enqueue_block_styles' );
+function coachingpro_enqueue_block_styles() {
+
+    wp_enqueue_style( 'custom-block-styles', get_stylesheet_directory_uri() . '/css/custom-block-styles.css' );
+
+}
+
 // Enqueue custom styles for Third-Party plugins.
 add_action( 'wp_enqueue_scripts', 'coachingpro_custom_plugin_styles' );
 function coachingpro_custom_plugin_styles() {
@@ -46,15 +63,20 @@ function coachingpro_custom_plugin_styles() {
 	// WooCommerce styles.
 	if ( class_exists( 'WooCommerce' ) ) {
 		if ( is_woocommerce() || is_page( array( 'cart', 'checkout' ) ) ) {
-			wp_enqueue_style( genesis_get_theme_handle() . '-woocommerce-custom-styles', get_stylesheet_directory_uri() . '/woocommerce.css', array(), genesis_get_theme_version() );
+			wp_enqueue_style( genesis_get_theme_handle() . '-woocommerce-custom-styles', get_stylesheet_directory_uri() . '/css/woocommerce.css', array(), genesis_get_theme_version() );
 		}
 	}
 
 	// Easy Digital Downloads styles.
 	if ( class_exists( 'Easy_Digital_Downloads' ) ) {
 		if ( is_post_type_archive( 'download' ) || is_singular( 'download' ) || edd_is_checkout() ) {
-			wp_enqueue_style( genesis_get_theme_handle() . '-edd-custom-styles', get_stylesheet_directory_uri() . '/easydigitaldownloads.css', array(), genesis_get_theme_version() );
+			wp_enqueue_style( genesis_get_theme_handle() . '-edd-custom-styles', get_stylesheet_directory_uri() . '/css/easydigitaldownloads.css', array(), genesis_get_theme_version() );
 		}
+	}
+
+	// WPForms.
+	if ( class_exists( 'WPForms' ) ) {
+		wp_enqueue_style( genesis_get_theme_handle() . '-wpforms-custom-styles', get_stylesheet_directory_uri() . '/css/wpforms.css', array(), genesis_get_theme_version() );
 	}
 
 }

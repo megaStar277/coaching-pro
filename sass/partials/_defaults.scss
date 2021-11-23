@@ -159,7 +159,7 @@ input[type="submit"] {
     font-size: $body-font-size;
     font-weight: 700;
     padding: 12px 24px;
-    border-radius: 30px;
+    border-radius: $global-border-radius;
     text-decoration: none;
     white-space: normal;
     width: auto;

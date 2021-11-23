@@ -36,9 +36,14 @@
 /* SINGLE POST
 ----------------------------- */
 .single-post {
+    img.post-photo {
+        display: block;
+        border-radius: $global-border-radius;
+    }
     .entry-header {
         .entry-title {
-            line-height: 1.5;
+            font-size: $h3-font-size;
+            line-height: 1.2;
         }
     }
 }
@@ -96,8 +101,16 @@
 .page-archive {
     .content {
         article.entry {
+            & > a.entry-image-link {
+                display: block;
+                margin-bottom: 20px;
+                img {
+                    display: block;
+                    border-radius: $global-border-radius;
+                }
+            }
             h2.entry-title {
-                font-size: $h4-font-size;
+                font-size: $h5-font-size;
                 // line-height: 1.5;
                 line-height: 1.25;
             }
