@@ -130,6 +130,14 @@ body {
 	margin-right: 0.01em;
 }
 
+/* BUTTONS
+--------------------------------------------- */
+.wp-block-button {
+	.wp-block-button__link {
+		border-radius: $global-border-radius;
+	}
+}
+
 /* TABLES
 --------------------------------------------- */
 .wp-block-table {

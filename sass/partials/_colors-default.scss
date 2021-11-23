@@ -192,6 +192,10 @@ input[type="submit"]:hover {
 
 /* ## Footer Colors
 --------------------------------------------- */
+.footer-widgets {
+    background-color: $white;
+}
+
 .site-footer {
     background-color: $theme-color8;
     color: $theme-color3;
@@ -204,8 +208,4 @@ input[type="submit"]:hover {
             border-bottom: 1px solid transparent;
         }
     }
-}
-
-.footer-widgets {
-    background-color: $white;
 }

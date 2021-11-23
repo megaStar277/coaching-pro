@@ -1343,7 +1343,6 @@ h6 {
 /* ## Entries
 --------------------------------------------- */
 .entry {
-  background-color: #fff;
   padding: 30px;
   margin-bottom: 5%; }
   .entry ol,
@@ -1826,6 +1825,9 @@ input[type="submit"]:hover {
 
 /* ## Footer Colors
 --------------------------------------------- */
+.footer-widgets {
+  background-color: #fff; }
+
 .site-footer {
   background-color: #f8f8f8;
   color: #6e6872; }
@@ -1834,9 +1836,6 @@ input[type="submit"]:hover {
     border-bottom: 1px solid #6e6872; }
     .site-footer a:focus, .site-footer a:hover {
       border-bottom: 1px solid transparent; }
-
-.footer-widgets {
-  background-color: #fff; }
 
 /* Override colors for responsive nav menu - this loads after color schemes.
 ---------------------------------------------------------------------------------------------------- */
@@ -1891,35 +1890,6 @@ input[type="submit"]:hover {
   color: #666; }
   .site-footer .genesis-nav-menu .sub-menu a span {
     border-color: #666; }
-
-/* Overrides for colors hover and focus - loads after colors.
----------------------------------------------------------------------------------------------------- */
-.footer-widgets .footer-widgets-1 a:focus,
-.footer-widgets .footer-widgets-1 a:hover,
-.footer-widgets .footer-widgets-2 a:focus,
-.footer-widgets .footer-widgets-2 a:hover {
-  color: #666;
-  border-bottom-color: transparent; }
-
-.footer-widgets .menu-social-menu-container li > a {
-  color: #fff;
-  border-bottom: none; }
-
-/* Custom Classes
----------------------------------------------------------------------------------------------------- */
-.widget_sp_image-image-link {
-  border-bottom: 1px solid transparent;
-  transition: none; }
-
-.link-has-image {
-  border-bottom: 1px solid transparent; }
-
-@media screen and (max-width: 414px) {
-  .alignleft.center-mobile,
-  .alignright.center-mobile {
-    display: block;
-    float: none;
-    margin: 0 auto 24px auto; } }
 
 /* BLOCK STYLES
 ----------------------------------------------------------------------------- */
@@ -2090,31 +2060,6 @@ input[type="submit"]:hover {
       font-weight: 700; }
       .gb-block-post-grid .gb-post-grid-items.is-grid article.entry a.gb-block-post-grid-more-link:hover {
         text-decoration: underline; }
-
-/*
-Social Icons Classes - for custom menu and widgets
----------------------------------------------------------------------------------------------------- */
-.menu-social-menu-container ul#menu-social-menu {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  padding: 20px;
-  text-align: center; }
-  .menu-social-menu-container ul#menu-social-menu > li {
-    display: inline-block;
-    padding: 20px 16px; }
-    .menu-social-menu-container ul#menu-social-menu > li a svg {
-      width: 24px;
-      height: 24px; }
-
-.sidebar .menu-social-menu-container ul#menu-social-menu {
-  padding: 0; }
-  .sidebar .menu-social-menu-container ul#menu-social-menu > li {
-    padding: 10px; }
-    .sidebar .menu-social-menu-container ul#menu-social-menu > li a svg {
-      width: 24px;
-      height: 24px; }
 
 /* # Print Styles
 ---------------------------------------------------------------------------------------------------- */

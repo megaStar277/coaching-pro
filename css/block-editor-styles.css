@@ -97,6 +97,11 @@
 .editor-styles-wrapper p.has-small-font-size.has-drop-cap:not(:focus)::first-letter {
   margin-right: 0.01em; }
 
+/* BUTTONS
+--------------------------------------------- */
+.wp-block-button .wp-block-button__link {
+  border-radius: 4px; }
+
 /* TABLES
 --------------------------------------------- */
 .wp-block-table {

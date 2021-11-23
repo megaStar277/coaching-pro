@@ -6,23 +6,7 @@
 
 /* CUSTOM BLOCK STYLES
 ----------------------------------------------------------------------------- */
-
-/* Image */
-.wp-block-image {
-	/* Rounded Corners style. */
-	&.is-style-roundedcorners {
-        img {
-    		border-radius: $global-border-radius;
-        }
-	}
-}
-
-/* GENESIS BLOCKS
------------------------------ */
-/* Genesis Advanced Columns */
-.wp-block-genesis-blocks-gb-columns {
-	/* Rounded Corners style. */
-	&.is-style-roundedcorners {
-		border-radius: $global-border-radius;
-	}
+.is-style-roundedcorners {
+	border-radius: $global-border-radius;
+	overflow: hidden;
 }
