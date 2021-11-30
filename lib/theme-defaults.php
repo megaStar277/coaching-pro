@@ -20,7 +20,7 @@ function coaching_pro_theme_defaults( $defaults ) {
 	$defaults['content_archive_limit']     = 0;
 	$defaults['content_archive_thumbnail'] = 0;
 	$defaults['posts_nav']                 = 'numeric';
-	$defaults['site_layout']               = 'full-width-content';
+	$defaults['site_layout']               = 'content-sidebar';
 
 	return $defaults;
 
@@ -42,7 +42,7 @@ function coaching_pro_theme_setting_defaults() {
 			'content_archive_limit'     => 0,
 			'content_archive_thumbnail' => 0,
 			'posts_nav'                 => 'numeric',
-			'site_layout'               => 'full-width-content',
+			'site_layout'               => 'content-sidebar',
 		) );
 
 	}

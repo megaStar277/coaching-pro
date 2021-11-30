@@ -102,98 +102,151 @@ return [
 			'ping_status'    => 'closed',
 			'meta_input'     => [ '_genesis_layout' => 'full-width-content' ],
 		],
-		// /* SAMPLE BLOG POSTS */
-		// 'Sample Blog Post 1'   => [
-		// 	'post_title'     => 'Five Important Things You Should Know About Courses',
-		// 	'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/sample-blog-post-1.php',
-		// 	'post_type'      => 'post',
-		// 	'post_status'    => 'publish',
-		// 	'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-1.jpg', // Photo by Matthew T Rader on Unsplash.
-		// 	'comment_status' => 'closed',
-		// 	'ping_status'    => 'closed',
-		// 	'meta_input'     => [
-		// 		'_featured_article' => 1,
-		// 	],
-		// ],
-		// 'Sample Blog Post 2'   => [
-		// 	'post_title'     => 'This Year Will Be The Year of Your Course',
-		// 	'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/sample-blog-post-2.php',
-		// 	'post_type'      => 'post',
-		// 	'post_status'    => 'publish',
-		// 	'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-2.jpg', // Photo by Jeff Isaak on Unsplash.
-		// 	'comment_status' => 'closed',
-		// 	'ping_status'    => 'closed',
-		// ],
-		// 'Sample Blog Post 3'   => [
-		// 	'post_title'     => 'Ten Things Your Competitors Know About Courses',
-		// 	'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/sample-blog-post-3.php',
-		// 	'post_type'      => 'post',
-		// 	'post_status'    => 'publish',
-		// 	'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-3.jpg', // Photo by Henri Meilhac on Unsplash.
-		// 	'comment_status' => 'closed',
-		// 	'ping_status'    => 'closed',
-		// 	'meta_input'     => [
-		// 		'_featured_article' => 1,
-		// 	],
-		// ],
-		// 'Sample Blog Post 4'   => [
-		// 	'post_title'     => 'Innovative Approaches To Improving Your Courses',
-		// 	'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/sample-blog-post-4.php',
-		// 	'post_type'      => 'post',
-		// 	'post_status'    => 'publish',
-		// 	'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-4.jpg', // Photo by Nathan Dumlao on Unsplash.
-		// 	'comment_status' => 'closed',
-		// 	'ping_status'    => 'closed',
-		// ],
-		// 'Sample Blog Post 5'   => [
-		// 	'post_title'     => 'The Crucial Step in Courses that Many Overlook',
-		// 	'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/sample-blog-post-5.php',
-		// 	'post_type'      => 'post',
-		// 	'post_status'    => 'publish',
-		// 	'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-5.jpg', // Photo by Clem Onojeghuo on Unsplash.
-		// 	'comment_status' => 'closed',
-		// 	'ping_status'    => 'closed',
-		// 	'meta_input'     => [
-		// 		'_featured_article' => 1,
-		// 	],
-		// ],
-		// 'Sample Blog Post 6'   => [
-		// 	'post_title'     => 'Three Tricks to Putting Your Courses into Overdrive',
-		// 	'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/sample-blog-post-6.php',
-		// 	'post_type'      => 'post',
-		// 	'post_status'    => 'publish',
-		// 	'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-6.jpg', // Photo by Jeremy Bishop on Unsplash.
-		// 	'comment_status' => 'closed',
-		// 	'ping_status'    => 'closed',
-		// ],
-		// /* SAMPLE TESTIMONIALS */
-		// 'Sample Testimonial 1' => [
-		// 	'post_title'     => 'Sample Testimonial 1',
-		// 	'post_content'   => '',
-		// 	'post_type'      => 'socialproofslider',
-		// 	'post_status'    => 'publish',
-		// 	'comment_status' => 'closed',
-		// 	'ping_status'    => 'closed',
-		// 	'meta_input'     => require dirname( __FILE__ ) . '/import/content/testimonials/sample-testimonial-1.php',
-		// ],
-		// 'Sample Testimonial 2' => [
-		// 	'post_title'     => 'Sample Testimonial 2',
-		// 	'post_content'   => '',
-		// 	'post_type'      => 'socialproofslider',
-		// 	'post_status'    => 'publish',
-		// 	'comment_status' => 'closed',
-		// 	'ping_status'    => 'closed',
-		// 	'meta_input'     => require dirname( __FILE__ ) . '/import/content/testimonials/sample-testimonial-2.php',
-		// ],
-		// 'Sample Testimonial 3' => [
-		// 	'post_title'     => 'Sample Testimonial 3',
-		// 	'post_content'   => '',
-		// 	'post_type'      => 'socialproofslider',
-		// 	'post_status'    => 'publish',
-		// 	'comment_status' => 'closed',
-		// 	'ping_status'    => 'closed',
-		// 	'meta_input'     => require dirname( __FILE__ ) . '/import/content/testimonials/sample-testimonial-3.php',
-		// ],
+		/* BLOG POSTS */
+		'blog-post-1'   => [
+			'post_title'     => 'Use your coaching strengths to your advantage',
+			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-1.php',
+			'post_type'      => 'post',
+			'post_status'    => 'publish',
+			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-1.jpg', // https://unsplash.com/photos/RgPQNvoIcdg
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+		],
+		'blog-post-2'   => [
+			'post_title'     => 'Start planning for professional leadership',
+			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-2.php',
+			'post_type'      => 'post',
+			'post_status'    => 'publish',
+			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-2.jpg', // https://unsplash.com/photos/--kQ4tBklJI
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+		],
+		'blog-post-3'   => [
+			'post_title'     => 'How to find your creative balance',
+			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-3.php',
+			'post_type'      => 'post',
+			'post_status'    => 'publish',
+			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-3.jpg', // https://unsplash.com/photos/VtKoSy_XzNU
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+		],
+		'blog-post-4'   => [
+			'post_title'     => 'Learn these helpful methods of leadership to achieve success',
+			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-4.php',
+			'post_type'      => 'post',
+			'post_status'    => 'publish',
+			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-4.jpg', // https://unsplash.com/photos/5U_28ojjgms
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+		],
+		'blog-post-5'   => [
+			'post_title'     => 'The top five business questions you should be asking yourself',
+			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-5.php',
+			'post_type'      => 'post',
+			'post_status'    => 'publish',
+			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-5.jpg', // https://unsplash.com/photos/-8DAN9_oi8g
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+		],
+		'blog-post-6'   => [
+			'post_title'     => 'Tips for visualizing your priorities',
+			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-6.php',
+			'post_type'      => 'post',
+			'post_status'    => 'publish',
+			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-6.jpg', // https://unsplash.com/photos/DXobXpIa9_4
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+		],
+		'blog-post-7'   => [
+			'post_title'     => 'How to select a coach who is just right for your needs',
+			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-7.php',
+			'post_type'      => 'post',
+			'post_status'    => 'publish',
+			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-7.jpg', // https://unsplash.com/photos/Be5aVKFv9ho
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+		],
+		'blog-post-8'   => [
+			'post_title'     => 'Helpful tips for creative professionals facing the effects of Coronavirus',
+			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-8.php',
+			'post_type'      => 'post',
+			'post_status'    => 'publish',
+			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-8.jpg', // https://unsplash.com/photos/8tvoDBqOHZU
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+		],
+		'blog-post-9'   => [
+			'post_title'     => 'Why having a personal brand can help you gain new clients',
+			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-9.php',
+			'post_type'      => 'post',
+			'post_status'    => 'publish',
+			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-9.jpg', // https://unsplash.com/photos/Hcfwew744z4
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+		],
+		'blog-post-10'   => [
+			'post_title'     => 'The importance of developing your personal brand as a coach',
+			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-10.php',
+			'post_type'      => 'post',
+			'post_status'    => 'publish',
+			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-10.jpg', // https://unsplash.com/photos/TXxiFuQLBKQ
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+		],
+		/* TESTIMONIALS */
+		'testimonial-1' => [
+			'post_title'     => 'Julie J.',
+			'post_content'   => '',
+			'post_type'      => 'socialproofslider',
+			'post_status'    => 'publish',
+			'featured_image' => CHILD_URL . '/config/import/images/demo-testimonial-1.jpg', // https://unsplash.com/photos/TXxiFuQLBKQ
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+			'meta_input'     => require dirname( __FILE__ ) . '/import/content/testimonials/sample-testimonial-1.php',
+		],
+		'testimonial-2' => [
+			'post_title'     => 'Cameron W.',
+			'post_content'   => '',
+			'post_type'      => 'socialproofslider',
+			'post_status'    => 'publish',
+			'featured_image' => CHILD_URL . '/config/import/images/demo-testimonial-2.jpg', // https://unsplash.com/photos/k-BWMCE1FNo
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+			'meta_input'     => require dirname( __FILE__ ) . '/import/content/testimonials/sample-testimonial-2.php',
+		],
+		'testimonial-3' => [
+			'post_title'     => 'Marc B.',
+			'post_content'   => '',
+			'post_type'      => 'socialproofslider',
+			'post_status'    => 'publish',
+			'featured_image' => CHILD_URL . '/config/import/images/demo-testimonial-3.jpg', // https://unsplash.com/photos/RQhV1Kj9uXY
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+			'meta_input'     => require dirname( __FILE__ ) . '/import/content/testimonials/sample-testimonial-3.php',
+		],
+		'testimonial-4' => [
+			'post_title'     => 'Brenda M.',
+			'post_content'   => '',
+			'post_type'      => 'socialproofslider',
+			'post_status'    => 'publish',
+			'featured_image' => CHILD_URL . '/config/import/images/demo-testimonial-4.jpg', // https://unsplash.com/photos/VtKoSy_XzNU
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+			'meta_input'     => require dirname( __FILE__ ) . '/import/content/testimonials/sample-testimonial-4.php',
+		],
+		/*
+		 * EDD DOWNLOADS
+ 		 * ---------------------
+ 		 * Easy Digital Downloads products can be imported using the included CSV file:
+ 		 * /config/import/edd/sample-edd-downloads.csv
+ 		 * 
+ 		 *
+ 		 * WOOCOMMERCE PRODUCTS
+		 * ---------------------
+		 * WooCommerce products can be imported using the included CSV file:
+		 * /config/import/woo/sample-woocommerce-products.csv
+		 *
+ 		 */
 	],
 	'navigation_menus' => [
 		'primary'         => [

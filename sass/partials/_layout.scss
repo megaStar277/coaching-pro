@@ -210,5 +210,8 @@ body.first-block-align-full.full-width-content {
     .entry,
     .post {
         width: 100% !important;
+        a {
+            border-bottom: 0;
+        }
     }
 }

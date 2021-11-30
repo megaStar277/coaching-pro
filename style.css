@@ -650,6 +650,9 @@ body.first-block-align-full.full-width-content.genesis-title-hidden.genesis-brea
   .grid-wrapper .entry,
   .grid-wrapper .post {
     width: 100% !important; }
+    .grid-wrapper .entry a,
+    .grid-wrapper .post a {
+      border-bottom: 0; }
 
 /* # Common Classes
 ---------------------------------------------------------------------------------------------------- */
