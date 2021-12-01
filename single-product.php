@@ -2,6 +2,7 @@
 /**
  * This template displays the single Product.
  *
+ * @package Coaching Pro
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

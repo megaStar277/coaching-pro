@@ -5,22 +5,21 @@
  * Visit `/wp-admin/admin.php?page=genesis-getting-started` to trigger import.
  *
  * @package Coaching Pro
- * @author  brandiD
  */
 
-$home_url = get_bloginfo('siteurl');
+$home_url = get_bloginfo( 'url' );
 
 // Get default images.
-$coachingpro_img_hero = CHILD_URL . '/config/import/images/demo-homepage-hero.jpg';
+$coachingpro_img_hero             = CHILD_URL . '/config/import/images/demo-homepage-hero.jpg';
 $coachingpro_img_video_screenshot = CHILD_URL . '/config/import/images/demo-homepage-video-screenshot.jpg';
-$coachingpro_img_book = CHILD_URL . '/config/import/images/demo-homepage-book.png';
-$coachingpro_logo_womansday = CHILD_URL . '/config/import/images/demo-logo-womansday.png';
-$coachingpro_logo_living = CHILD_URL . '/config/import/images/demo-logo-marthastewartliving.png';
-$coachingpro_logo_own = CHILD_URL . '/config/import/images/demo-logo-own.png';
-$coachingpro_logo_droz = CHILD_URL . '/config/import/images/demo-logo-drozshow.png';
-$coachingpro_icon_leap = CHILD_URL . '/config/import/images/demo-icon-leap.png';
-$coachingpro_icon_learn = CHILD_URL . '/config/import/images/demo-icon-learn.png';
-$coachingpro_icon_life = CHILD_URL . '/config/import/images/demo-icon-life.png';
+$coachingpro_img_book             = CHILD_URL . '/config/import/images/demo-homepage-book.png';
+$coachingpro_logo_womansday       = CHILD_URL . '/config/import/images/demo-logo-womansday.png';
+$coachingpro_logo_living          = CHILD_URL . '/config/import/images/demo-logo-marthastewartliving.png';
+$coachingpro_logo_own             = CHILD_URL . '/config/import/images/demo-logo-own.png';
+$coachingpro_logo_droz            = CHILD_URL . '/config/import/images/demo-logo-drozshow.png';
+$coachingpro_icon_leap            = CHILD_URL . '/config/import/images/demo-icon-leap.png';
+$coachingpro_icon_learn           = CHILD_URL . '/config/import/images/demo-icon-learn.png';
+$coachingpro_icon_life            = CHILD_URL . '/config/import/images/demo-icon-life.png';
 
 // Output page content.
 return <<<CONTENT

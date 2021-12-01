@@ -5,7 +5,6 @@
  * Visit `/wp-admin/admin.php?page=genesis-getting-started` to trigger import.
  *
  * @package Coaching Pro
- * @author  brandiD
  */
 
 return array(

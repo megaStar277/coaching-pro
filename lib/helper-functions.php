@@ -1,15 +1,17 @@
 <?php
 /**
- * Coaching Pro Theme
- *
  * This file adds helper functions to the Coaching Pro theme.
  *
  * @package Coaching Pro Theme
- * @author  thebrandiD
- * @license GPL-2.0+
- * @link    https://buildmybrandid.com/
  */
 
+/**
+ * Converts a HEX color to RGBA format.
+ *
+ * @param  string  $color The original HEX color string.
+ * @param  boolean $opacity If the origina color has an opacity value or not.
+ * @return string $output The modified rgba color value.
+ */
 function coaching_pro_convert_hex2rgba( $color, $opacity = false ) {
 	$default = 'rgb(0,0,0)';
 

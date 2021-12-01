@@ -5,10 +5,12 @@
  * @package Coaching Pro
  */
 
-add_action( 'wp_enqueue_scripts', 'coachingpro_custom_wpforms_colors_css' );
+/**
+ * Enqueues assets for the WPForms plugin.
+ */
 function coachingpro_custom_wpforms_colors_css() {
 
-	wp_enqueue_style( genesis_get_theme_handle() . '-wpforms-custom-styles', get_stylesheet_directory_uri() . '/css/wpforms.css' );
+	wp_enqueue_style( genesis_get_theme_handle() . '-wpforms-custom-styles', get_stylesheet_directory_uri() . '/css/wpforms.css', '', CHILD_THEME_VERSION );
 
 	$appearance = genesis_get_config( 'appearance' );
 
@@ -59,7 +61,6 @@ function coachingpro_custom_wpforms_colors_css() {
 		$button_text_color,
 		$button_hover_bg_color,
 		$button_hover_text_color
-
 	);
 
 	if ( $css ) {
@@ -67,3 +68,4 @@ function coachingpro_custom_wpforms_colors_css() {
 	}
 
 }
+add_action( 'wp_enqueue_scripts', 'coachingpro_custom_wpforms_colors_css' );

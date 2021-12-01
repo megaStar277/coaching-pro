@@ -2,25 +2,19 @@
 /**
  * Loads all colors and settings for the Coaching Pro theme.
  *
- * @since 2.0.0
  * @package Coaching Pro Theme
  */
 
-// Add the Color Palette settings to the Customizer.
-add_action( 'customize_register', 'coaching_pro_color_settings' );
 /**
  * Register settings and controls with the Customizer.
- *
- * @since 2.0.0
- * @param WP_Customize_Manager $wp_customize Customizer object.
  */
 function coaching_pro_color_settings() {
 
 	global $wp_customize;
 
-    $appearance = genesis_get_config( 'appearance' );
+	$appearance = genesis_get_config( 'appearance' );
 
-    // Add 'Color Palette' Section.
+	// Add 'Color Palette' Section.
 	$wp_customize->add_section(
 		'color_palette_section',
 		array(
@@ -31,7 +25,7 @@ function coaching_pro_color_settings() {
 
 	// -----------------------------.
 
-    // Add 'Color 1' Setting.
+	// Add 'Color 1' Setting.
 	$wp_customize->add_setting(
 		'coachpro_theme_color_1_setting',
 		array(
@@ -53,9 +47,9 @@ function coaching_pro_color_settings() {
 		)
 	);
 
-    // -----------------------------.
+	// -----------------------------.
 
-    // Add 'Color 2' Setting.
+	// Add 'Color 2' Setting.
 	$wp_customize->add_setting(
 		'coachpro_theme_color_2_setting',
 		array(
@@ -77,9 +71,9 @@ function coaching_pro_color_settings() {
 		)
 	);
 
-    // -----------------------------.
+	// -----------------------------.
 
-    // Add 'Color 3' Setting.
+	// Add 'Color 3' Setting.
 	$wp_customize->add_setting(
 		'coachpro_theme_color_3_setting',
 		array(
@@ -101,9 +95,9 @@ function coaching_pro_color_settings() {
 		)
 	);
 
-    // -----------------------------.
+	// -----------------------------.
 
-    // Add 'Color 4' Setting.
+	// Add 'Color 4' Setting.
 	$wp_customize->add_setting(
 		'coachpro_theme_color_4_setting',
 		array(
@@ -125,9 +119,9 @@ function coaching_pro_color_settings() {
 		)
 	);
 
-    // -----------------------------.
+	// -----------------------------.
 
-    // Add 'Text Color 1' Setting.
+	// Add 'Text Color 1' Setting.
 	$wp_customize->add_setting(
 		'coachpro_theme_textcolor_1_setting',
 		array(
@@ -149,9 +143,9 @@ function coaching_pro_color_settings() {
 		)
 	);
 
-    // -----------------------------.
+	// -----------------------------.
 
-    // Add 'Text Color 2' Setting.
+	// Add 'Text Color 2' Setting.
 	$wp_customize->add_setting(
 		'coachpro_theme_textcolor_2_setting',
 		array(
@@ -173,9 +167,9 @@ function coaching_pro_color_settings() {
 		)
 	);
 
-    // -----------------------------.
+	// -----------------------------.
 
-    // Add 'BG Color 1' Setting.
+	// Add 'BG Color 1' Setting.
 	$wp_customize->add_setting(
 		'coachpro_theme_bgcolor_1_setting',
 		array(
@@ -197,9 +191,9 @@ function coaching_pro_color_settings() {
 		)
 	);
 
-    // -----------------------------.
+	// -----------------------------.
 
-    // Add 'BG Color 2' Setting.
+	// Add 'BG Color 2' Setting.
 	$wp_customize->add_setting(
 		'coachpro_theme_bgcolor_2_setting',
 		array(
@@ -224,9 +218,12 @@ function coaching_pro_color_settings() {
 	// -----------------------------.
 
 	// Separator.
-	$wp_customize->add_setting( 'coachingpro_separator', array(
-		'sanitize_callback' => 'coachingpro_sanitize',
-	) );
+	$wp_customize->add_setting(
+		'coachingpro_separator',
+		array(
+			'sanitize_callback' => 'coachingpro_sanitize',
+		)
+	);
 	$wp_customize->add_control(
 		new Separator_Control(
 			$wp_customize,
@@ -239,7 +236,7 @@ function coaching_pro_color_settings() {
 
 	// -----------------------------.
 
-    // Add 'WooCommerce Accent Color' Setting.
+	// Add 'WooCommerce Accent Color' Setting.
 	$wp_customize->add_setting(
 		'coachpro_theme_linkscolor_setting',
 		array(
@@ -291,9 +288,12 @@ function coaching_pro_color_settings() {
 	if ( class_exists( 'WooCommerce' ) ) {
 
 		// Separator.
-		$wp_customize->add_setting( 'coachingpro_separator_2', array(
-			'sanitize_callback' => 'coachingpro_sanitize',
-		) );
+		$wp_customize->add_setting(
+			'coachingpro_separator_2',
+			array(
+				'sanitize_callback' => 'coachingpro_sanitize',
+			)
+		);
 		$wp_customize->add_control(
 			new Separator_Control(
 				$wp_customize,
@@ -334,9 +334,12 @@ function coaching_pro_color_settings() {
 	if ( class_exists( 'Easy_Digital_Downloads' ) ) {
 
 		// Separator.
-		$wp_customize->add_setting( 'coachingpro_separator_3', array(
-			'sanitize_callback' => 'coachingpro_sanitize',
-		) );
+		$wp_customize->add_setting(
+			'coachingpro_separator_3',
+			array(
+				'sanitize_callback' => 'coachingpro_sanitize',
+			)
+		);
 		$wp_customize->add_control(
 			new Separator_Control(
 				$wp_customize,
@@ -370,10 +373,8 @@ function coaching_pro_color_settings() {
 		);
 
 	}
-
-	// -----------------------------.
-
 }
+add_action( 'customize_register', 'coaching_pro_color_settings' );
 
 // Get the Appearance settings.
 $appearance = genesis_get_config( 'appearance' );
@@ -381,15 +382,12 @@ $appearance = genesis_get_config( 'appearance' );
 // Add support for the Block Editor Color Palette.
 add_theme_support( 'editor-color-palette', $appearance['editor-color-palette'] );
 
-
 /**
  * Output the inline CSS to the front end of Coaching Pro theme.
- *
- * @since 2.0.0
  */
 function coaching_pro_color_css() {
 
-    $appearance = genesis_get_config( 'appearance' );
+	$appearance           = genesis_get_config( 'appearance' );
 	$editor_color_palette = $appearance['editor-color-palette'];
 
 	$color_one = get_theme_mod( 'coachpro_theme_color_1_setting', $appearance['default-colors']['color1'] );
@@ -398,16 +396,16 @@ function coaching_pro_color_css() {
 	$color_bg1 = get_theme_mod( 'coachpro_theme_bgcolor_1_setting', $appearance['default-colors']['bgcolor1'] );
 	$color_bg2 = get_theme_mod( 'coachpro_theme_bgcolor_2_setting', $appearance['default-colors']['bgcolor2'] );
 
-	$links_color = get_theme_mod( 'coachpro_theme_linkscolor_setting', $appearance['default-colors']['textcolor1'] );
+	$links_color            = get_theme_mod( 'coachpro_theme_linkscolor_setting', $appearance['default-colors']['textcolor1'] );
 	$mobilemenubutton_color = get_theme_mod( 'coachpro_theme_mobilemenubutton_setting', $appearance['default-colors']['color2'] );
 
 	// Determine contrasting colors for button text.
-	$button_text_color = coaching_pro_color_contrast( $color_two );
+	$button_text_color       = coaching_pro_color_contrast( $color_two );
 	$button_hover_text_color = coaching_pro_color_contrast( $color_one );
 
-    $css = '';
+	$css = '';
 
-    foreach ( $editor_color_palette as $color_info ) {
+	foreach ( $editor_color_palette as $color_info ) {
 
 		$contrast_color = coaching_pro_color_contrast( $color_info['color'] );
 
@@ -445,86 +443,94 @@ function coaching_pro_color_css() {
 	}
 
 	// Output colors for links.
-	$css .= "
+	$css .= '
 
 		a {
-			color: " . $links_color . ";
+			color: ' . $links_color . ';
 		}
-	";
+	';
 
 	// Output colors for non-editable buttons: navigation menu, pagination, read more links, etc.
-	$css .= "
+	$css .= '
 
 		@media screen and (max-width: 1023px) {
 
 			.site-header .genesis-responsive-menu .genesis-nav-menu {
-				background-color: " . $color_bg2 . ";
+				background-color: ' . $color_bg2 . ';
 			}
 
 			.site-header .genesis-responsive-menu .genesis-nav-menu .sub-menu {
-				background-color: " . $color_bg1 . ";
+				background-color: ' . $color_bg1 . ';
 			}
 
 		}
 
 		.genesis-responsive-menu .genesis-nav-menu li.current-menu-item > a,
 		.genesis-responsive-menu .genesis-nav-menu li.current-menu-ancestor > a {
-			color: " . $color_two . ";
+			color: ' . $color_two . ';
 		}
 
 		/* PAGINATION */
 		.archive-pagination ul {
-			background-color: " . $color_bg1 . ";
+			background-color: ' . $color_bg1 . ';
 		}
 
 		.archive-pagination ul li a,
 		.archive-pagination ul li.pagination-omission {
-			background-color: " . $color_bg1 . ";
-			color: " . $links_color . ";
+			background-color: ' . $color_bg1 . ';
+			color: ' . $links_color . ';
 		}
 
 		.archive-pagination ul li a:focus,
 		.archive-pagination ul li a:hover,
 		.archive-pagination ul li.active a {
-			background-color: " . $color_two . ";
-			color: " . $button_hover_text_color . ";
+			background-color: ' . $color_two . ';
+			color: ' . $button_hover_text_color . ';
 		}
 
-		a.more-link.button {
-			background-color: " . $color_two . ";
+		a.more-link.button,
+		.sidebar .widget.widget_search .wp-block-search__inside-wrapper .wp-block-search__button,
+		.search-form input[type="submit"].search-form-submit {
+			background-color: ' . $color_two . ';
+			color: ' . $button_text_color . ';
 		}
 
-		a.more-link.button:hover {
-			background-color: " . $color_one . ";
+		a.more-link.button:hover,
+		.sidebar .widget.widget_search .wp-block-search__inside-wrapper .wp-block-search__button:focus,
+		.sidebar .widget.widget_search .wp-block-search__inside-wrapper .wp-block-search__button:hover,
+		.search-form input[type="submit"].search-form-submit:focus,
+		.search-form input[type="submit"].search-form-submit:hover {
+			background-color: ' . $color_one . ';
+			color: ' . $button_hover_text_color . ';
 		}
-	";
+	';
 
 	// Assign hover colors for white/orange buttons.
-	$css .= "
+	$css .= '
 
 		.wp-block-button .wp-block-button__link.has-white-background-color.has-colortwo-color:hover {
-			background-color: " . $color_two . " !important;
+			background-color: ' . $color_two . ' !important;
 		}
 		.wp-block-button .wp-block-button__link.has-white-background-color.has-colortwo-color:hover {
-			color: " . $appearance['default-colors']['white'] . " !important;
+			color: ' . $appearance['default-colors']['white'] . ' !important;
 		}
-	";
+	';
 
 	// Assign hover colors for orange/white buttons.
-	$css .= "
+	$css .= '
 
 		.wp-block-button .wp-block-button__link.has-colortwo-background-color.has-white-color:hover {
-			background-color: " . $color_one . ";
+			background-color: ' . $color_one . ';
 		}
-	";
+	';
 
 	// Output color for Mobile Menu Button.
-	$css .= "
+	$css .= '
 
 		button.menu-toggle,
 		button.sub-menu-toggle,
 		.wp-block-search__button {
-			background-color: " . $mobilemenubutton_color . ";
+			background-color: ' . $mobilemenubutton_color . ';
 		}
 
 		button.menu-toggle:hover,
@@ -533,11 +539,11 @@ function coaching_pro_color_css() {
 		button.sub-menu-toggle:focus,
 		.wp-block-search__button:hover,
 		.wp-block-search__button:focus {
-			background-color: " . $color_one . ";
+			background-color: ' . $color_one . ';
 		}
-	";
+	';
 
-    // Output inline styles.
+	// Output inline styles.
 	if ( $css ) {
 		wp_add_inline_style( genesis_get_theme_handle(), $css );
 	}
@@ -547,17 +553,4 @@ add_action( 'wp_enqueue_scripts', 'coaching_pro_color_css' );
 
 if ( ! class_exists( 'Separator_Control' ) ) {
 	return null;
-}
-
-/**
- * Class Prefix_Separator_Control
- *
- * Custom control to display separator
- */
-class Separator_Control extends WP_Customize_Control {
-	public function render_content() {
-		?>
-		<label><hr></label>
-		<?php
-	}
 }

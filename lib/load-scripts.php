@@ -1,36 +1,44 @@
 <?php
-/* Load the scripts and stylesheets for Coaching Pro theme.
------------------------------------------------------------------------------ */
+/**
+ * Loads the scripts and stylesheets for Coaching Pro theme.
+ *
+ * @package Coaching Pro
+ */
 
-// Load the main stylesheet.
+// Remove the default stylesheet loading action.
 remove_action( 'genesis_meta', 'genesis_load_stylesheet' );
-add_action( 'genesis_meta', 'coaching_pro_enqueue_main_stylesheet', 5 );
-function coaching_pro_enqueue_main_stylesheet() {
-	$handle  = defined( 'CHILD_THEME_NAME' ) && CHILD_THEME_NAME ? sanitize_title_with_dashes( CHILD_THEME_NAME ) : 'child-theme';
-	wp_enqueue_style( $handle , CHILD_THEME_URI . "/style.css", false, CHILD_THEME_VERSION );
-}
 
-// Enqueue Scripts and Styles.
-add_action( 'wp_enqueue_scripts', 'coaching_pro_enqueue_scripts_styles' );
+/**
+ * Loads the main stylesheet.
+ */
+function coaching_pro_enqueue_main_stylesheet() {
+	$handle = defined( 'CHILD_THEME_NAME' ) && CHILD_THEME_NAME ? sanitize_title_with_dashes( CHILD_THEME_NAME ) : 'child-theme';
+	wp_enqueue_style( $handle, CHILD_THEME_URI . '/style.css', false, CHILD_THEME_VERSION );
+}
+add_action( 'genesis_meta', 'coaching_pro_enqueue_main_stylesheet', 5 );
+
+/**
+ * Enqueues theme scripts and styles.
+ */
 function coaching_pro_enqueue_scripts_styles() {
 	$suffix = ( defined( 'COACHING_PRO_DEBUG' ) && COACHING_PRO_DEBUG ) ? '' : '.min';
 
-	$googlefontsURL = 'https://fonts.googleapis.com/css?family='.get_fonts_list();
+	$googlefonts_url = 'https://fonts.googleapis.com/css?family=' . get_fonts_list();
 
 	// Google fonts.
-	wp_enqueue_style( 'coaching-pro-fonts', $googlefontsURL, array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'coaching-pro-fonts', $googlefonts_url, array(), CHILD_THEME_VERSION );
 
 	// Dashicons.
 	wp_enqueue_style( 'dashicons' );
 
 	// Global scripts.
-	wp_enqueue_script( 'global-scripts', CHILD_THEME_URI . "/js/global.js", array( 'jquery' ), CHILD_THEME_VERSION, true );
+	wp_enqueue_script( 'global-scripts', CHILD_THEME_URI . '/js/global.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 
 	// Smooth scroll.
-	wp_enqueue_script( 'homepage-scripts', CHILD_THEME_URI . "/js/smooth-scroll.js", array( 'jquery' ), CHILD_THEME_VERSION, true );
+	wp_enqueue_script( 'homepage-scripts', CHILD_THEME_URI . '/js/smooth-scroll.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 
 	// Responsive menu.
-	wp_enqueue_script( 'coaching-pro-responsive-menu', CHILD_THEME_URI. "/js/responsive-menus.js", array( 'jquery' ), CHILD_THEME_VERSION, true );
+	wp_enqueue_script( 'coaching-pro-responsive-menu', CHILD_THEME_URI . '/js/responsive-menus.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 	wp_localize_script(
 		'coaching-pro-responsive-menu',
 		'genesis_responsive_menu',
@@ -38,26 +46,28 @@ function coaching_pro_enqueue_scripts_styles() {
 	);
 
 }
+add_action( 'wp_enqueue_scripts', 'coaching_pro_enqueue_scripts_styles' );
 
-
-// Block Editor Assets.
-add_action( 'enqueue_block_editor_assets', 'coachingpro_enqueue_block_editor_scripts'  );
+/**
+ * Enqueues the Block Editor Assets.
+ */
 function coachingpro_enqueue_block_editor_scripts() {
-
-    // Enqueue Block Style Variations.
-    wp_enqueue_script( 'blockstylevariations-js', get_stylesheet_directory_uri() . '/js/block-style-variations.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+	// Enqueue Block Style Variations.
+	wp_enqueue_script( 'blockstylevariations-js', get_stylesheet_directory_uri() . '/js/block-style-variations.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 }
+add_action( 'enqueue_block_editor_assets', 'coachingpro_enqueue_block_editor_scripts' );
 
-// Custom Block Styles.
-add_action( 'enqueue_block_assets', 'coachingpro_enqueue_block_styles' );
+/**
+ * Enqueues the Custom Block styles.
+ */
 function coachingpro_enqueue_block_styles() {
-
-    wp_enqueue_style( 'custom-block-styles', get_stylesheet_directory_uri() . '/css/custom-block-styles.css' );
-
+	wp_enqueue_style( 'custom-block-styles', get_stylesheet_directory_uri() . '/css/custom-block-styles.css', '', CHILD_THEME_VERSION );
 }
+add_action( 'enqueue_block_assets', 'coachingpro_enqueue_block_styles' );
 
-// Enqueue custom styles for Third-Party plugins.
-add_action( 'wp_enqueue_scripts', 'coachingpro_custom_plugin_styles' );
+/**
+ * Enqueues custom styles for Third-Party plugins.
+ */
 function coachingpro_custom_plugin_styles() {
 
 	// WooCommerce styles.
@@ -80,8 +90,13 @@ function coachingpro_custom_plugin_styles() {
 	}
 
 }
+add_action( 'wp_enqueue_scripts', 'coachingpro_custom_plugin_styles' );
 
-// Returns a URL-encoded list of Google Fonts to enqueue.
+/**
+ * Returns a list of Google Fonts.
+ *
+ * @return array $output A URL-encoded list of Google Fonts to enqueue.
+ */
 function get_fonts_list() {
 
 	// Get the appearance settings array.
@@ -99,17 +114,16 @@ function get_fonts_list() {
 	// Output a list of all chosen fonts.
 	foreach ( $editor_fonts as $font ) {
 
-		$fontfamily_escaped = '';
+		$fontfamily_escaped  = '';
 		$fontfamily_escaped .= str_replace( ' ', '+', $font['font'] );
 		$fontfamily_escaped .= ':400,700';
 
-		if ( in_array( $fontfamily_escaped, $esc_fontlist ) == false ) {
+		if ( in_array( $fontfamily_escaped, $esc_fontlist, true ) === false ) {
 			$esc_fontlist[] = $fontfamily_escaped;
 		}
-
 	}
 
-	$allfonts_str = implode('|', $esc_fontlist);
+	$allfonts_str = implode( '|', $esc_fontlist );
 
 	$output .= $allfonts_str;
 
@@ -117,24 +131,26 @@ function get_fonts_list() {
 
 }
 
+// ADMIN SCRIPTS.
+// ----------------------------------------------------------------------------.
 
-/* ADMIN SCRIPTS
------------------------------------------------------------------------------ */
-
-// Define the responsive menu settings.
+/**
+ * Defines the responsive menu settings.
+ * @return array $settings An array of the responsive menu settings.
+ */
 function coaching_pro_responsive_menu_settings() {
 	$settings = array(
-	'mainMenu'          => __( 'Menu', 'coaching-pro' ),
-	'menuIconClass'     => 'dashicons-before dashicons-menu',
-	'subMenu'           => __( 'Submenu', 'coaching-pro' ),
-	'subMenuIconsClass' => 'dashicons-before dashicons-arrow-down-alt2',
-	'menuClasses'       => array(
-		'combine' => array(
-			'.nav-primary',
-			'.nav-header',
+		'mainMenu'          => __( 'Menu', 'coaching-pro' ),
+		'menuIconClass'     => 'dashicons-before dashicons-menu',
+		'subMenu'           => __( 'Submenu', 'coaching-pro' ),
+		'subMenuIconsClass' => 'dashicons-before dashicons-arrow-down-alt2',
+		'menuClasses'       => array(
+			'combine' => array(
+				'.nav-primary',
+				'.nav-header',
+			),
+			'others'  => array(),
 		),
-		'others'  => array(),
-	),
 	);
 	return $settings;
 }

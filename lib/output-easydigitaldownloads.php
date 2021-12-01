@@ -5,10 +5,12 @@
  * @package Coaching Pro
  */
 
-add_action( 'wp_enqueue_scripts', 'coachingpro_custom_edd_colors_css' );
+/**
+ * Enqueues assets for the EDD plugin.
+ */
 function coachingpro_custom_edd_colors_css() {
 
-	wp_enqueue_style( genesis_get_theme_handle() . '-edd-custom-styles', get_stylesheet_directory_uri() . '/css/easydigitaldownloads.css' );
+	wp_enqueue_style( genesis_get_theme_handle() . '-edd-custom-styles', get_stylesheet_directory_uri() . '/css/easydigitaldownloads.css', '', CHILD_THEME_VERSION );
 
 	$appearance = genesis_get_config( 'appearance' );
 
@@ -16,10 +18,10 @@ function coachingpro_custom_edd_colors_css() {
 	$edd_accent_color = get_theme_mod( 'coachpro_theme_eddaccentcolor_setting', $appearance['default-colors']['color2'] );
 
 	$button_hover_bg_color = get_theme_mod( 'coachpro_theme_color_1_setting', $appearance['default-colors']['color1'] );
-	$bg_color1 = get_theme_mod( 'coachpro_theme_bgcolor_1_setting', $appearance['default-colors']['bgcolor1'] );
+	$bg_color1             = get_theme_mod( 'coachpro_theme_bgcolor_1_setting', $appearance['default-colors']['bgcolor1'] );
 
 	// Determine contrasting colors for button text.
-	$button_text_color = coaching_pro_color_contrast( $edd_accent_color );
+	$button_text_color       = coaching_pro_color_contrast( $edd_accent_color );
 	$button_hover_text_color = coaching_pro_color_contrast( $button_hover_bg_color );
 
 	$css = '';
@@ -81,7 +83,6 @@ function coachingpro_custom_edd_colors_css() {
 		$button_hover_bg_color,
 		$button_hover_text_color,
 		$bg_color1
-
 	);
 
 	if ( $css ) {
@@ -89,3 +90,4 @@ function coachingpro_custom_edd_colors_css() {
 	}
 
 }
+add_action( 'wp_enqueue_scripts', 'coachingpro_custom_edd_colors_css' );

@@ -2,8 +2,6 @@
 /**
  * Loads Block Editor functions for Coaching Pro theme.
  *
- * @since 1.4.0
- *
  * @package Coaching Pro Theme
  */
 
@@ -19,18 +17,24 @@ add_filter( 'use_widgets_block_editor', '__return_true' );
 // Add support for Editor Styles.
 add_theme_support( 'editor-styles' );
 
-// Load Google fonts.
-add_action( 'enqueue_block_editor_assets', 'coachingpro_enqueue_googlefonts' );
+/**
+ * Loads Google fonts.
+ */
 function coachingpro_enqueue_googlefonts() {
 
-	$googlefontsURL = 'https://fonts.googleapis.com/css?family='.blockeditor_get_fonts_list();
+	$googlefonts_url = 'https://fonts.googleapis.com/css?family=' . blockeditor_get_fonts_list();
 
 	// Google fonts.
-	wp_enqueue_style( 'coaching-pro-blockeditor-googlefonts', $googlefontsURL, array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'coaching-pro-blockeditor-googlefonts', $googlefonts_url, array(), CHILD_THEME_VERSION );
 
 }
+add_action( 'enqueue_block_editor_assets', 'coachingpro_enqueue_googlefonts' );
 
-// Returns a URL-encoded list of Google Fonts to enqueue.
+/**
+ * Returns a URL-encoded list of Google Fonts.
+ *
+ * @return string URL-encoded list of Google Fonts to be enqueued.
+ */
 function blockeditor_get_fonts_list() {
 
 	// Get the appearance settings array.
@@ -48,17 +52,16 @@ function blockeditor_get_fonts_list() {
 	// Output a list of all chosen fonts.
 	foreach ( $editor_fonts as $font ) {
 
-		$fontfamily_escaped = '';
+		$fontfamily_escaped  = '';
 		$fontfamily_escaped .= str_replace( ' ', '+', $font['font'] );
 		$fontfamily_escaped .= ':400,700';
 
-		if ( in_array( $fontfamily_escaped, $esc_fontlist ) == false ) {
+		if ( in_array( $fontfamily_escaped, $esc_fontlist, true ) === false ) {
 			$esc_fontlist[] = $fontfamily_escaped;
 		}
-
 	}
 
-	$allfonts_str = implode('|', $esc_fontlist);
+	$allfonts_str = implode( '|', $esc_fontlist );
 
 	$output .= $allfonts_str;
 
@@ -67,7 +70,7 @@ function blockeditor_get_fonts_list() {
 }
 
 // Include the custom Google fonts.
-include_once( CHILD_THEME_DIR . '/lib/output-block-editor-custom-fonts.php' );
+require_once CHILD_THEME_DIR . '/lib/output-block-editor-custom-fonts.php';
 
 // Add a custom body class - helper for displaying the transparent header nav.
 add_filter( 'body_class', 'coachingpro_blocks_body_classes' );
@@ -109,8 +112,8 @@ function coachingpro_blocks_body_classes( $classes ) {
 	}
 
 	// Transparent header class.
-	$meta = get_post_meta( get_the_ID() );
-	$transheader_checkbox_value = ( isset( $meta['page_transparent_header_value'][0] ) &&  '1' === $meta['page_transparent_header_value'][0] ) ? 1 : 0;
+	$meta                       = get_post_meta( get_the_ID() );
+	$transheader_checkbox_value = ( isset( $meta['page_transparent_header_value'][0] ) && '1' === $meta['page_transparent_header_value'][0] ) ? 1 : 0;
 
 	if ( 0 !== $transheader_checkbox_value ) {
 		$classes[] = 'transparent-header';

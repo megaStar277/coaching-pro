@@ -5,10 +5,9 @@
  * Visit `/wp-admin/admin.php?page=genesis-getting-started` to trigger import.
  *
  * @package Coaching Pro
- * @author  brandiD
  */
 
-$home_url = get_bloginfo('siteurl');
+$home_url = get_bloginfo( 'url' );
 
 // Get default images.
 $coachingpro_services_1 = CHILD_URL . '/config/import/images/demo-services-1.jpg';

@@ -2,12 +2,15 @@
 /**
  * Loads all fonts and settings for the Coaching Pro theme.
  *
- * @since 2.0.0
  * @package Coaching Pro Theme
  */
 
-// Returns an array of Google Font names.
-// Taken from: https://www.fontpair.co/fonts
+/**
+ * Returns an array of Google Font names.
+ * Taken from: https://www.fontpair.co/fonts
+ *
+ * @return array A list of Google Fonts.
+ */
 function get_gfonts() {
 	$gfont_names = array(
 		'Alegreya',
@@ -53,26 +56,21 @@ function get_gfonts() {
 		'Vollkorn',
 		'Work Sans',
 		'Yellowtail',
-		'Zilla Slab'
+		'Zilla Slab',
 	);
 
 	return $gfont_names;
 }
 
 
-// Add the Fonts settings to the Customizer.
-add_action( 'customize_register', 'coaching_pro_font_settings' );
 /**
  * Register settings and controls with the Customizer.
- *
- * @since 2.0.0
- * @param WP_Customize_Manager $wp_customize Customizer object.
  */
 function coaching_pro_font_settings() {
 
 	global $wp_customize;
 
-    $appearance = genesis_get_config( 'appearance' );
+	$appearance = genesis_get_config( 'appearance' );
 
 	// Create an empty array to hold the list of fonts.
 	$choices = array();
@@ -81,13 +79,13 @@ function coaching_pro_font_settings() {
 	$gfonts = get_gfonts();
 
 	// Loop through the gfonts array, add each item to the $choices array in the correct format.
-	foreach ($gfonts as $font_family => $item) {
-		$choices[$item] = $item;
+	foreach ( $gfonts as $font_family => $item ) {
+		$choices[ $item ] = $item;
 	}
 
 	// -----------------------------.
 
-    // Add 'Fonts' Customizer Section.
+	// Add 'Fonts' Customizer Section.
 	$wp_customize->add_section(
 		'fonts_section',
 		array(
@@ -98,7 +96,7 @@ function coaching_pro_font_settings() {
 
 	// -----------------------------.
 
-    // Add 'H1' Setting.
+	// Add 'H1' Setting.
 	$wp_customize->add_setting(
 		'coachpro_theme_font_h1_setting',
 		array(
@@ -109,19 +107,19 @@ function coaching_pro_font_settings() {
 
 	// Add 'H1' Control - use the $choices array.
 	$wp_customize->add_control(
-        'coachpro_theme_font_h1_setting',
-        array(
-			'type' => 'select',
-			'section' => 'fonts_section',
-            'label'    => __( 'H1', 'coaching-pro' ),
+		'coachpro_theme_font_h1_setting',
+		array(
+			'type'        => 'select',
+			'section'     => 'fonts_section',
+			'label'       => __( 'H1', 'coaching-pro' ),
 			'description' => __( 'Choose the font family to use for H1. The default font is: ' ) . $appearance['default-fonts']['h1'],
-            'choices' => $choices
-        ),
-    );
+			'choices'     => $choices,
+		),
+	);
 
-    // -----------------------------.
+	// -----------------------------.
 
-    // Add 'H2' Setting.
+	// Add 'H2' Setting.
 	$wp_customize->add_setting(
 		'coachpro_theme_font_h2_setting',
 		array(
@@ -132,19 +130,19 @@ function coaching_pro_font_settings() {
 
 	// Add 'H2' Control - use the $choices array.
 	$wp_customize->add_control(
-        'coachpro_theme_font_h2_setting',
-        array(
-			'type' => 'select',
-			'section' => 'fonts_section',
-            'label'    => __( 'H2', 'coaching-pro' ),
+		'coachpro_theme_font_h2_setting',
+		array(
+			'type'        => 'select',
+			'section'     => 'fonts_section',
+			'label'       => __( 'H2', 'coaching-pro' ),
 			'description' => __( 'Choose the font family to use for H2. The default font is: ' ) . $appearance['default-fonts']['h2'],
-            'choices' => $choices
-        ),
-    );
+			'choices'     => $choices,
+		),
+	);
 
-    // -----------------------------.
+	// -----------------------------.
 
-    // Add 'H3' Setting.
+	// Add 'H3' Setting.
 	$wp_customize->add_setting(
 		'coachpro_theme_font_h3_setting',
 		array(
@@ -155,19 +153,19 @@ function coaching_pro_font_settings() {
 
 	// Add 'H3' Control - use the $choices array.
 	$wp_customize->add_control(
-        'coachpro_theme_font_h3_setting',
-        array(
-			'type' => 'select',
-			'section' => 'fonts_section',
-            'label'    => __( 'H3', 'coaching-pro' ),
+		'coachpro_theme_font_h3_setting',
+		array(
+			'type'        => 'select',
+			'section'     => 'fonts_section',
+			'label'       => __( 'H3', 'coaching-pro' ),
 			'description' => __( 'Choose the font family to use for H3. The default font is: ' ) . $appearance['default-fonts']['h3'],
-            'choices' => $choices
-        ),
-    );
+			'choices'     => $choices,
+		),
+	);
 
-    // -----------------------------.
+	// -----------------------------.
 
-    // Add 'H4' Setting.
+	// Add 'H4' Setting.
 	$wp_customize->add_setting(
 		'coachpro_theme_font_h4_setting',
 		array(
@@ -178,19 +176,19 @@ function coaching_pro_font_settings() {
 
 	// Add 'H4' Control - use the $choices array.
 	$wp_customize->add_control(
-        'coachpro_theme_font_h4_setting',
-        array(
-			'type' => 'select',
-			'section' => 'fonts_section',
-            'label'    => __( 'H4', 'coaching-pro' ),
+		'coachpro_theme_font_h4_setting',
+		array(
+			'type'        => 'select',
+			'section'     => 'fonts_section',
+			'label'       => __( 'H4', 'coaching-pro' ),
 			'description' => __( 'Choose the font family to use for H4. The default font is: ' ) . $appearance['default-fonts']['h4'],
-            'choices' => $choices
-        ),
-    );
+			'choices'     => $choices,
+		),
+	);
 
-    // -----------------------------.
+	// -----------------------------.
 
-    // Add 'H5' Setting.
+	// Add 'H5' Setting.
 	$wp_customize->add_setting(
 		'coachpro_theme_font_h5_setting',
 		array(
@@ -201,19 +199,19 @@ function coaching_pro_font_settings() {
 
 	// Add 'H5' Control - use the $choices array.
 	$wp_customize->add_control(
-        'coachpro_theme_font_h5_setting',
-        array(
-			'type' => 'select',
-			'section' => 'fonts_section',
-            'label'    => __( 'H5', 'coaching-pro' ),
+		'coachpro_theme_font_h5_setting',
+		array(
+			'type'        => 'select',
+			'section'     => 'fonts_section',
+			'label'       => __( 'H5', 'coaching-pro' ),
 			'description' => __( 'Choose the font family to use for H5. The default font is: ' ) . $appearance['default-fonts']['h5'],
-            'choices' => $choices
-        ),
-    );
+			'choices'     => $choices,
+		),
+	);
 
-    // -----------------------------.
+	// -----------------------------.
 
-    // Add 'H6' Setting.
+	// Add 'H6' Setting.
 	$wp_customize->add_setting(
 		'coachpro_theme_font_h6_setting',
 		array(
@@ -224,19 +222,19 @@ function coaching_pro_font_settings() {
 
 	// Add 'H6' Control - use the $choices array.
 	$wp_customize->add_control(
-        'coachpro_theme_font_h6_setting',
-        array(
-			'type' => 'select',
-			'section' => 'fonts_section',
-            'label'    => __( 'H6', 'coaching-pro' ),
+		'coachpro_theme_font_h6_setting',
+		array(
+			'type'        => 'select',
+			'section'     => 'fonts_section',
+			'label'       => __( 'H6', 'coaching-pro' ),
 			'description' => __( 'Choose the font family to use for H6. The default font is: ' ) . $appearance['default-fonts']['h6'],
-            'choices' => $choices
-        ),
-    );
+			'choices'     => $choices,
+		),
+	);
 
-    // -----------------------------.
+	// -----------------------------.
 
-    // Add 'Primary Nav Menu' Setting.
+	// Add 'Primary Nav Menu' Setting.
 	$wp_customize->add_setting(
 		'coachpro_theme_font_navmenu_setting',
 		array(
@@ -247,19 +245,19 @@ function coaching_pro_font_settings() {
 
 	// Add 'Primary Nav Menu' Control - use the $choices array.
 	$wp_customize->add_control(
-        'coachpro_theme_font_navmenu_setting',
-        array(
-			'type' => 'select',
-			'section' => 'fonts_section',
-            'label'    => __( 'Primary Nav Menu', 'coaching-pro' ),
+		'coachpro_theme_font_navmenu_setting',
+		array(
+			'type'        => 'select',
+			'section'     => 'fonts_section',
+			'label'       => __( 'Primary Nav Menu', 'coaching-pro' ),
 			'description' => __( 'Choose the font family to use for the Primary Nav Menu. The default font is: ' ) . $appearance['default-fonts']['navmenu'],
-            'choices' => $choices
-        ),
-    );
+			'choices'     => $choices,
+		),
+	);
 
-    // -----------------------------.
+	// -----------------------------.
 
-    // Add 'Body Text' Setting.
+	// Add 'Body Text' Setting.
 	$wp_customize->add_setting(
 		'coachpro_theme_font_body_setting',
 		array(
@@ -270,37 +268,32 @@ function coaching_pro_font_settings() {
 
 	// Add 'Body Text' Control - use the $choices array.
 	$wp_customize->add_control(
-        'coachpro_theme_font_body_setting',
-        array(
-			'type' => 'select',
-			'section' => 'fonts_section',
-            'label'    => __( 'Body Text', 'coaching-pro' ),
+		'coachpro_theme_font_body_setting',
+		array(
+			'type'        => 'select',
+			'section'     => 'fonts_section',
+			'label'       => __( 'Body Text', 'coaching-pro' ),
 			'description' => __( 'Choose the font family to use for Body text. The default font is: ' ) . $appearance['default-fonts']['body'],
-            'choices' => $choices
-        ),
-    );
-
-    // -----------------------------.
-
+			'choices'     => $choices,
+		),
+	);
 }
-
+add_action( 'customize_register', 'coaching_pro_font_settings' );
 
 /**
  * Output the inline CSS to the front end of Coaching Pro theme.
- *
- * @since 2.0.0
  */
 function coaching_pro_fonts_css() {
 
-    $appearance = genesis_get_config( 'appearance' );
+	$appearance = genesis_get_config( 'appearance' );
 
 	$editor_fonts = $appearance['editor-fonts'];
 
-    $css = "
+	$css = '
 		/* ********* GOOGLE FONTS ********* */
-		";
+		';
 
-    foreach ( $editor_fonts as $font ) {
+	foreach ( $editor_fonts as $font ) {
 
 		// Fonts for body tag.
 		if ( 'body' === $font['slug'] ) {
@@ -333,10 +326,9 @@ function coaching_pro_fonts_css() {
 			";
 
 		}
-
 	}
 
-    // Output inline styles.
+	// Output inline styles.
 	if ( $css ) {
 		wp_add_inline_style( genesis_get_theme_handle(), $css );
 	}

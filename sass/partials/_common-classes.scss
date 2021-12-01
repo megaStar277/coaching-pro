@@ -73,7 +73,7 @@
 
 .post-password-form input[type="submit"],
 .search-form input[type="submit"] {
-    margin-top: 10px;
+    // margin-top: 10px;
 }
 
 .genesis-nav-menu .search input[type="submit"],
@@ -88,9 +88,14 @@
 }
 
 .search-form {
+    display: flex;
+    flex: auto;
+    flex-wrap: nowrap;
+    max-width: 100%;
     position: relative;
     overflow: hidden;
     border: 1px solid;
+    border-radius: $global-border-radius;
     .search-submit {
         bottom: 3px;
         padding: .5em 1em;
@@ -116,7 +121,7 @@
 .entry-content .search-form,
 .site-header .search-form {
     margin-bottom: 40px;
-    width: 50%;
+    // width: 50%;
 }
 
 input:focus::-webkit-input-placeholder {

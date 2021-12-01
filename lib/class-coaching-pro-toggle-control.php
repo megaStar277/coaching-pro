@@ -3,9 +3,6 @@
  * Adds a custom On/Off Toggle Switch Control to the Customizer.
  *
  * @package Coaching Pro
- * @author  thebrandiD
- * @license GPL-2.0+
- * @link    https://thebrandidthemes.com/
  */
 
 if ( class_exists( 'WP_Customize_Control' ) ) {

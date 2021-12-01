@@ -5,7 +5,20 @@
  * Onboarding config to load plugins and demo page content on theme activation.
  *
  * @package Coaching Pro
- * @author  brandiD
+ */
+
+/*
+ * EDD DOWNLOADS
+ * ---------------------
+ * Easy Digital Downloads products can be imported using the included CSV file:
+ * /config/import/edd/sample-edd-downloads.csv
+ *
+ *
+ * WOOCOMMERCE PRODUCTS
+ * ---------------------
+ * WooCommerce products can be imported using the included CSV file:
+ * /config/import/woo/sample-woocommerce-products.csv
+ *
  */
 
 return [
@@ -39,7 +52,7 @@ return [
 		],
 	],
 	'content'          => [
-		'homepage'             => [
+		'homepage'      => [
 			'post_title'     => 'Home',
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/homepage.php',
 			'post_type'      => 'page',
@@ -47,28 +60,12 @@ return [
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => [
-				'_genesis_layout' => 'full-width-content',
-				'_genesis_hide_title' => '1',
-				'page_transparent_header_value' => '1'
+				'_genesis_layout'               => 'full-width-content',
+				'_genesis_hide_title'           => '1',
+				'page_transparent_header_value' => '1',
 			],
 		],
-		// 'downloads' => [
-		// 	'post_title'     => 'Downloads',
-		// 	'post_type'      => 'page',
-		// 	'post_status'    => 'publish',
-		// 	'comment_status' => 'closed',
-		// 	'ping_status'    => 'closed',
-		// 	'meta_input'     => [ '_genesis_layout' => 'full-width-content' ],
-		// ],
-		// 'shop' => [
-		// 	'post_title'     => 'Shop',
-		// 	'post_type'      => 'page',
-		// 	'post_status'    => 'publish',
-		// 	'comment_status' => 'closed',
-		// 	'ping_status'    => 'closed',
-		// 	'meta_input'     => [ '_genesis_layout' => 'full-width-content' ],
-		// ],
-		'about' => [
+		'about'         => [
 			'post_title'     => 'About',
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/about.php',
 			'post_type'      => 'page',
@@ -76,7 +73,7 @@ return [
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 		],
-		'services' => [
+		'services'      => [
 			'post_title'     => 'Services',
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/services.php',
 			'post_type'      => 'page',
@@ -85,7 +82,7 @@ return [
 			'ping_status'    => 'closed',
 			'meta_input'     => [ '_genesis_layout' => 'full-width-content' ],
 		],
-		'blog' => [
+		'blog'          => [
 			'post_title'     => 'Blog',
 			'post_type'      => 'page',
 			'post_status'    => 'publish',
@@ -93,7 +90,7 @@ return [
 			'ping_status'    => 'closed',
 			'meta_input'     => [ '_genesis_layout' => 'full-width-content' ],
 		],
-		'contact-me' => [
+		'contact-me'    => [
 			'post_title'     => 'Contact Me',
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/contact-me.php',
 			'post_type'      => 'page',
@@ -108,7 +105,7 @@ return [
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-1.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-1.jpg', // https://unsplash.com/photos/RgPQNvoIcdg
+			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-1.jpg', // Source: {https://unsplash.com/photos/RgPQNvoIcdg}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 		],
@@ -117,7 +114,7 @@ return [
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-2.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-2.jpg', // https://unsplash.com/photos/--kQ4tBklJI
+			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-2.jpg', // Source: {https://unsplash.com/photos/--kQ4tBklJI}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 		],
@@ -126,7 +123,7 @@ return [
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-3.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-3.jpg', // https://unsplash.com/photos/VtKoSy_XzNU
+			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-3.jpg', // Source: {https://unsplash.com/photos/VtKoSy_XzNU}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 		],
@@ -135,7 +132,7 @@ return [
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-4.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-4.jpg', // https://unsplash.com/photos/5U_28ojjgms
+			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-4.jpg', // Source: {https://unsplash.com/photos/5U_28ojjgms}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 		],
@@ -144,7 +141,7 @@ return [
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-5.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-5.jpg', // https://unsplash.com/photos/-8DAN9_oi8g
+			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-5.jpg', // Source: {https://unsplash.com/photos/-8DAN9_oi8g}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 		],
@@ -153,7 +150,7 @@ return [
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-6.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-6.jpg', // https://unsplash.com/photos/DXobXpIa9_4
+			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-6.jpg', // Source: {https://unsplash.com/photos/DXobXpIa9_4}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 		],
@@ -162,7 +159,7 @@ return [
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-7.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-7.jpg', // https://unsplash.com/photos/Be5aVKFv9ho
+			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-7.jpg', // Source: {https://unsplash.com/photos/Be5aVKFv9ho}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 		],
@@ -171,7 +168,7 @@ return [
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-8.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-8.jpg', // https://unsplash.com/photos/8tvoDBqOHZU
+			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-8.jpg', // Source: {https://unsplash.com/photos/8tvoDBqOHZU}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 		],
@@ -180,16 +177,16 @@ return [
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-9.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-9.jpg', // https://unsplash.com/photos/Hcfwew744z4
+			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-9.jpg', // Source: {https://unsplash.com/photos/Hcfwew744z4}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 		],
-		'blog-post-10'   => [
+		'blog-post-10'  => [
 			'post_title'     => 'The importance of developing your personal brand as a coach',
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-10.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-10.jpg', // https://unsplash.com/photos/TXxiFuQLBKQ
+			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-10.jpg', // Source: {https://unsplash.com/photos/TXxiFuQLBKQ}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 		],
@@ -199,7 +196,7 @@ return [
 			'post_content'   => '',
 			'post_type'      => 'socialproofslider',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-testimonial-1.jpg', // https://unsplash.com/photos/TXxiFuQLBKQ
+			'featured_image' => CHILD_URL . '/config/import/images/demo-testimonial-1.jpg', // Source: {https://unsplash.com/photos/TXxiFuQLBKQ}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => require dirname( __FILE__ ) . '/import/content/testimonials/sample-testimonial-1.php',
@@ -209,7 +206,7 @@ return [
 			'post_content'   => '',
 			'post_type'      => 'socialproofslider',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-testimonial-2.jpg', // https://unsplash.com/photos/k-BWMCE1FNo
+			'featured_image' => CHILD_URL . '/config/import/images/demo-testimonial-2.jpg', // Source: {https://unsplash.com/photos/k-BWMCE1FNo}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => require dirname( __FILE__ ) . '/import/content/testimonials/sample-testimonial-2.php',
@@ -219,7 +216,7 @@ return [
 			'post_content'   => '',
 			'post_type'      => 'socialproofslider',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-testimonial-3.jpg', // https://unsplash.com/photos/RQhV1Kj9uXY
+			'featured_image' => CHILD_URL . '/config/import/images/demo-testimonial-3.jpg', // Source: {https://unsplash.com/photos/RQhV1Kj9uXY}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => require dirname( __FILE__ ) . '/import/content/testimonials/sample-testimonial-3.php',
@@ -229,46 +226,27 @@ return [
 			'post_content'   => '',
 			'post_type'      => 'socialproofslider',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-testimonial-4.jpg', // https://unsplash.com/photos/VtKoSy_XzNU
+			'featured_image' => CHILD_URL . '/config/import/images/demo-testimonial-4.jpg', // Source: {https://unsplash.com/photos/VtKoSy_XzNU}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => require dirname( __FILE__ ) . '/import/content/testimonials/sample-testimonial-4.php',
 		],
-		/*
-		 * EDD DOWNLOADS
- 		 * ---------------------
- 		 * Easy Digital Downloads products can be imported using the included CSV file:
- 		 * /config/import/edd/sample-edd-downloads.csv
- 		 * 
- 		 *
- 		 * WOOCOMMERCE PRODUCTS
-		 * ---------------------
-		 * WooCommerce products can be imported using the included CSV file:
-		 * /config/import/woo/sample-woocommerce-products.csv
-		 *
- 		 */
 	],
 	'navigation_menus' => [
-		'primary'         => [
-			'homepage' => [
+		'primary' => [
+			'homepage'   => [
 				'title' => 'Home',
 			],
-			// 'downloads' => [
-			// 	'title' => 'Downloads',
-			// ],
-			// 'shop' => [
-			// 	'title' => 'Shop',
-			// ],
-			'about'    => [
+			'about'      => [
 				'title' => 'About',
 			],
-			'services' => [
+			'services'   => [
 				'title' => 'Services',
 			],
-			'blog'     => [
+			'blog'       => [
 				'title' => 'Blog',
 			],
-			'contact-me'  => [
+			'contact-me' => [
 				'title' => 'Contact Me',
 			],
 		],

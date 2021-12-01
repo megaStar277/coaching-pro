@@ -2,7 +2,7 @@
 /**
  * Coaching Pro Theme settings.
  *
- * Genesis 2.9+ updates these settings when themes are activated.
+ * Genesis updates these settings when themes are activated.
  *
  * @package Coaching Pro
  */

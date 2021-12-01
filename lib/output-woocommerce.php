@@ -5,23 +5,25 @@
  * @package Coaching Pro
  */
 
-add_action( 'wp_enqueue_scripts', 'coachingpro_custom_woocommerce_css' );
+/**
+ * Enqueues assets for the WooCommerce plugin.
+ */
 function coachingpro_custom_woocommerce_css() {
 
-	wp_enqueue_style( genesis_get_theme_handle() . '-woocommerce-custom-styles', get_stylesheet_directory_uri() . '/css/woocommerce.css' );
+	wp_enqueue_style( genesis_get_theme_handle() . '-woocommerce-custom-styles', get_stylesheet_directory_uri() . '/css/woocommerce.css', '', CHILD_THEME_VERSION );
 
 	$appearance = genesis_get_config( 'appearance' );
 
-	$text_color1 = get_theme_mod( 'coachpro_theme_textcolor_1_setting', $appearance['default-colors']['textcolor1'] );
-	$links_color = get_theme_mod( 'coachpro_theme_linkscolor_setting', $appearance['default-colors']['textcolor1'] );
+	$text_color1           = get_theme_mod( 'coachpro_theme_textcolor_1_setting', $appearance['default-colors']['textcolor1'] );
+	$links_color           = get_theme_mod( 'coachpro_theme_linkscolor_setting', $appearance['default-colors']['textcolor1'] );
 	$button_hover_bg_color = get_theme_mod( 'coachpro_theme_color_1_setting', $appearance['default-colors']['color1'] );
-	$bg_color1 = get_theme_mod( 'coachpro_theme_bgcolor_1_setting', $appearance['default-colors']['bgcolor1'] );
+	$bg_color1             = get_theme_mod( 'coachpro_theme_bgcolor_1_setting', $appearance['default-colors']['bgcolor1'] );
 
 	// Get WooCommerce accent color.
 	$woo_accent_color = get_theme_mod( 'coachpro_theme_wooaccentcolor_setting', $appearance['default-colors']['color2'] );
 
 	// Determine contrasting colors for button text.
-	$button_text_color = coaching_pro_color_contrast( $woo_accent_color );
+	$button_text_color       = coaching_pro_color_contrast( $woo_accent_color );
 	$button_hover_text_color = coaching_pro_color_contrast( $button_hover_bg_color );
 
 	$css = '';
@@ -119,7 +121,6 @@ function coachingpro_custom_woocommerce_css() {
 		$button_hover_text_color,
 		$text_color1,
 		$bg_color1
-
 	);
 
 	if ( $css ) {
@@ -127,3 +128,4 @@ function coachingpro_custom_woocommerce_css() {
 	}
 
 }
+add_action( 'wp_enqueue_scripts', 'coachingpro_custom_woocommerce_css' );

@@ -2,12 +2,9 @@
 /**
  * Coaching Pro Theme
  *
- * This file adds functions to the Coaching Pro theme.
+ * The main functions for the Coaching Pro theme.
  *
  * @package Coaching Pro Theme
- * @author  thebrandiD
- * @license GPL-2.0+
- * @link    https://buildmybrandid.com/
  */
 
 // Start the engine.
@@ -24,12 +21,7 @@ define( 'SITE_NAME', get_bloginfo( 'name' ) );
 define( 'SITE_DESCRIPTION', get_bloginfo( 'description' ) );
 
 // No longer need to hard code version in functions.php file - it is pulled from version in stylesheet.
-// If WP_DEBUG is on, this adds unique string to css file reduce stylesheet cached issues during development.
-if ( defined( 'COACHING_PRO_DEBUG' ) && COACHING_PRO_DEBUG  ) {
-	define( 'CHILD_THEME_VERSION', mt_rand() );
-} else {
-	define( 'CHILD_THEME_VERSION', $child_theme->get( 'Version' ) );
-}
+define( 'CHILD_THEME_VERSION', $child_theme->get( 'Version' ) );
 define( 'ROOT_DOMAIN_URL', home_url() );
 define( 'CHILD_SITE_NAME', get_bloginfo( 'name' ) );
 
@@ -37,7 +29,7 @@ define( 'CHILD_SITE_NAME', get_bloginfo( 'name' ) );
 require_once CHILD_THEME_DIR . '/lib/theme-defaults.php';
 
 // Set Localization (do not remove).
-add_action( 'after_setup_theme','coaching_pro_localization_setup' );
+add_action( 'after_setup_theme', 'coaching_pro_localization_setup' );
 /**
  * Loads text Domain
  *
@@ -50,11 +42,14 @@ function coaching_pro_localization_setup() {
 // Load Theme Setup and Configuration.
 require_once CHILD_THEME_DIR . '/lib/theme-setup.php';
 
-// Color functions.
-require_once CHILD_THEME_DIR . '/lib/color-functions.php';
+// Import custom separator control.
+require_once CHILD_THEME_DIR . '/lib/class-separator-control.php';
 
 // Import Customizer custom toggle control.
 require_once CHILD_THEME_DIR . '/lib/class-coaching-pro-toggle-control.php';
+
+// Color functions.
+require_once CHILD_THEME_DIR . '/lib/color-functions.php';
 
 // Customizer functions.
 require_once CHILD_THEME_DIR . '/lib/customize.php';
@@ -62,8 +57,8 @@ require_once CHILD_THEME_DIR . '/lib/customize.php';
 // Font functions.
 require_once CHILD_THEME_DIR . '/lib/font-functions.php';
 
-// Add the social icons functions.
-require_once CHILD_THEME_DIR . '/lib/icon-functions.php';
+// // Add the social icons functions.
+// require_once CHILD_THEME_DIR . '/lib/icon-functions.php';
 
 // Custom metaboxes.
 require_once CHILD_THEME_DIR . '/lib/meta-boxes.php';

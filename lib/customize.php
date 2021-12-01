@@ -1,9 +1,13 @@
 <?php
+/**
+ * Loads all Customizer settings for the Coaching Pro theme.
+ *
+ * @package Coaching Pro Theme
+ */
+
 add_action( 'customize_register', 'coaching_pro_customizer_register' );
 /**
  * Register settings and controls with the Customizer.
- *
- * @since 2.0.0
  *
  * @param WP_Customize_Manager $wp_customize Customizer object.
  */
@@ -53,8 +57,8 @@ function coaching_pro_customizer_register( $wp_customize ) {
  * Sanitization callback for 'checkbox' type controls. This callback sanitizes `$checked`
  * as a boolean value, either TRUE or FALSE.
  *
- * @param 	bool 	$checked 	Whether the checkbox is checked.
- * @return 	bool 				Whether the checkbox is checked.
+ * @param bool $checked Whether the checkbox is checked.
+ * @return bool Whether the checkbox is checked.
  */
 function coaching_pro_sanitize_checkbox( $checked ) {
 	// Boolean check.
