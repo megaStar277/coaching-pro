@@ -27,6 +27,66 @@
     }
 }
 
+body {
+    &.custom-logo {
+        .title-area {
+            a {
+                &.custom-logo-link {
+                    display: block;
+                    overflow: hidden;
+                    position: relative;
+                    border-bottom: 0;
+                }
+                .svg {
+                    display: block;
+                    max-width: 300px;
+                    width: 100%;
+                    height: auto;
+                    .fill-when-transparent {
+                        transition: fill .2s ease-in-out;
+                        fill: $theme-color5;
+                    }
+                }
+            }
+        }
+        .site-title,
+        .site-description {
+            display: none;
+        }
+        &.transparent-header {
+            .site-header {
+                &:not(.scrolled) {
+                    .title-area {
+                        a {
+                            .svg {
+                                .fill-when-transparent {
+                                    transition: fill .2s ease-in-out;
+                                    fill: $theme-color5;
+                                    @include media($screen--m) {
+                                        fill: $white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.scrolled {
+                    .title-area {
+                        a {
+                            .svg {
+                                .fill-when-transparent {
+                                    transition: fill .2s ease-in-out;
+                                    fill: $theme-color5;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 .fixed-header-off .site-header {
     position: relative;
 }

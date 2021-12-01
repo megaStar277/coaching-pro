@@ -113,6 +113,14 @@ msgstr ""
 msgid "Body Text"
 msgstr ""
 
+#: config/theme-supports.php:32
+msgid "Primary Menu"
+msgstr ""
+
+#: config/theme-supports.php:33
+msgid "Footer Menu"
+msgstr ""
+
 #: lib/block-patterns.php:17
 msgctxt "Block pattern category"
 msgid "Coaching Pro"
@@ -201,15 +209,27 @@ msgstr ""
 msgid "Easy Digital Downloads Accent Color"
 msgstr ""
 
-#: lib/customize.php:24
+#: lib/customize.php:35
+msgid "Site Title Display"
+msgstr ""
+
+#: lib/customize.php:39
+msgid "Show Title & Tagline"
+msgstr ""
+
+#: lib/customize.php:40
+msgid "Show Logo Image"
+msgstr ""
+
+#: lib/customize.php:52
 msgid "Coaching Pro Settings"
 msgstr ""
 
-#: lib/customize.php:45
+#: lib/customize.php:73
 msgid "Sticky Header"
 msgstr ""
 
-#: lib/customize.php:48
+#: lib/customize.php:76
 msgid "Enable or Disable the Sticky Header. Turning this ON will keep the header in place while you scroll the page. Turning this OFF will make the header scroll with the rest of the page content. This effect is disabled for mobile devices."
 msgstr ""
 
@@ -225,22 +245,14 @@ msgstr ""
 msgid "Submenu"
 msgstr ""
 
-#: lib/theme-setup.php:45
+#: lib/theme-setup.php:46
 msgid "Featured Image"
 msgstr ""
 
-#: lib/theme-setup.php:81
-msgid "Primary Menu"
-msgstr ""
-
-#: lib/theme-setup.php:82
-msgid "Footer Menu"
-msgstr ""
-
-#: lib/theme-setup.php:194, lib/theme-setup.php:221
+#: lib/theme-setup.php:186, lib/theme-setup.php:213
 msgid "Read more"
 msgstr ""
 
-#: lib/theme-setup.php:194, lib/theme-setup.php:221
+#: lib/theme-setup.php:186, lib/theme-setup.php:213
 msgid "about"
 msgstr ""

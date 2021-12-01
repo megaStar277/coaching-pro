@@ -5,17 +5,8 @@
  * @package Coaching Pro Theme
  */
 
-// Enable Wide Blocks.
-add_theme_support( 'align-wide' );
-
-// Make media embeds responsive.
-add_theme_support( 'responsive-embeds' );
-
 // Enable Widget Blocks.
 add_filter( 'use_widgets_block_editor', '__return_true' );
-
-// Add support for Editor Styles.
-add_theme_support( 'editor-styles' );
 
 /**
  * Loads Google fonts.
@@ -80,8 +71,6 @@ add_filter( 'body_class', 'coachingpro_blocks_body_classes' );
  * - `has-no-blocks` if content contains no blocks.
  * - `first-block-[block-name]` to allow changes based on the first block (such as removing padding above a Cover block).
  * - `first-block-align-[alignment]` to allow styling adjustment if the first block is wide or full-width.
- *
- * @since 2.0.0
  *
  * @param array $classes The original classes.
  * @return array The modified classes.

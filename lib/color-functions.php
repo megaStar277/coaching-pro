@@ -376,12 +376,6 @@ function coaching_pro_color_settings() {
 }
 add_action( 'customize_register', 'coaching_pro_color_settings' );
 
-// Get the Appearance settings.
-$appearance = genesis_get_config( 'appearance' );
-
-// Add support for the Block Editor Color Palette.
-add_theme_support( 'editor-color-palette', $appearance['editor-color-palette'] );
-
 /**
  * Output the inline CSS to the front end of Coaching Pro theme.
  */

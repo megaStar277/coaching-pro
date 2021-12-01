@@ -25,8 +25,8 @@ Next, you’ll need to install Gulp globally (if you do not have it installed al
 
 from terminal type: `npm install -g gulp`
 
-## Clone the Course Maker Pro theme repo.
-[GitHub](https://github.com/brandid/course-maker-pro)
+## Clone the Coaching Pro theme repo:
+[Coaching Pro repo on GitHub](https://github.com/brandid/coaching-pro)
 
 Once the Child theme is installed, from the child theme folder in Terminal type:
 

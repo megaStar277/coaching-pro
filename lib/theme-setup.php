@@ -5,14 +5,18 @@
  * @package Coaching Pro Theme
  */
 
-// Add HTML5 markup structure.
-add_theme_support( 'html5', array( 'caption', 'comment-form', 'comment-list', 'gallery', 'search-form' ) );
+/**
+ * Adds theme supports.
+ */
+function coaching_pro_theme_support() {
 
-// Add Accessibility support.
-add_theme_support( 'genesis-accessibility', array( '404-page', 'drop-down-menu', 'headings', 'rems', 'skip-links' ) );
+	$theme_supports = genesis_get_config( 'theme-supports' );
 
-// Add viewport meta tag for mobile browsers.
-add_theme_support( 'genesis-responsive-viewport' );
+	foreach ( $theme_supports as $feature => $args ) {
+		add_theme_support( $feature, $args );
+	}
+}
+add_action( 'after_setup_theme', 'coaching_pro_theme_support', 9 );
 
 // Remove unnecessary layouts.
 genesis_unregister_layout( 'content-sidebar-sidebar' );
@@ -22,11 +26,8 @@ genesis_unregister_layout( 'sidebar-content-sidebar' );
 // Unregister secondary sidebar.
 unregister_sidebar( 'sidebar-alt' );
 
-// Add support for after entry widget.
-add_theme_support( 'genesis-after-entry-widget-area' );
-
-// Add support for a footer Widget Blocks area.
-add_theme_support( 'genesis-footer-widgets', 1 );
+// Include the custom logo functions.
+require_once CHILD_THEME_DIR . '/lib/logo-functions.php';
 
 // Add Image Sizes.
 add_image_size( 'featured-image', 900, 400, true );
@@ -74,15 +75,6 @@ function coaching_pro_remove_unwanted_genesis_metaboxes() {
 }
 add_action( 'toplevel_page_genesis_settings_page_boxes', 'coaching_pro_remove_unwanted_genesis_metaboxes' );
 
-// Rename the primary and secondary navigation menus.
-add_theme_support(
-	'genesis-menus',
-	array(
-		'primary'   => __( 'Primary Menu', 'coaching-pro' ),
-		'secondary' => __( 'Footer Menu', 'coaching-pro' ),
-	)
-);
-
 // Reposition the primary navigation menu.
 remove_action( 'genesis_after_header', 'genesis_do_subnav' );
 add_action( 'genesis_footer', 'genesis_do_subnav', 5 );
@@ -118,7 +110,7 @@ add_action( 'genesis_header', 'genesis_do_nav', 12 );
  * @param array $classes An array of body classes.
  * @return array $classes The modified array.
  */
-function coaching_pro_theme_color_body_class( $classes ) {
+function coaching_pro_fixed_header_body_class( $classes ) {
 
 	$fixed_header_off = get_theme_mod( 'fixed_header_off', false );
 	$classes[]        = ( $fixed_header_off ? 'fixed-header-off' : 'fixed-header-on' );
@@ -126,7 +118,7 @@ function coaching_pro_theme_color_body_class( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'coaching_pro_theme_color_body_class' );
+add_filter( 'body_class', 'coaching_pro_fixed_header_body_class' );
 
 /**
  * Modifies the size of the Gravatar in the author box.

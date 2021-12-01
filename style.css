@@ -938,6 +938,36 @@ h6 {
       .site-header .widget-area {
         width: 800px; } }
 
+body.custom-logo .title-area a.custom-logo-link {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 0; }
+
+body.custom-logo .title-area a .svg {
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  height: auto; }
+  body.custom-logo .title-area a .svg .fill-when-transparent {
+    transition: fill .2s ease-in-out;
+    fill: #939393; }
+
+body.custom-logo .site-title,
+body.custom-logo .site-description {
+  display: none; }
+
+body.custom-logo.transparent-header .site-header:not(.scrolled) .title-area a .svg .fill-when-transparent {
+  transition: fill .2s ease-in-out;
+  fill: #939393; }
+  @media screen and (min-width: 1024px) {
+    body.custom-logo.transparent-header .site-header:not(.scrolled) .title-area a .svg .fill-when-transparent {
+      fill: #fff; } }
+
+body.custom-logo.transparent-header .site-header.scrolled .title-area a .svg .fill-when-transparent {
+  transition: fill .2s ease-in-out;
+  fill: #939393; }
+
 .fixed-header-off .site-header {
   position: relative; }
 
@@ -1842,7 +1872,7 @@ input[type="submit"]:hover {
 
 /* Override colors for responsive nav menu - this loads after color schemes.
 ---------------------------------------------------------------------------------------------------- */
-.genesis-nav-menu .current-menu-item > span,
+.genesis-nav-menu .current-menu-item > a > span,
 .genesis-nav-menu a:focus span,
 .genesis-nav-menu a:hover span {
   border-bottom: 2px solid; }
