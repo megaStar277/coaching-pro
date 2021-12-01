@@ -1,0 +1,12 @@
+// Import Bourbon, Neat
+@import 'node_modules/bourbon/core/bourbon';
+@import 'node_modules/bourbon-neat/app/assets/stylesheets/neat';
+
+@import 'partials/variables';
+
+/* CUSTOM BLOCK STYLES
+----------------------------------------------------------------------------- */
+.is-style-roundedcorners {
+	border-radius: $global-border-radius;
+	overflow: hidden;
+}

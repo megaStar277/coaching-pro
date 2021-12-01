@@ -1,0 +1,211 @@
+/* Default Colors - All of the elements with colors not in base color scheme
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Header Colors
+--------------------------------------------- */
+.transparent-header .site-header.sticky:not(.scrolled) {
+    background-color: transparent;
+}
+
+.transparent-header .site-header:not(.sticky),
+.transparent-header .site-header.sticky.scrolled,
+body:not(.transparent-header) .site-header {
+    background-color: $theme-color8 !important;
+}
+
+/* ## Default Menu Colors
+--------------------------------------------- */
+
+.nav-primary {
+    background-color: transparent;
+}
+
+/* Colors for transparent header nav menu */
+body.transparent-header {
+    header.sticky:not(.scrolled) {
+        .site-title {
+            a {
+                @include media($screen--m) {
+                    color: #fff;
+                }
+            }
+        }
+        .site-description {
+            @include media($screen--m) {
+                color: #fff;
+            }
+        }
+        .genesis-responsive-menu {
+            .genesis-nav-menu {
+                .menu-item {
+                    a {
+                        @include media($screen--m) {
+                            color: #fff;
+                        }
+                    }
+                    .sub-menu {
+                        background: rgba(0,0,0,0.05);
+                        @include media($screen--m) {
+                            background: rgba(0,0,0,0.66);
+                        }
+                        a {
+                            @include media($screen--m) {
+                                color: $white;
+                            }
+                        }
+                    }
+                    .sub-menu,
+                    .sub-menu a {
+                        border-color: $white;
+                    }
+                }
+            }
+        }
+    }
+    header.sticky.scrolled {
+        .genesis-responsive-menu {
+            .genesis-nav-menu {
+                .menu-item {
+                    a {
+                        // color: #fff;
+                    }
+                    .sub-menu {
+                        background: $sub-menu-background;
+                        a {
+                            color: $sub-menu-color;
+                        }
+                    }
+                    .sub-menu,
+                    .sub-menu a {
+                        border-color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.genesis-nav-menu {
+    .sub-menu {
+        background: $sub-menu-background;
+        a {
+            color: $sub-menu-color;
+        }
+    }
+    .sub-menu,
+    .sub-menu a {
+        border-color: $white;
+    }
+}
+
+.menu-toggle {
+    color: $white;
+    &:focus,
+    &:hover {
+        background-color: $soft-white;
+    }
+    .activated .genesis-nav-menu a {
+        color: $sub-menu-color;
+    }
+}
+
+// .sub-menu-toggle,
+.sub-menu-toggle {
+    &:focus,
+    &:hover {
+        background-color: rgba(0,0,0,0.5);
+        color: $white;
+    }
+}
+
+.genesis-responsive-menu {
+    .genesis-nav-menu {
+        background-color: $sub-menu-background;
+        @include media($screen--m) {
+            background-color: transparent;
+        }
+        .menu-item {
+            a {
+                border-bottom-color: $white;
+            }
+        }
+        .sub-menu {
+            @include media($screen--m) {
+                border-top-color: $white;
+            }
+            a {
+                color: $sub-menu-color;
+            }
+        }
+        .sub-menu,
+        .sub-menu a {
+            border-color: $white;
+        }
+    }
+}
+
+.menu-social-menu-container li > a {
+    color: $theme-color2;
+    border-bottom: none;
+}
+
+/* ## Theme Colors
+--------------------------------------------- */
+
+a.button,
+button {
+    color: $white;
+}
+
+.button:focus,
+.button:hover,
+button:focus,
+button:hover,
+input[type="button"]:focus,
+input[type="button"]:hover,
+input[type="reset"]:focus,
+input[type="reset"]:hover,
+input[type="submit"]:focus,
+input[type="submit"]:hover {
+    background-color: $grey;
+}
+
+.fixed-header-on .custom-header-background .site-header {
+    @include media($screen--m) {
+        background-color: transparent;
+    }
+}
+
+.archive-pagination {
+    li {
+        a {
+            background: $theme-color7;
+            color: $soft-black;
+        }
+    }
+    .active {
+        a {
+            color: $white;
+        }
+    }
+}
+
+/* ## Footer Colors
+--------------------------------------------- */
+.footer-widgets {
+    background-color: $white;
+}
+
+.site-footer {
+    background-color: $theme-color8;
+    color: $theme-color3;
+    a {
+        color: $theme-color3;
+        border-bottom: 1px solid $theme-color3;
+        &:focus,
+        &:hover {
+            // color: $grey;
+            border-bottom: 1px solid transparent;
+        }
+    }
+}

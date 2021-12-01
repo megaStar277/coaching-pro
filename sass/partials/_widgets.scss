@@ -1,0 +1,118 @@
+/* Widgets
+---------------------------------------------------------------------------------------------------- */
+
+/* # Widgets
+---------------------------------------------------------------------------------------------------- */
+.widget-area {
+    .widget {
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.widget {
+    // margin-bottom: 40px;
+    word-wrap: break-word;
+    p:last-child {
+        // margin-bottom: 0;
+    }
+    // ul > li:last-of-type {
+    //     margin-bottom: 0;
+    // }
+    ul > li {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        &:last-of-type {
+            padding-bottom: 0;
+        }
+    }
+    ol > li {
+        list-style-position: inside;
+        list-style-type: decimal;
+        padding-left: 20px;
+        text-indent: -20px;
+    }
+    li li {
+        border: 0;
+        margin: 0 0 0 30px;
+        padding: 0;
+    }
+}
+
+.widget_calendar {
+    table {
+        width: 100%;
+        td,
+        th {
+            text-align: center;
+        }
+    }
+}
+
+/* # Footer Widgets
+---------------------------------------------------------------------------------------------------- */
+.footer-widgets {
+    clear: both;
+    flex: 1 0 auto;
+    margin: 0 auto;
+    // font-size: 18px;
+    // padding: 0;
+    width: 100%;
+    @include media($screen--l) {
+        max-width: 1280px;
+        width: 1200px;
+    }
+    .alignfull {
+        margin-left: calc( -100vw / 2 + 100% / 2 );
+        margin-right: calc( -100vw / 2 + 100% / 2 );
+        max-width: 100vw;
+    }
+    .wrap {
+        // display: flex;
+        // flex-wrap: wrap;
+        // margin: 0;
+        // padding: 0;
+        display: block;
+        overflow: visible;
+    }
+    .widget {
+        margin: 0;
+    }
+    .footer-widgets-1 {
+        display: block;
+        width: 100%;
+        max-width: none;
+        padding-left: 30px;
+        padding-right: 30px;
+        @include media($screen--l) {
+            width: 65%;
+            margin: 0 auto;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        & > section {
+            display: block;
+            width: auto;
+            margin: 0 auto;
+            // overflow: hidden;
+            .widget-wrap {
+                margin: 0 auto;
+                .wp-block-columns {
+                    &.alignfull {
+                        margin-bottom: 0;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer-widgets::after,
+.footer-widgets::before,
+.site-container::before {
+    display: none;
+    content: none;
+    width: 0;
+}

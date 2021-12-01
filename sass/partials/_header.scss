@@ -1,0 +1,212 @@
+/* # Site Header
+---------------------------------------------------------------------------------------------------- */
+.site-header {
+    position: relative;
+    width: 100%;
+    z-index: 400;
+    transition: background-color 0.2s ease-in-out;
+    @include media($screen--m) {
+        position: fixed;
+    }
+    &.sticky {
+        &.scrolled {
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.70);
+        }
+    }
+    .widget-area {
+        float: right;
+        text-align: center;
+        width: 100%;
+        @include media($screen--m) {
+            width: 620px;
+            text-align: right;
+        }
+        @include media($screen--m) {
+            width: 800px;
+        }
+    }
+}
+
+body {
+    &.custom-logo {
+        .title-area {
+            a {
+                &.custom-logo-link {
+                    display: block;
+                    overflow: hidden;
+                    position: relative;
+                    border-bottom: 0;
+                }
+                .svg {
+                    display: block;
+                    max-width: 300px;
+                    width: 100%;
+                    height: auto;
+                    .fill-when-transparent {
+                        transition: fill .2s ease-in-out;
+                        fill: $theme-color5;
+                    }
+                }
+            }
+        }
+        .site-title,
+        .site-description {
+            display: none;
+        }
+        &.transparent-header {
+            .site-header {
+                &:not(.scrolled) {
+                    .title-area {
+                        a {
+                            .svg {
+                                .fill-when-transparent {
+                                    transition: fill .2s ease-in-out;
+                                    fill: $theme-color5;
+                                    @include media($screen--m) {
+                                        fill: $white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.scrolled {
+                    .title-area {
+                        a {
+                            .svg {
+                                .fill-when-transparent {
+                                    transition: fill .2s ease-in-out;
+                                    fill: $theme-color5;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.fixed-header-off .site-header {
+    position: relative;
+}
+
+.home {
+    .site-header {
+        z-index: 400;
+        position: relative;
+        @include media($screen--m) {
+            position: relative;
+            background-color: transparent;
+        }
+    }
+    &.fixed-header-on {
+        .site-header {
+            z-index: 400;
+            position: relative;
+            @include media($screen--m) {
+                position: fixed;
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+.custom-header-background.light .site-header,
+.fixed-header-off .custom-header-background .site-header {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.site-header > .wrap {
+    padding: 0;
+    max-width: $max-width;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    @include media($screen--m) {
+        padding: 0;
+        flex-direction: row;
+    }
+}
+
+.fixed-header-on .custom-header-background {
+    //background-color: transparent;
+    z-index: 100;
+}
+
+.custom-header-background.light:before,
+.fixed-header-off .custom-header-background:before {
+    border-left: 50px transparent solid!important;
+    transition: border-left .3s linear .2s;
+}
+
+/* ## Title Area
+--------------------------------------------- */
+.title-area {
+    float: none;
+    padding: 10px 0;
+    width: 100%;
+    margin: auto;
+    @include media($screen--m) {
+        // float: left;
+        width: 300px;
+    }
+    @include media($screen--l) {
+        margin-left: 0;
+        padding-left: 10px;
+    }
+    @include media($screen--xxl) {
+        padding-left: 0;
+    }
+}
+
+.header-image .title-area {
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 0;
+}
+
+.site-title {
+    font-size: $h4-font-size;
+    font-weight: 700;
+    line-height: 1.2;
+    a,
+    a:focus,
+    a:hover {
+        text-decoration: none;
+        border-bottom: none;
+    }
+    a {
+        &:focus,
+        &:hover {
+            opacity: .7;
+        }
+    }
+}
+
+.site-description,
+.site-title {
+    margin-bottom: 0;
+    text-align: center;
+    @include media($screen--l) {
+        text-align: left;
+    }
+}
+
+.no-primary-nav .site-description,
+.no-primary-nav .site-title {
+    text-align: center;
+}
+
+.site-description {
+    font-size: 0.8em;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 0;
+    @include media($screen--m) {
+        margin-bottom: 0;
+    }
+}

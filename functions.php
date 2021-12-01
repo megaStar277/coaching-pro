@@ -2,16 +2,13 @@
 /**
  * Coaching Pro Theme
  *
- * This file adds functions to the Coaching Pro theme.
+ * The main functions for the Coaching Pro theme.
  *
  * @package Coaching Pro Theme
- * @author  thebrandiD
- * @license GPL-2.0+
- * @link    https://thebrandidthemes.com/
  */
 
 // Start the engine.
-include_once( get_template_directory() . '/lib/init.php' );
+require_once get_template_directory() . '/lib/init.php';
 
 // Load constants - use constants in code instead of functions to improve performance. Hat Tip to Tonya at Knowthecode.io.
 $child_theme = wp_get_theme();
@@ -24,19 +21,15 @@ define( 'SITE_NAME', get_bloginfo( 'name' ) );
 define( 'SITE_DESCRIPTION', get_bloginfo( 'description' ) );
 
 // No longer need to hard code version in functions.php file - it is pulled from version in stylesheet.
-// If WP_DEBUG is on, this adds unique string to css file reduce stylesheet cached issues during development.
-if ( defined( 'COACHING_PRO_DEBUG' ) && COACHING_PRO_DEBUG  ) {
-	define( 'CHILD_THEME_VERSION', mt_rand() );
-} else {
-	define( 'CHILD_THEME_VERSION', $child_theme->get( 'Version' ) );
-}
+define( 'CHILD_THEME_VERSION', $child_theme->get( 'Version' ) );
 define( 'ROOT_DOMAIN_URL', home_url() );
 define( 'CHILD_SITE_NAME', get_bloginfo( 'name' ) );
+
 // Setup Theme.
-include_once( CHILD_THEME_DIR . '/lib/theme-defaults.php' );
+require_once CHILD_THEME_DIR . '/lib/theme-defaults.php';
 
 // Set Localization (do not remove).
-add_action( 'after_setup_theme','coaching_pro_localization_setup' );
+add_action( 'after_setup_theme', 'coaching_pro_localization_setup' );
 /**
  * Loads text Domain
  *
@@ -47,28 +40,52 @@ function coaching_pro_localization_setup() {
 }
 
 // Load Theme Setup and Configuration.
-include_once( CHILD_THEME_DIR . '/lib/theme-setup.php' );
+require_once CHILD_THEME_DIR . '/lib/theme-setup.php';
 
-// Register Widget Areas.
-include_once( CHILD_THEME_DIR . '/lib/widget-setup.php' );
+// Import custom separator control.
+require_once CHILD_THEME_DIR . '/lib/class-separator-control.php';
 
-// Add the social icons functions.
-include_once( CHILD_THEME_DIR . '/lib/icon-functions.php' );
+// Import Customizer custom toggle control.
+require_once CHILD_THEME_DIR . '/lib/class-coaching-pro-toggle-control.php';
 
-// Add Color Schemes to WordPress Theme Customizer.
-include_once( CHILD_THEME_DIR . '/lib/customize-colors.php' );
+// Color functions.
+require_once CHILD_THEME_DIR . '/lib/color-functions.php';
 
-// Include Customizer CSS.
-include_once( CHILD_THEME_DIR . '/lib/output-colors.php' );
+// Customizer functions.
+require_once CHILD_THEME_DIR . '/lib/customize.php';
 
-// Add Image upload and Color select to WordPress Theme Customizer.
-include_once( CHILD_THEME_DIR . '/lib/customize.php' );
+// Font functions.
+require_once CHILD_THEME_DIR . '/lib/font-functions.php';
 
-// Include Customizer CSS for home page.
-include_once( CHILD_THEME_DIR . '/lib/output.php' );
+// // Add the social icons functions.
+// require_once CHILD_THEME_DIR . '/lib/icon-functions.php';
+
+// Custom metaboxes.
+require_once CHILD_THEME_DIR . '/lib/meta-boxes.php';
 
 // Add the helper functions.
-include_once( CHILD_THEME_DIR . '/lib/helper-functions.php' );
+require_once CHILD_THEME_DIR . '/lib/helper-functions.php';
 
 // Load Scripts and Styles.
-include_once( CHILD_THEME_DIR . '/lib/load-scripts.php' );
+require_once CHILD_THEME_DIR . '/lib/load-scripts.php';
+
+// Load Block Editor functions.
+require_once CHILD_THEME_DIR . '/lib/block-functions.php';
+
+// Load Block Patterns.
+require_once CHILD_THEME_DIR . '/lib/block-patterns.php';
+
+// Custom functions for WooCommerce.
+if ( class_exists( 'WooCommerce' ) ) {
+	require_once CHILD_THEME_DIR . '/lib/output-woocommerce.php';
+}
+
+// Custom functions for Easy Digital Downloads.
+if ( class_exists( 'Easy_Digital_Downloads' ) ) {
+	require_once CHILD_THEME_DIR . '/lib/output-easydigitaldownloads.php';
+}
+
+// Custom functions for WPForms plugin.
+if ( class_exists( 'WPForms' ) ) {
+	require_once CHILD_THEME_DIR . '/lib/output-wpforms.php';
+}

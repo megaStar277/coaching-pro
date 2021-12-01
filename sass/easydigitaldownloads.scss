@@ -1,0 +1,240 @@
+// Import Bourbon, Neat
+@import 'node_modules/bourbon/core/bourbon';
+@import 'node_modules/bourbon-neat/app/assets/stylesheets/neat';
+
+@import 'partials/variables';
+
+/* EASY DIGITAL DOWNLOADS STYLES
+----------------------------------------------------------------------------- */
+
+/* GLOBAL STYLES
+--------------------------------------- */
+.edd-page {
+    #genesis-content {
+        padding-bottom: 40px;
+        button,
+        a.button,
+        #edd-purchase-button,
+		.edd-submit,
+		[type=submit].edd-submit {
+            border-radius: $global-border-radius;
+            margin-top: 1em;
+            padding: calc(.667em + 2px) calc(1.333em + 2px);
+            font-size: 100%;
+            font-weight: 600;
+            border: none;
+            &.edd-apply-discount {
+                font-size: 80%;
+                margin-top: 0;
+            }
+        }
+        form {
+            input[type="text"],
+            input[type="email"],
+            input[type="phone"],
+            input[type="tel"],
+            input[type="password"],
+            select,
+            textarea {
+                border: 1px solid #d3ced2;
+            }
+        }
+        .edd-pagination-wrap {
+            display: block;
+            margin-top: 40px;
+            text-align: center;
+            .edd-pagination {
+                display: inline-block;
+                white-space: nowrap;
+                margin: 1px;
+                padding: 0;
+                clear: both;
+                border: 1px solid #ccc;
+                border-radius: $global-border-radius;
+                overflow: hidden;
+                .page-numbers {
+                    display: inline-block;
+                    float: left;
+                    margin-bottom: 0;
+                    padding: calc(.667em + 2px) calc(1.333em + 2px);
+                    font-weight: 600;
+                    line-height: 1;
+                    border: 0;
+                }
+            }
+        }
+    }
+}
+
+/* ARCHIVE PAGE
+--------------------------------------- */
+.edd-page.edd-archive {
+    #genesis-content {
+        article.entry {
+            .entry-title {
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            .edd-products-wrap {
+                max-width: 100%;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, 100%);
+                justify-content: space-between;
+                @include media($screen--m){
+                    grid-template-columns: repeat(auto-fill, 48%);
+                    grid-gap: 2%;
+                }
+                @include media($screen--l) {
+                    grid-template-columns: repeat(auto-fill, 31%);
+                    margin-left: -210px;
+                    margin-right: -210px;
+                    max-width: 1200px;
+                }
+                .edd-product {
+                    margin-bottom: 30px;
+                    .product-image {
+                        line-height: 0;
+                        margin-bottom: 1em;
+                        a {
+                            display: inline-block;
+                            img {
+                                display: block;
+                                border-radius: $global-border-radius;
+                            }
+                        }
+                    }
+                    a {
+                        display: inline-block;
+                        border-bottom: 0;
+                        .title {
+                            font-size: 1em;
+                            font-weight: 600;
+                            margin: 0;
+                            padding: 0.5em 0;
+                        }
+                    }
+                    .product-price {
+                        font-size: .857em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* SINGLE DOWNLOAD PAGE
+--------------------------------------- */
+.edd-page.edd-single-download {
+    #genesis-content {
+        article.entry {
+            header.entry-header {
+                margin: 30px 0;
+            }
+        }
+    }
+}
+
+/* FULL-WIDTH PAGES
+--------------------------------------- */
+.full-width-content {
+    &.edd-page {
+        #genesis-content {
+            & > .entry {
+                & > .entry-content {
+                    // width: 100%;
+                    margin-left: 0;
+                    margin-right: 0;
+                    @include media($screen--l) {
+                        margin-left: -250px;
+                        margin-right: -250px;
+                        max-width: 1280px;
+                        padding: 0 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* CHECKOUT PAGE
+--------------------------------------- */
+.edd-checkout {
+    #edd_checkout_cart_form {
+        #edd_checkout_cart {
+            thead {
+                display: none;
+                @include media($screen--l) {
+                    display: table-header-group;
+                }
+            }
+            tbody {
+                tr {
+                    display: block;
+                    margin-bottom: 20px;
+                    @include media($screen--l) {
+                        display: table-row;
+                        margin-bottom: 0;
+                    }
+                    &:nth-child(even) {
+                        background-color: rgba(0,0,0,0.025);
+                        @include media($screen--l) {
+                            background-color: transparent;
+                        }
+                    }
+                    td {
+                        display: block;
+                        width: 100%;
+                        background-color: transparent;
+                        border: 0;
+                        @include media($screen--l) {
+                            display: table-cell;
+                            width: auto;
+                            background-color: #fff;
+                            border: 1px solid #eee;
+                        }
+                        &.edd_cart_item_price {
+                            text-align: right;
+                            @include media($screen--l) {
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* SHARED STYLES
+--------------------------------------- */
+#edd_checkout_wrap .edd_empty_cart,
+.entry-content .edd-no-purchases {
+    display: block;
+    text-align: center;
+}
+
+
+/* LOGIN FORM
+--------------------------------------- */
+#edd_login_form {
+    background-color: $soft-white;
+    margin-bottom: 40px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    label {
+        font-weight: bold;
+    }
+    input[type="text"],
+    input[type="password"] {
+        border: 1px solid #ccc;
+    }
+    input[type="submit"] {
+        border-radius: $global-border-radius;
+        margin-top: 1em;
+        padding: calc(.667em + 2px) calc(1.333em + 2px);
+        font-size: 100%;
+        font-weight: 600;
+        border: none;
+    }
+}

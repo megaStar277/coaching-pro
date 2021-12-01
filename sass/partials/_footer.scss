@@ -1,0 +1,27 @@
+/* # Site Footer
+---------------------------------------------------------------------------------------------------- */
+.site-footer {
+    font-size: 0.9em;
+    line-height: 1;
+    padding: 20px 0;
+    text-align: center;
+    .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    a {
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        &:focus,
+        &:hover {
+            border-bottom: 1px solid transparent;
+        }
+    }
+    p {
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+}

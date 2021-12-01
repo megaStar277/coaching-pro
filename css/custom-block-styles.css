@@ -1,0 +1,11 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+/* CUSTOM BLOCK STYLES
+----------------------------------------------------------------------------- */
+.is-style-roundedcorners {
+  border-radius: 4px;
+  overflow: hidden; }

@@ -1,0 +1,371 @@
+/* # Site Navigation
+---------------------------------------------------------------------------------------------------- */
+
+/* Genesis Navigation */
+
+/* fix to remove unwanted space between nav items - thanks Rob Neu -> https://gist.github.com/robneu/0ad283737d80802cb0e0 */
+.genesis-nav-menu {
+    clear: both;
+    font-size: .001px;
+    line-height: 1;
+    width: 100%;
+    text-align: center;
+    // added to reduce flash of standard menu while js loads
+    display: none;
+    @include media($screen--m) {
+        display: block;
+        text-align: center;
+    }
+    @include media($screen--l) {
+        text-align: right;
+    }
+    .wrap {
+        padding: 0;
+    }
+    .menu-item {
+      // font-size: 15px;
+      font-size: clamp(14px, 2.5vw, 16px);
+      font-weight: 400;
+      line-height: 1;
+      display: inline-block;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      text-align: left;
+      &:hover {
+          position: static;
+          & > .sub-menu {
+              left: auto;
+              opacity: 1;
+              padding: 10px;
+              .menu-item {
+                  display: block;
+                  a {
+                      padding: 10px;
+                  }
+              }
+          }
+      }
+    }
+    a {
+        display: block;
+        padding: 15px 20px;
+        text-decoration: none;
+        border-bottom: none;
+        @include media($screen--m) {
+            padding: 32px 20px;
+        }
+        @include media($screen--l) {
+            padding: 32px 16px;
+        }
+        span {
+            padding-bottom: 3px;
+        }
+        .icon-angle-down {
+            color: transparent;
+            display: none;
+            @include media($screen--m) {
+                display: inline-block;
+                color: inherit;
+            }
+        }
+        .sub-menu {
+            border-top: none;
+            left: -9999px;
+            opacity: 0;
+            position: absolute;
+            transition: opacity .3s ease-in-out;
+            z-index: 99;
+            width: 100%;
+            @include media($screen--m) {
+                width: 300px;
+                .menu-item {
+                    display: block;
+                    a {
+                        padding: 10px;
+                        // border: 1px dotted;
+                        border-top: 0;
+                        font-size: 0.8rem;
+                        position: relative;
+                        word-wrap: break-word;
+                        width: 100%;
+                        @include media($screen--m) {
+                            width: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & > .first > a {
+        padding-left: 0;
+    }
+    & > .last > a {
+        padding-right: 0;
+    }
+    & > .right {
+        float: right;
+    }
+    li {
+        float: none;
+    }
+}
+
+/* ## Accessible Menu
+--------------------------------------------- */
+.menu .menu-item {
+    &:focus {
+        position: static;
+    }
+    & > a:focus + ul.sub-menu,
+    &.sfHover > ul.sub-menu {
+        left: auto;
+        opacity: 1;
+    }
+}
+
+.menu-toggle {
+    border-radius: 0;
+    line-height: 22px;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    &.activated:before {
+        content: "\f335";
+    }
+    &::before {
+        font-size: 1.5em;
+        margin-right: 10px;
+        text-rendering: auto;
+    }
+}
+
+.menu-toggle,
+.sub-menu-toggle {
+    border-width: 0;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+    visibility: visible;
+    @include media($screen--m) {
+        display: none;
+        visibility: hidden;
+    }
+    &:focus,
+    &:hover {
+        border-width: 0;
+    }
+}
+
+.sub-menu-toggle {
+    float: right;
+    padding: 12px 10px;
+    border-radius: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    background: transparent;
+    &:focus,
+    &:hover {
+        background: transparent;
+    }
+    &::before {
+        display: inline-block;
+        text-rendering: auto;
+        transform: rotate( 0 );
+        transition: transform .25s ease-in-out;
+    }
+    &.activated::before {
+        transform: rotate( 180deg );
+    }
+}
+
+/* ## Genesis Responsive Menu
+--------------------------------------------- */
+
+// turn display on now that js has loaded
+.genesis-responsive-menu {
+    .wrap {
+        padding: 0;
+    }
+    .genesis-nav-menu {
+        display: block;
+        .menu-item {
+            display: block;
+            float: none;
+            position: relative;
+            text-align: left;
+            @include media($screen--m) {
+                display: inline-block;
+            }
+            &:focus,
+            &:hover {
+                position: relative;
+            }
+            &:hover > .sub-menu {
+                @include media($screen--m) {
+                    left: auto;
+                    opacity: 1;
+                }
+            }
+            a {
+                border: none;
+                margin-bottom: 0;
+                padding: 15px 20px;
+                width: 100%;
+                font-weight: bold;
+                @include media($screen--m) {
+                    display: block;
+                    text-decoration: none;
+                    border-bottom: none;
+                    font-weight: normal;
+                    border-top: 0;
+                    border: none;
+                    padding: 20px;
+                    position: relative;
+                    word-wrap: break-word;
+                }
+                @include media($screen--l) {
+                    padding: 32px 16px;
+                }
+                &:focus ul.sub-menu,
+                &:focus ul.sub-menu .sub-menu {
+                    left: 0;
+                    margin-left: 0;
+                }
+            }
+            /* 2ND LEVEL DEPTH */
+            .sub-menu {
+                clear: both;
+                border: none;
+                display: none;
+                margin: 0;
+                padding: 10px 0 10px 10px;
+                opacity: 1;
+                position: static;
+                width: 100%;
+                @include media($screen--m) {
+                    padding: 10px;
+                    left: -9999px;
+                    opacity: 0;
+                    position: absolute;
+                    transition: opacity .4s ease-in-out;
+                    z-index: 99;
+                    width: 240px;
+                }
+                .menu-item {
+                    display: block;
+                    @include media($screen--m) {
+                        display: block;
+                    }
+                    a {
+                        padding: 10px;
+                        .icon-angle-down {
+                            @include media($screen--m) {
+                                transform: rotate(-90deg);
+                            }
+                        }
+                    }
+                    /* 3RD LEVEL DEPTH */
+                    .sub-menu {
+                        @include media($screen--m) {
+                            left: calc(100% + 10px);
+                            top: -10px;
+                            width: 200px;
+                            .menu-item {
+                                a {
+                                    font-size: 0.9em;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.genesis-skip-link .skip-link-hidden {
+    display: none;
+    visibility: hidden;
+}
+
+/* ## Site Header Navigation
+--------------------------------------------- */
+.site-header {
+    .genesis-nav-menu li li {
+        margin-left: 0;
+    }
+}
+
+/* ## Primary Navigation
+--------------------------------------------- */
+.nav-primary {
+    // font-family: $sans-serif;
+    font-weight: 300;
+    display: none;
+    width: 100%;
+    @include media($screen--m) {
+        opacity: 0;
+        display: block;
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    @include media($screen--l) {
+        display: inline-block;
+        width: calc( 100% - 400px);
+        margin-right: 0;
+        padding-right: 20px;
+        padding-left: 0;
+    }
+    &.genesis-responsive-menu {
+        @include media($screen--m) {
+            background-color: rgba(0,0,0,0.03);
+        }
+        @include media($screen--l) {
+            background-color: transparent;
+        }
+    }
+    ul#menu-primary-navigation {
+		li {
+			a {
+				font-size: clamp(14px, 2.5vw, 16px);
+			}
+        }
+    }
+}
+
+.js .nav-primary {
+    display: none;
+    @include media($screen--m) {
+        opacity: 1;
+        display: inline-block;
+    }
+}
+
+/* ## Secondary Navigation
+--------------------------------------------- */
+.nav-secondary {
+    width: 100%;
+    .genesis-nav-menu {
+        display: block;
+        text-align: center;
+    }
+}
+
+/* ## Footer Navigation
+--------------------------------------------- */
+.site-footer .genesis-nav-menu {
+    padding-bottom: 20px;
+    a {
+        padding: 0 20px 10px;
+        border-bottom: none;
+        &:focus,
+        &:hover {
+            border-bottom: none;
+        }
+    }
+}

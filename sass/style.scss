@@ -1,0 +1,42 @@
+/*
+Theme Name: Coaching Pro
+Theme URI: https://buildmybrandid.com/
+Description: A Genesis child theme for Coaches, built by brandiD.
+Author: brandiD
+Author URI: https://thebrandid.com/
+
+Version: 2.0.0
+
+Tags: accessibility-ready, blocks, custom-colors, custom-header, custom-menu, featured-images, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+
+Template: genesis
+
+License: GPL-2.0+
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Text Domain: coaching-pro
+*/
+
+// Import Bourbon, Neat
+@import 'node_modules/bourbon/core/bourbon';
+@import 'node_modules/bourbon-neat/app/assets/stylesheets/neat';
+
+// Import styles
+@import 'partials/reset';
+@import 'partials/variables';
+@import 'partials/defaults';
+@import 'partials/accessibility';
+@import 'partials/layout';
+@import 'partials/common-classes';
+@import 'partials/typography';
+@import 'partials/header';
+@import 'partials/navigation';
+@import 'partials/content-area';
+@import 'partials/sidebar';
+@import 'partials/blog';
+@import 'partials/footer';
+@import 'partials/widgets';
+@import 'partials/colors-default';
+@import 'partials/colors-responsive-nav';
+@import 'partials/block-styles';
+@import 'partials/print-media-queries';

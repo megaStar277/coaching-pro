@@ -1,4 +1,4 @@
-# Copyright (C) 2018 Coaching Pro
+# Copyright (C) 2021 Coaching Pro
 # This file is distributed under the same license as the Coaching Pro package.
 msgid ""
 msgstr ""
@@ -13,317 +13,246 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: 404.php:39
+#: 404.php:34
 msgid "Not found, error 404"
 msgstr ""
 
-#: 404.php:44
-msgid "The page you are looking for no longer exists. Perhaps you can return back to the site's <a href=\"%s\">homepage</a> and see if you can find what you are looking for. Or, you can try finding it by using the search form below."
+#: 404.php:47
+msgid "The page you are looking for no longer exists. Perhaps you can return back to the site's"
 msgstr ""
 
-#: 404.php:51
-msgid "The page you are looking for no longer exists. Perhaps you can return back to the site's <a href=\"%s\">homepage</a> and see if you can find what you are looking for. Or, you can try finding it with the information below."
+#: 404.php:47, 404.php:41
+msgid "homepage"
 msgstr ""
 
-#: 404.php:61
+#: 404.php:47
+msgid "and see if you can find what you are looking for. Or, you can try finding it with the information below."
+msgstr ""
+
+#: 404.php:41
+msgid "The page you are looking for no longer exists. Perhaps you can return back to the site's "
+msgstr ""
+
+#: 404.php:41
+msgid " and see if you can find what you are looking for. Or, you can try finding it by using the search form below."
+msgstr ""
+
+#: 404.php:54
 msgid "Sitemap"
 msgstr ""
 
-#: page_landing.php:2
-msgid "Landing Page"
+#: config/appearance.php:59, lib/color-functions.php:43
+msgid "Color 1"
 msgstr ""
 
-#: searchform.php:19
-msgctxt "label"
-msgid "Search for:"
+#: config/appearance.php:64, lib/color-functions.php:67
+msgid "Color 2"
 msgstr ""
 
-#: searchform.php:21
-msgctxt "placeholder"
-msgid "Search &hellip;"
+#: config/appearance.php:69, lib/color-functions.php:91
+msgid "Color 3"
 msgstr ""
 
-#: searchform.php:23
-msgctxt "submit button"
-msgid "Search"
+#: config/appearance.php:74, lib/color-functions.php:115
+msgid "Color 4"
 msgstr ""
 
-#: lib/customize-colors.php:286, lib/customize-colors.php:338
-msgid "Color Scheme"
+#: config/appearance.php:79, lib/color-functions.php:139
+msgid "Text Color 1"
 msgstr ""
 
-#: lib/customize-colors.php:340
-msgid "Career"
+#: config/appearance.php:84, lib/color-functions.php:163
+msgid "Text Color 2"
 msgstr ""
 
-#: lib/customize-colors.php:341
-msgid "Executives"
+#: config/appearance.php:89, lib/color-functions.php:187
+msgid "Background Color 1"
 msgstr ""
 
-#: lib/customize-colors.php:342
-msgid "Health and Fitness"
+#: config/appearance.php:94, lib/color-functions.php:211
+msgid "Background Color 2"
 msgstr ""
 
-#: lib/customize-colors.php:343
-msgid "Relationships"
+#: config/appearance.php:99
+msgid "White"
 msgstr ""
 
-#: lib/customize-colors.php:344
-msgid "Custom"
+#: config/appearance.php:104
+msgid "Black"
 msgstr ""
 
-#: lib/customize-colors.php:364
-msgid "Custom Color #1"
+#: config/appearance.php:111, lib/font-functions.php:114
+msgid "H1"
 msgstr ""
 
-#: lib/customize-colors.php:385
-msgid "Custom Color #2"
+#: config/appearance.php:117, lib/font-functions.php:137
+msgid "H2"
 msgstr ""
 
-#: lib/customize-colors.php:406
-msgid "Custom Color #3"
+#: config/appearance.php:123, lib/font-functions.php:160
+msgid "H3"
 msgstr ""
 
-#: lib/customize-colors.php:427
-msgid "Custom Color #4"
+#: config/appearance.php:129, lib/font-functions.php:183
+msgid "H4"
 msgstr ""
 
-#: lib/customize-colors.php:448
-msgid "Navigation Text Color"
+#: config/appearance.php:135, lib/font-functions.php:206
+msgid "H5"
 msgstr ""
 
-#: lib/customize-colors.php:469
-msgid "Navigation Text Hover Color"
+#: config/appearance.php:141, lib/font-functions.php:229
+msgid "H6"
 msgstr ""
 
-#: lib/customize.php:43
-msgid "No Image"
+#: config/appearance.php:147, lib/font-functions.php:252
+msgid "Primary Nav Menu"
 msgstr ""
 
-#: lib/customize.php:74
-msgid "Front Page Background Images"
+#: config/appearance.php:153, lib/font-functions.php:275
+msgid "Body Text"
 msgstr ""
 
-#: lib/customize.php:97
-msgid "Front Page Welcome Section Image:"
-msgstr ""
-
-#: lib/customize.php:107
-msgid "Front Page Call To Action Section Image:"
-msgstr ""
-
-#: lib/customize.php:117
-msgid "Front Page Offer Section Image:"
-msgstr ""
-
-#: lib/customize.php:126
-msgid "General Settings"
-msgstr ""
-
-#: lib/customize.php:141
-msgid "Turn off Sticky Header Navigation (allow header to scroll) "
-msgstr ""
-
-#: lib/customize.php:160
-msgid "Turn off front page graphics"
-msgstr ""
-
-#: lib/customize.php:179
-msgid "Use minified CSS stylesheet"
-msgstr ""
-
-#: lib/customize.php:188
-msgid "Logo Image"
-msgstr ""
-
-#: lib/customize.php:199
-msgid "Background Repeat"
-msgstr ""
-
-#: lib/customize.php:204
-msgid "No Repeat"
-msgstr ""
-
-#: lib/customize.php:205
-msgid "Tile"
-msgstr ""
-
-#: lib/customize.php:206
-msgid "Tile Horizontally"
-msgstr ""
-
-#: lib/customize.php:207
-msgid "Tile Vertically"
-msgstr ""
-
-#: lib/customize.php:224
-msgid "Background Size"
-msgstr ""
-
-#: lib/customize.php:229
-msgid "Cover"
-msgstr ""
-
-#: lib/customize.php:230
-msgid "Contain"
-msgstr ""
-
-#: lib/customize.php:231
-msgid "100% width"
-msgstr ""
-
-#: lib/customize.php:232
-msgid "100% height"
-msgstr ""
-
-#: lib/customize.php:233
-msgid "Actual Size"
-msgstr ""
-
-#: lib/customize.php:245
-msgid "Background Position Horizontal"
-msgstr ""
-
-#: lib/customize.php:250
-msgid "Left"
-msgstr ""
-
-#: lib/customize.php:251, lib/customize.php:269
-msgid "Center"
-msgstr ""
-
-#: lib/customize.php:252
-msgid "Right"
-msgstr ""
-
-#: lib/customize.php:263
-msgid "Background Position Vertical"
-msgstr ""
-
-#: lib/customize.php:268
-msgid "Top"
-msgstr ""
-
-#: lib/customize.php:270
-msgid "Bottom"
-msgstr ""
-
-#: lib/customize.php:283
-msgid "Change the color of the overlay for this image."
-msgstr ""
-
-#: lib/customize.php:284
-msgid "Overlay Color"
-msgstr ""
-
-#: lib/customize.php:297
-msgid "Background Overlay"
-msgstr ""
-
-#: lib/customize.php:298, lib/customize.php:318
-msgid "Opacity (0 = transparent | 1 = solid)"
-msgstr ""
-
-#: lib/customize.php:317
-msgid "Image Opacity"
-msgstr ""
-
-#: lib/icon-functions.php:46
-msgid "Please define default parameters in the form of an array."
-msgstr ""
-
-#: lib/icon-functions.php:51
-msgid "Please define an SVG icon filename."
-msgstr ""
-
-#: lib/load-scripts.php:119
-msgid "Menu"
-msgstr ""
-
-#: lib/load-scripts.php:121
-msgid "Submenu"
-msgstr ""
-
-#: lib/theme-setup.php:53
-msgid "Featured Image"
-msgstr ""
-
-#: lib/theme-setup.php:89
+#: config/theme-supports.php:32
 msgid "Primary Menu"
 msgstr ""
 
-#: lib/theme-setup.php:89
+#: config/theme-supports.php:33
 msgid "Footer Menu"
 msgstr ""
 
-#: lib/theme-setup.php:179
+#: lib/block-patterns.php:17
+msgctxt "Block pattern category"
+msgid "Coaching Pro"
+msgstr ""
+
+#: lib/block-patterns.php:46
+msgid "Main Hero"
+msgstr ""
+
+#: lib/block-patterns.php:47
+msgctxt "Block pattern description"
+msgid "A full-width hero image section with heading, supporting text, and a button."
+msgstr ""
+
+#: lib/block-patterns.php:63
+msgid "Hero 2-columns"
+msgstr ""
+
+#: lib/block-patterns.php:64
+msgctxt "Block pattern description"
+msgid "A full-width section with two columns: one column containing a hero image, the other column containing heading text, supporting text, and a button."
+msgstr ""
+
+#: lib/block-patterns.php:80
+msgid "Basic 2-columns"
+msgstr ""
+
+#: lib/block-patterns.php:81
+msgctxt "Block pattern description"
+msgid "A simple full-width section with two columns, each containing heading text, supporting text, and a button."
+msgstr ""
+
+#: lib/block-patterns.php:97
+msgid "Features 3-columns"
+msgstr ""
+
+#: lib/block-patterns.php:98
+msgctxt "Block pattern description"
+msgid "A full-width section with heading text, supporting text, and 3-columns."
+msgstr ""
+
+#: lib/block-patterns.php:114
+msgid "Blog Grid"
+msgstr ""
+
+#: lib/block-patterns.php:115
+msgctxt "Block pattern description"
+msgid "A full-width section to showcase blog posts. Contains heading text, sub-heading text, supporting text, and a 2-column grid of your latest blog posts."
+msgstr ""
+
+#: lib/block-patterns.php:131
+msgid "Testimonials Section"
+msgstr ""
+
+#: lib/block-patterns.php:132
+msgctxt "Block pattern description"
+msgid "A full-width section to showcase testimonials. Contains heading text, sub-heading text, supporting text, and a rotating slider of your testimonials."
+msgstr ""
+
+#: lib/block-patterns.php:148
+msgid "Newsletter Opt-In"
+msgstr ""
+
+#: lib/block-patterns.php:149
+msgctxt "Block pattern description"
+msgid "A full-width section to promote newsletter signups or other content. Contains a background hero image, heading text, sub-heading text, supporting text, and a place to add your own opt-in form block."
+msgstr ""
+
+#: lib/color-functions.php:21
+msgid "Color Palette"
+msgstr ""
+
+#: lib/color-functions.php:254
+msgid "Links Color"
+msgstr ""
+
+#: lib/color-functions.php:278
+msgid "Mobile Menu Button Color"
+msgstr ""
+
+#: lib/color-functions.php:322
+msgid "WooCommerce Accent Color"
+msgstr ""
+
+#: lib/color-functions.php:368
+msgid "Easy Digital Downloads Accent Color"
+msgstr ""
+
+#: lib/customize.php:35
+msgid "Site Title Display"
+msgstr ""
+
+#: lib/customize.php:39
+msgid "Show Title & Tagline"
+msgstr ""
+
+#: lib/customize.php:40
+msgid "Show Logo Image"
+msgstr ""
+
+#: lib/customize.php:52
+msgid "Coaching Pro Settings"
+msgstr ""
+
+#: lib/customize.php:73
+msgid "Sticky Header"
+msgstr ""
+
+#: lib/customize.php:76
+msgid "Enable or Disable the Sticky Header. Turning this ON will keep the header in place while you scroll the page. Turning this OFF will make the header scroll with the rest of the page content. This effect is disabled for mobile devices."
+msgstr ""
+
+#: lib/font-functions.php:92
+msgid "Fonts"
+msgstr ""
+
+#: lib/load-scripts.php:143
+msgid "Menu"
+msgstr ""
+
+#: lib/load-scripts.php:145
+msgid "Submenu"
+msgstr ""
+
+#: lib/theme-setup.php:46
+msgid "Featured Image"
+msgstr ""
+
+#: lib/theme-setup.php:186, lib/theme-setup.php:213
 msgid "Read more"
 msgstr ""
 
-#: lib/theme-setup.php:179
+#: lib/theme-setup.php:186, lib/theme-setup.php:213
 msgid "about"
-msgstr ""
-
-#: lib/widget-setup.php:13
-msgid "Front Page Welcome Section"
-msgstr ""
-
-#: lib/widget-setup.php:14
-msgid "This is the welcome area in the header."
-msgstr ""
-
-#: lib/widget-setup.php:22
-msgid "Front Page 1 - a"
-msgstr ""
-
-#: lib/widget-setup.php:23
-msgid "This is the front page 1a section."
-msgstr ""
-
-#: lib/widget-setup.php:29
-msgid "Front Page 1 - b"
-msgstr ""
-
-#: lib/widget-setup.php:30
-msgid "This is the front page 1b section."
-msgstr ""
-
-#: lib/widget-setup.php:36
-msgid "Front Page 2"
-msgstr ""
-
-#: lib/widget-setup.php:37
-msgid "This is the front page 2 section."
-msgstr ""
-
-#: lib/widget-setup.php:44
-msgid "Front Page 3"
-msgstr ""
-
-#: lib/widget-setup.php:45
-msgid "This is the front page 3 section."
-msgstr ""
-
-#: lib/widget-setup.php:52
-msgid "Front Page Testimonials"
-msgstr ""
-
-#: lib/widget-setup.php:53
-msgid "This is the front page testimonials section."
-msgstr ""
-
-#: lib/widget-setup.php:61
-msgid "Front Page Call to Action"
-msgstr ""
-
-#: lib/widget-setup.php:62
-msgid "This is the call to action  section."
-msgstr ""
-
-#: lib/widget-setup.php:69
-msgid "Front Page Offer"
-msgstr ""
-
-#: lib/widget-setup.php:70
-msgid "This is the front page offer section."
 msgstr ""

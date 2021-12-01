@@ -1,0 +1,119 @@
+/* BLOG STYLES
+----------------------------------------------------------------------------- */
+
+/* BLOG PAGE
+----------------------------- */
+.blog {
+    &.blog-archive {
+        .content-sidebar-wrap {
+            flex-wrap: wrap;
+            .archive-description {
+                width: 100%;
+                padding: 0;
+                .archive-title {
+                    padding: 30px;
+                    font-size: $h1-font-size;
+                    @include media($screen--l) {
+                        padding: 12px 30px;
+                    }
+                }
+            }
+        }
+        &.full-width-content {
+            #genesis-content {
+                .breadcrumb {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+                .archive-description {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+/* SINGLE POST
+----------------------------- */
+.single-post {
+    img.post-photo {
+        display: block;
+        border-radius: $global-border-radius;
+    }
+    .entry-header {
+        .entry-title {
+            font-size: $h3-font-size;
+            line-height: 1.2;
+        }
+    }
+}
+
+/* FEATURED POST
+----------------------------- */
+.featured-post {
+    h2,
+    h3 {
+        margin-bottom: 0;
+    }
+}
+
+
+/* ARCHIVE PAGE
+----------------------------- */
+.page-archive {
+    .site-container {
+        .site-inner {
+            .content-sidebar-wrap {
+                flex-wrap: wrap;
+                .content {
+                    .archive-description {
+                        width: 100%;
+                        padding: 0;
+                        padding-left: 0;
+                        padding-right: 0;
+                        text-align: center;
+                        .archive-title {
+                            text-align: center;
+                            font-size: $h1-font-size;
+                            padding: 30px;
+                            @include media($screen--l) {
+                                padding: 12px 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.full-width-content {
+        #genesis-content {
+            .breadcrumb {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+/* SHARED STYLES
+----------------------------- */
+.blog-archive,
+.page-archive {
+    .content {
+        article.entry {
+            & > a.entry-image-link {
+                display: block;
+                margin-bottom: 20px;
+                img {
+                    display: block;
+                    border-radius: $global-border-radius;
+                }
+            }
+            h2.entry-title {
+                font-size: $h5-font-size;
+                // line-height: 1.5;
+                line-height: 1.25;
+            }
+        }
+    }
+}

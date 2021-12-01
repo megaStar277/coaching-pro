@@ -1,0 +1,210 @@
+/* # Content Area
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Entries
+--------------------------------------------- */
+.entry {
+    // background-color: $white;
+    padding: 30px;
+    margin-bottom: 5%;
+    ol,
+    ul {
+        margin-bottom: 28px;
+        margin-left: 40px;
+    }
+    ol > li {
+        list-style-type: decimal;
+    }
+    ul > li {
+        list-style-type: disc;
+    }
+    ol ol,
+    ul ul {
+        margin-bottom: 0;
+    }
+    code {
+        background-color: $base-text-color;
+        color: $background-color;
+    }
+}
+
+body.first-block-align-full.full-width-content {
+    .entry {
+        padding-top: 0;
+        @include media($screen--m) {
+            margin-bottom: 0;
+            padding: 0;
+        }
+    }
+}
+
+body:not(.first-block-align-full).full-width-content {
+    .entry {
+        padding: 30px;
+        @include media($screen--m) {
+            padding: 30px 0;
+        }
+    }
+}
+
+body {
+    &.page {
+        #genesis-content {
+            & > article.entry {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+    &:not(.page) {
+        #genesis-content {
+            & > article.entry {
+                margin-bottom: 0;
+                // padding-bottom: 0;
+                @include media($screen--m) {
+                    padding-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
+/* ## Entry Meta
+--------------------------------------------- */
+p.entry-meta {
+    font-size: 0.8em;
+    margin-bottom: 0;
+}
+
+.entry-header .entry-meta {
+    margin-bottom: 24px;
+}
+
+.entry-footer .entry-meta {
+    border-top: 1px solid $background-color;
+    padding-top: 24px;
+}
+
+.entry-categories,
+.entry-tags {
+    display: block;
+}
+
+/* ## Pagination
+--------------------------------------------- */
+.pagination {
+    clear: both;
+    margin: 5% auto;
+    text-align: center;
+    @include media($screen--s1) {
+        margin: 40px 0;
+    }
+    ul {
+        display: inline-block;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: $global-border-radius;
+        overflow: hidden;
+        li {
+            float: left;
+            border: 0;
+            & > a,
+            &.pagination-omission {
+                margin-bottom: 0;
+                padding: calc(.667em + 2px) calc(1.333em + 2px);
+                font-size: 1em;
+                font-weight: 600;
+                line-height: 1;
+            }
+        }
+    }
+}
+
+.adjacent-entry-pagination {
+    margin-bottom: 0;
+}
+
+.archive-pagination {
+    li {
+        display: inline;
+    }
+    a {
+        background-color: $white;
+        color: $base-text-color;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 8px 12px;
+        text-decoration: none;
+        border-bottom: none;
+    }
+    .active a,
+    a:focus,
+    a:hover {
+        color: $white;
+    }
+    li a {
+        margin-bottom: 4px;
+        @include media($screen--s1) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* ## Comments
+--------------------------------------------- */
+.comment-respond,
+.entry-comments,
+.entry-pings {
+    background-color: $soft-white;
+    font-size: 0.8em;
+    padding: 30px;
+    margin-bottom: 5%;
+    @include media($screen--s1) {
+        margin-bottom: 40px;
+    }
+}
+
+.comment-list {
+    li {
+        padding: 40px 0 0 30px;
+    }
+    .depth-1 {
+        padding-left: 0;
+    }
+}
+
+.comment-header {
+    margin-bottom: 30px;
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.comment-content {
+    clear: both;
+    ul > li {
+        list-style-type: disc;
+    }
+}
+
+.comment-respond {
+    input[type="email"],
+    input[type="text"],
+    input[type="url"] {
+        width: 50%;
+    }
+    label {
+        display: block;
+        margin-right: 12px;
+    }
+}
+
+.entry-pings .reply {
+    display: none;
+}
+
+.post-edit-link {
+    display: none;
+}

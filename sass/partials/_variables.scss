@@ -1,0 +1,91 @@
+// Colors
+//------------------------------------------------------------------------------
+$white: #fff;
+$black: #000;
+$soft-white: #f5f5f5;
+$soft-black: #666;
+$grey: #a5abab;
+
+// Theme Default Colors
+// -------------------------------------
+$theme-color1: #56585d;
+$theme-color2: #d46a43;
+$theme-color3: #6e6872;
+$theme-color4: #5c4a28;
+$theme-color5: #939393;
+$theme-color6: #8a8a8a;
+$theme-color7: #f0efee;
+$theme-color8: #f8f8f8;
+
+// Background colors
+//-------------------------------------
+$background-color: $white;
+
+// Menu items
+//-------------------------------------
+$sub-menu-color: $soft-black;
+$sub-menu-background: $theme-color7;
+
+// Base colors for text and links
+//-------------------------------------
+$base-text-color: $soft-black;
+
+// Border Radius
+//-------------------------------------
+$global-border-radius: 4px;
+
+// Global Screen Sizes - was 1440px
+//------------------------------------------------------------------------------
+$small1-screen: 320px;
+$small-screen-600: 600px;
+$small2-screen: 768px;
+$medium-screen: 1024px;
+$large-screen: 1280px;
+$xl-screen: 1341px;
+$xxl-screen: 1600px;
+
+$max-width: 1280px;
+
+// Global Breakpoints
+//------------------------------------------------------------------------------
+$screen--s1: new-breakpoint(min-width $small1-screen 4);
+$screen--s2: new-breakpoint(min-width $small2-screen 6);
+$screen--s: new-breakpoint(min-width $small-screen-600 6);
+$screen--m: new-breakpoint(min-width $medium-screen 12);
+$screen--l: new-breakpoint(min-width $large-screen 12);
+$screen--xl: new-breakpoint(min-width $xl-screen 12);
+$screen--xxl: new-breakpoint(min-width $xxl-screen 12);
+
+$screen--768: new-breakpoint(min-width 768px 6);
+$screen--phone: new-breakpoint(max-width 414px 6);
+
+// Global Max Width Settings
+//------------------------------------------------------------------------------
+$base-wrap-max-width: $max-width - 372px; // 768px;
+$wrap-max-width-medium: $max-width - 180px; // 960px
+$wrap-max-width-large: $max-width;
+
+// Global Font Families
+//------------------------------------------------------------------------------
+$sans-serif: Helvetica, Arial, sans-serif;
+$mono: Courier, monospace;
+
+// Base Typography
+//------------------------------------------------------------------------------
+$html-font-size: 62.5%;
+
+$body-font-weight: 300;
+$body-line-height: 1.6;
+
+$heading-line-height: 1.5;
+$heading-font-weight: 300;
+
+// Fluid Typography - responsive font sizes
+//------------------------------------------------------------------------------
+$body-font-size: clamp( 14px, calc(1vw + 1rem), 17px );
+$h1-font-size: clamp( 36px, calc(3.5vw + 1rem), 60px );
+$h2-font-size: clamp( 24px, calc(2.8vw + 1rem), 48px );
+$h3-font-size: clamp( 20px, calc(2vw + 1rem), 38px );
+$h4-font-size: clamp( 18px, calc(1.75vw + 1rem), 30px );
+$h5-font-size: clamp( 17px, calc(1.25vw + 1rem), 24px );
+$h6-font-size: clamp( 16px, calc(1vw + 1rem), 20px );
