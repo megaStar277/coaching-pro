@@ -13,14 +13,9 @@
  */
 function coaching_pro_theme_defaults( $defaults ) {
 
-	$defaults['blog_cat_num']              = 6;
-	$defaults['content_archive']           = 'full';
-	$defaults['content_archive_limit']     = 0;
-	$defaults['content_archive_thumbnail'] = 0;
-	$defaults['posts_nav']                 = 'numeric';
-	$defaults['site_layout']               = 'content-sidebar';
+	$args = genesis_get_config( 'child-theme-settings' );
 
-	return $defaults;
+	return wp_parse_args( $args, $defaults );
 
 }
 add_filter( 'genesis_theme_settings_defaults', 'coaching_pro_theme_defaults' );
@@ -32,16 +27,9 @@ function coaching_pro_theme_setting_defaults() {
 
 	if ( function_exists( 'genesis_update_settings' ) ) {
 
-		genesis_update_settings(
-			array(
-				'blog_cat_num'              => 6,
-				'content_archive'           => 'full',
-				'content_archive_limit'     => 0,
-				'content_archive_thumbnail' => 0,
-				'posts_nav'                 => 'numeric',
-				'site_layout'               => 'content-sidebar',
-			)
-		);
+		$args = genesis_get_config( 'child-theme-settings' );
+
+		genesis_update_settings( $args );
 
 	}
 

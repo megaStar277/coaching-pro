@@ -42,6 +42,9 @@ function coaching_pro_localization_setup() {
 // Load Theme Setup and Configuration.
 require_once CHILD_THEME_DIR . '/lib/theme-setup.php';
 
+// Load custom Onboarding functions.
+require_once CHILD_THEME_DIR . '/lib/onboarding-functions.php';
+
 // Import custom separator control.
 require_once CHILD_THEME_DIR . '/lib/class-separator-control.php';
 

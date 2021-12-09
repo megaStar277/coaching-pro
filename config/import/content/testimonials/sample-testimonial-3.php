@@ -2,7 +2,7 @@
 /**
  * Coaching Pro - One-Click Theme Setup - Demo Testimonial #3 content.
  *
- * Visit `/wp-admin/admin.php?page=genesis-getting-started` to trigger import.
+ * Visit Genesis > Child Theme Setup to trigger import.
  *
  * @package Coaching Pro
  */
