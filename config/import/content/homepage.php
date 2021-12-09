@@ -2,7 +2,7 @@
 /**
  * Coaching Pro - One-Click Theme Setup - Homepage content.
  *
- * Visit `/wp-admin/admin.php?page=genesis-getting-started` to trigger import.
+ * Visit Genesis > Child Theme Setup to trigger import.
  *
  * @package Coaching Pro
  */
@@ -51,8 +51,8 @@ return <<<CONTENT
 <p style="font-size:22px">Intrigue your audience with valuable<br>information they can’t possibly pass up.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:image {"width":542,"height":361,"sizeSlug":"full","linkDestination":"custom","className":"is-style-roundedcorners"} -->
-<figure class="wp-block-image size-full is-resized is-style-roundedcorners"><a href="https://www.youtube.com/watch?v=C0DPdy98e4c" target="_blank" rel="noopener"><img src="$coachingpro_img_video_screenshot" alt="Watch this video on YouTube" class="wp-image-9999" width="542" height="361"/></a></figure>
+<!-- wp:image {"id":2976,"width":542,"height":361,"sizeSlug":"full","linkDestination":"custom","className":"is-style-roundedcorners"} -->
+<figure class="wp-block-image size-full is-resized is-style-roundedcorners"><a href="https://www.youtube.com/watch?v=C0DPdy98e4c" target="_blank" rel="noopener"><img src="$coachingpro_img_video_screenshot" alt="Watch this video on YouTube" class="wp-image-2976" width="542" height="361"/></a></figure>
 <!-- /wp:image --></div></div>
 <!-- /wp:genesis-blocks/gb-column -->
 
@@ -83,8 +83,8 @@ return <<<CONTENT
 
 <!-- wp:genesis-blocks/gb-columns {"columns":2,"layout":"gb-2-col-equal","columnsGap":0,"align":"full","backgroundColor":"bgcolortwo","columnMaxWidth":0} -->
 <div class="wp-block-genesis-blocks-gb-columns gb-layout-columns-2 gb-2-col-equal has-bgcolortwo-background-color alignfull"><div class="gb-layout-column-wrap gb-block-layout-column-gap-0 gb-is-responsive-column"><!-- wp:genesis-blocks/gb-column {"textAlign":"center","paddingSync":true,"padding":40,"columnVerticalAlignment":"center"} -->
-<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column gb-is-vertically-aligned-center"><div class="gb-block-layout-column-inner" style="padding:40px;text-align:center"><!-- wp:image {"align":"center","sizeSlug":"full","linkDestination":"media"} -->
-<div class="wp-block-image"><figure class="aligncenter size-full"><img src="$coachingpro_img_book" alt="Sample product photo" class="wp-image-9999"/></figure></div>
+<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column gb-is-vertically-aligned-center"><div class="gb-block-layout-column-inner" style="padding:40px;text-align:center"><!-- wp:image {"align":"center","id":2778,"sizeSlug":"full","linkDestination":"none"} -->
+<div class="wp-block-image"><figure class="aligncenter size-full"><img src="$coachingpro_img_book" alt="Sample product photo" class="wp-image-2778"/></figure></div>
 <!-- /wp:image --></div></div>
 <!-- /wp:genesis-blocks/gb-column -->
 
@@ -119,26 +119,26 @@ return <<<CONTENT
 
 <!-- wp:genesis-blocks/gb-columns {"columns":4,"layout":"gb-4-col-equal","className":"logos-small"} -->
 <div class="wp-block-genesis-blocks-gb-columns logos-small gb-layout-columns-4 gb-4-col-equal"><div class="gb-layout-column-wrap gb-block-layout-column-gap-2 gb-is-responsive-column"><!-- wp:genesis-blocks/gb-column {"textAlign":"center","columnVerticalAlignment":"center"} -->
-<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column gb-is-vertically-aligned-center"><div class="gb-block-layout-column-inner" style="text-align:center"><!-- wp:image {"align":"center","sizeSlug":"full","linkDestination":"none"} -->
-<div class="wp-block-image"><figure class="aligncenter size-full"><img src="$coachingpro_logo_womansday" alt="" class="wp-image-9999"/></figure></div>
+<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column gb-is-vertically-aligned-center"><div class="gb-block-layout-column-inner" style="text-align:center"><!-- wp:image {"align":"center","id":3074,"sizeSlug":"full","linkDestination":"none","style":{"color":{}}} -->
+<div class="wp-block-image"><figure class="aligncenter size-full"><img src="$coachingpro_logo_womansday" alt="" class="wp-image-3074"/></figure></div>
 <!-- /wp:image --></div></div>
 <!-- /wp:genesis-blocks/gb-column -->
 
 <!-- wp:genesis-blocks/gb-column {"textAlign":"center","columnVerticalAlignment":"center"} -->
-<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column gb-is-vertically-aligned-center"><div class="gb-block-layout-column-inner" style="text-align:center"><!-- wp:image {"align":"center","sizeSlug":"full","linkDestination":"none"} -->
-<div class="wp-block-image"><figure class="aligncenter size-full"><img src="$coachingpro_logo_living" alt="" class="wp-image-9999"/></figure></div>
+<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column gb-is-vertically-aligned-center"><div class="gb-block-layout-column-inner" style="text-align:center"><!-- wp:image {"align":"center","id":3073,"sizeSlug":"full","linkDestination":"none"} -->
+<div class="wp-block-image"><figure class="aligncenter size-full"><img src="$coachingpro_logo_own" alt="" class="wp-image-3073"/></figure></div>
 <!-- /wp:image --></div></div>
 <!-- /wp:genesis-blocks/gb-column -->
 
 <!-- wp:genesis-blocks/gb-column {"textAlign":"center","columnVerticalAlignment":"center"} -->
-<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column gb-is-vertically-aligned-center"><div class="gb-block-layout-column-inner" style="text-align:center"><!-- wp:image {"align":"center","sizeSlug":"full","linkDestination":"none"} -->
-<div class="wp-block-image"><figure class="aligncenter size-full"><img src="$coachingpro_logo_own" alt="" class="wp-image-9999"/></figure></div>
+<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column gb-is-vertically-aligned-center"><div class="gb-block-layout-column-inner" style="text-align:center"><!-- wp:image {"align":"center","id":3072,"sizeSlug":"full","linkDestination":"none"} -->
+<div class="wp-block-image"><figure class="aligncenter size-full"><img src="$coachingpro_logo_living" alt="" class="wp-image-3072"/></figure></div>
 <!-- /wp:image --></div></div>
 <!-- /wp:genesis-blocks/gb-column -->
 
 <!-- wp:genesis-blocks/gb-column {"textAlign":"center","columnVerticalAlignment":"center"} -->
-<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column gb-is-vertically-aligned-center"><div class="gb-block-layout-column-inner" style="text-align:center"><!-- wp:image {"align":"center","sizeSlug":"full","linkDestination":"none"} -->
-<div class="wp-block-image"><figure class="aligncenter size-full"><img src="$coachingpro_logo_droz" alt="" class="wp-image-9999"/></figure></div>
+<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column gb-is-vertically-aligned-center"><div class="gb-block-layout-column-inner" style="text-align:center"><!-- wp:image {"align":"center","id":3071,"sizeSlug":"full","linkDestination":"none"} -->
+<div class="wp-block-image"><figure class="aligncenter size-full"><img src="$coachingpro_logo_droz" alt="" class="wp-image-3071"/></figure></div>
 <!-- /wp:image --></div></div>
 <!-- /wp:genesis-blocks/gb-column --></div></div>
 <!-- /wp:genesis-blocks/gb-columns --></div></div>
@@ -163,7 +163,7 @@ return <<<CONTENT
 
 <!-- wp:genesis-blocks/gb-columns {"columns":3,"layout":"gb-3-col-equal","columnsGap":4,"marginTop":40} -->
 <div class="wp-block-genesis-blocks-gb-columns gb-layout-columns-3 gb-3-col-equal" style="margin-top:40px"><div class="gb-layout-column-wrap gb-block-layout-column-gap-4 gb-is-responsive-column"><!-- wp:genesis-blocks/gb-column {"textAlign":"center"} -->
-<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner" style="text-align:center"><!-- wp:image {"align":"center","sizeSlug":"large","linkDestination":"none"} -->
+<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner" style="text-align:center"><!-- wp:image {"align":"center","id":9999,"sizeSlug":"large","linkDestination":"none"} -->
 <div class="wp-block-image"><figure class="aligncenter size-large"><img src="$coachingpro_icon_leap" alt="" class="wp-image-9999"/></figure></div>
 <!-- /wp:image -->
 
@@ -177,7 +177,7 @@ return <<<CONTENT
 <!-- /wp:genesis-blocks/gb-column -->
 
 <!-- wp:genesis-blocks/gb-column {"textAlign":"center"} -->
-<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner" style="text-align:center"><!-- wp:image {"align":"center","sizeSlug":"large","linkDestination":"none"} -->
+<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner" style="text-align:center"><!-- wp:image {"align":"center","id":9999,"sizeSlug":"large","linkDestination":"none"} -->
 <div class="wp-block-image"><figure class="aligncenter size-large"><img src="$coachingpro_icon_learn" alt="" class="wp-image-9999"/></figure></div>
 <!-- /wp:image -->
 
@@ -191,7 +191,7 @@ return <<<CONTENT
 <!-- /wp:genesis-blocks/gb-column -->
 
 <!-- wp:genesis-blocks/gb-column {"textAlign":"center"} -->
-<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner" style="text-align:center"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner" style="text-align:center"><!-- wp:image {"id":9999,"sizeSlug":"large","linkDestination":"none"} -->
 <figure class="wp-block-image size-large"><img src="$coachingpro_icon_life" alt="" class="wp-image-9999"/></figure>
 <!-- /wp:image -->
 

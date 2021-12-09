@@ -19,6 +19,11 @@
  * WooCommerce products can be imported using the included CSV file:
  * /config/import/woo/sample-woocommerce-products.csv
  *
+ * WP FORMS
+ * ---------------------
+ * Sample WP Forms can be imported using the included JSON file:
+ * /config/import/wpforms/sample-wpforms-forms.json
+ *
  */
 
 return [
